@@ -1,0 +1,7 @@
+<h2>{{model.slug}} - {{model.title}}</h2>
+
+<ul>
+  {{#each model.presentationTopics as |topic|}}
+    <li>{{topic.duration}} - {{{topic.title}}} - {{topic.presenter.title}}</li>
+  {{/each}}
+</ul>

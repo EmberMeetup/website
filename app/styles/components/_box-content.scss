@@ -1,0 +1,11 @@
+.box-content {
+  max-width: $maxWidth;
+  margin: 0 auto;
+
+  padding: 30px;
+  
+  &.has-image .box-content--content {
+    padding-left: 45px;
+  }
+}
+

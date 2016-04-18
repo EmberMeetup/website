@@ -1,0 +1,11 @@
+<grid responsive>
+  {{#if image}}
+    <box class="box-content--img" md=2 sm=4 xs=12>
+      <img src={{image}}>
+    </box>
+  {{/if}}
+  <box class="box-content--content" md=10 sm=8 xs=12>
+    {{yield}}
+  </box>
+</grid>
+

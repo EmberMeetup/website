@@ -1,0 +1,26 @@
+.box-callout {
+  &.is-red {
+    color: white;
+    background-color: $red;
+    padding: 0 30px;
+    
+    h1, h2, h3, h4, h5 {
+      color: white;
+      margin-bottom: 0;
+    }
+    
+    grid {
+      max-width: $maxWidth;
+      margin: 0 auto;
+    }
+  }
+  
+  .box-callout--img-left, .box-callout--img-right {
+    padding: 30px;
+    
+    img {
+      max-height: 110px;      
+    }
+  }
+  
+}

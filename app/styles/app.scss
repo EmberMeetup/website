@@ -1,0 +1,18 @@
+$red: #EF5950;
+$blue: #6FD1D8;
+$darkerBlue: #40AFB2;
+$navyBlue: #1D1737;
+$skyBlue: #DCF5FF;
+
+$maxWidth: 1400px;
+
+@import "bourbon";
+@import "neat";
+
+@import '_type';
+@import '_header';
+
+@import 'components/_hero-image';
+@import 'components/_box-content';
+@import 'components/_box-callout';
+

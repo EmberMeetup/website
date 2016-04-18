@@ -1,0 +1,15 @@
+<grid responsive>
+  {{#if (and image (eq position 'left'))}}
+    <box class="box-callout--img-left" md=2 sm=4 xs=12>
+      <img src={{image}}>
+    </box>
+  {{/if}}
+  <box class="box-callout--content" md=10 sm=8 xs=12>
+    {{yield}}
+  </box>
+  {{#if (and image (eq position 'right'))}}
+    <box class="box-callout--img-right" md=2 sm=4 xs=12>
+      <img src={{image}}>
+    </box>
+  {{/if}}  
+</grid>
