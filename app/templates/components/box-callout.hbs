@@ -4,9 +4,11 @@
       <img src={{image}}>
     </box>
   {{/if}}
-  <box class="box-callout--content" md=10 sm=8 xs=12>
-    {{yield}}
-  </box>
+  {{#if image}}
+    <box class="box-callout--content" md=10 sm=8 xs=12>{{yield}}</box>
+  {{else}}
+    <box class="box-callout--content" md=12 sm=8 xs=12>{{yield}}</box>
+  {{/if}}
   {{#if (and image (eq position 'right'))}}
     <box class="box-callout--img-right" md=2 sm=4 xs=12>
       <img src={{image}}>
