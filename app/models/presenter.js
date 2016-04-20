@@ -11,8 +11,7 @@ export default PostModel.extend({
   lastName: attr(),
   twitter: attr(),
   linkedin: attr(),
-  bio: attr(),
-  talks: hasMany(),
-  avatar: attr(),
+  presentationTopics: hasMany(),
+  avatar: attr('image'),
   age: attr()
 });

@@ -1,0 +1,71 @@
+.gem-topics {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.gem-topics--topic {
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-border-radius: 3px !default;
+  $base-spacing: 1.5em !default;
+  $dark-gray: #333 !default;
+  $base-font-color: $dark-gray !default;
+  //////////////////////////////////////////////////////////////////////////////////
+
+  $gem-topics-gutter: 1.4em;
+  $gem-topics-image-padding: 0;
+  $gem-topics-image-width: 4em;
+  $gem-topics-color: $base-font-color;
+  $gem-topics-detail-color: transparentize($gem-topics-color, 0.5);
+  $gem-topics-image-vert-alignment: top;
+
+  border-bottom: 1px solid transparentize($gem-topics-color, 0.9);
+  display: table;
+  margin-bottom: $base-spacing;
+  padding-bottom: 1em;
+  width: 100%;
+
+  .gem-topics--image,
+  .gem-topics--content {
+    display: table-cell;
+    vertical-align: $gem-topics-image-vert-alignment;
+  }
+
+  .gem-topics--image {
+    padding-right: $gem-topics-gutter;
+
+    > img {
+      border-radius: $base-border-radius;
+      display: block;
+      height: auto;
+      max-width: none;
+      padding: $gem-topics-image-padding;
+      width: $gem-topics-image-width;
+    }
+
+    .gem-topics--reverse-order & {
+      padding-right: 0;
+      padding-left: 10px;
+    }
+  }
+
+  .gem-topics--content {
+    width: 100%;
+
+    h1 {
+      font-size: 1em;
+      margin: 0 0 0.5em 0;
+    }
+
+    p {
+      line-height: 1.5em;
+      margin-bottom: 0.5em;
+    }
+
+    p.gem-topics--detail {
+      color: $gem-topics-detail-color;
+      font-size: 0.9em;
+      font-style: italic;
+    }
+  }
+}
+

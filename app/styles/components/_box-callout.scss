@@ -1,17 +1,26 @@
 .box-callout {
+  padding: 0 30px;
+
+  grid {
+    max-width: $maxWidth;
+    margin: 0 auto;
+  }
+  
   &.is-red {
     color: white;
     background-color: $red;
-    padding: 0 30px;
     
     h1, h2, h3, h4, h5 {
       color: white;
       margin-bottom: 0;
     }
+  }
+  
+  &.is-blue {
+    background: url(images/blue-background.svg) no-repeat center top $skyBlue;
     
     grid {
-      max-width: $maxWidth;
-      margin: 0 auto;
+      max-width: 700px;
     }
   }
   
