@@ -14,10 +14,15 @@
       color: white;
       margin-bottom: 0;
     }
+    
+    a {
+      color: white;
+    }
   }
   
   &.is-blue {
     background: url(images/blue-background.svg) no-repeat center top $skyBlue;
+    padding-bottom: 30px;
     
     grid {
       max-width: 700px;

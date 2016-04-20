@@ -1,5 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  classNames: ['gem-agenda']
+  tagName: 'footer',
+  classNames: 'footer'
 });

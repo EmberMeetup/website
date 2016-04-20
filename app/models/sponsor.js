@@ -7,10 +7,7 @@ const {
 } = DS;
 
 export default PostModel.extend({
-  firstName: attr(),
-  lastName: attr(),
-  twitter: attr(),
-  linkedin: attr(),
-  presentationTopics: hasMany(),
-  avatar: attr('image')
+  companyName: attr(),
+  logo: attr('image'),
+  link: attr()
 });

@@ -4,11 +4,13 @@ import EventMixin from './event-mixin';
 import DS from 'ember-data';
 
 const {
-  attr
+  attr,
+  hasMany
 } = DS;
 
 export default PostModel.extend(EventMixin, {
   eventbrite: attr(),
   hero: attr('image'),
-  template: attr()
+  layout: attr(),
+  sponsors: hasMany()
 });

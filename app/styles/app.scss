@@ -1,14 +1,9 @@
-$red: #EF5950;
-$blue: #6FD1D8;
-$darkerBlue: #40AFB2;
-$navyBlue: #1D1737;
-$skyBlue: #DCF5FF;
-
 $maxWidth: 1400px;
 
 @import "bourbon";
 @import "neat";
 
+@import '_colors';
 @import '_type';
 @import '_header';
 @import '_buttons';
@@ -17,4 +12,6 @@ $maxWidth: 1400px;
 @import 'components/_box-content';
 @import 'components/_box-callout';
 @import 'components/_gem-topics';
-
+@import 'components/_gem-agenda';
+@import 'components/_gem-sponsor-links';
+@import 'components/_gem-footer';
