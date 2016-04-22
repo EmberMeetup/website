@@ -1,0 +1,27 @@
+header {
+  background: $skyBlue;
+  padding-left: 30px;
+  
+  nav {
+    max-width: $maxWidth;
+    
+    padding-bottom: 5px; 
+  }
+  
+  a {
+    display: inline-block;
+    padding: 40px 20px;
+    
+    color: $darkerBlue;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  a.go-home {
+    text-indent: -2000px;
+    width: 80px;
+    
+    background: url(images/gem-flag.svg) center top no-repeat;
+  }
+  
+}

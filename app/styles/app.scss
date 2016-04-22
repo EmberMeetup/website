@@ -5,9 +5,9 @@ $maxWidth: 1400px;
 
 @import '_colors';
 @import '_type';
-@import '_header';
 @import '_buttons';
 
+@import 'components/_nav-header';
 @import 'components/_hero-image';
 @import 'components/_box-content';
 @import 'components/_box-callout';
@@ -16,3 +16,16 @@ $maxWidth: 1400px;
 @import 'components/_gem-sponsor-links';
 @import 'components/_gem-footer';
 @import 'components/_gem-cards';
+
+.max-width {
+  max-width: $maxWidth;
+}
+
+.auto-margin {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gem-article {
+  margin: 0 30px;
+}
