@@ -2,7 +2,6 @@ import DS from 'ember-data';
 import PostModel from 'ember-wordpress/models/post';
 
 const {
-  hasMany,
   attr
 } = DS;
 
