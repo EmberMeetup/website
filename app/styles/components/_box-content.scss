@@ -11,9 +11,9 @@
 }
 
 .box-content--img {
-  @include span-columns(3);
+  @include span-columns(4);
 }
 
 .box-content--content {
-  @include span-columns(9);
+  @include span-columns(8);
 }
