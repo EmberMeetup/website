@@ -24,6 +24,8 @@
   padding-bottom: 1em;
   width: 100%;
 
+  @include outer-container(100%);
+
   .gem-topics--image,
   .gem-topics--content {
     display: table-cell;
@@ -32,7 +34,7 @@
 
   .gem-topics--image {
     padding-right: $gem-topics-gutter;
-
+    @include span-columns(3);
     > img {
       border-radius: $base-border-radius;
       display: block;
@@ -50,7 +52,7 @@
 
   .gem-topics--content {
     width: 100%;
-
+    @include span-columns(9);
     h1 {
       font-size: 1em;
       margin: 0 0 0.5em 0;

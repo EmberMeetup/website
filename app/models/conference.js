@@ -11,5 +11,6 @@ const {
 export default PostModel.extend(EventMixin, {
   eventbrite: attr(),
   hero: attr('image'),
+  sidebar: attr(),
   sponsors: hasMany()
 });

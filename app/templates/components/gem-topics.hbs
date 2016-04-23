@@ -1,12 +1,14 @@
-{{#each topics as |topic|}}
-  <div class="gem-topics--topic">
-    <div class="gem-topics--image">
-      <img src={{topic.presenter.avatar}}>
+<div class="gem-topics">
+  {{#each topics as |topic|}}
+    <div class="gem-topics--topic">
+      <div class="gem-topics--image">
+        <img src={{topic.presenter.avatar}}>
+      </div>
+      <div class="gem-topics--content">
+        <h1>{{topic.title}}</h1>
+        {{{if topic.excerpt topic.excerpt}}}
+        <p class="gem-topics--detail">by {{topic.presenter.title}}</p>
+      </div>
     </div>
-    <div class="gem-topics--content">
-      <h1>{{topic.title}}</h1>
-      {{{if topic.excerpt topic.excerpt}}}
-      <p class="gem-topics--detail">by {{topic.presenter.title}}</p>
-    </div>
-  </div>
-{{/each}}
+  {{/each}}
+</div>

@@ -1,3 +1,10 @@
 {{hero-image hero=model.hero}}  
 
-{{dynamic-render model.content model=model}}
+<section class="conference">
+  <aside>
+    {{dynamic-render model.sidebar model=model}}
+  </aside>
+  <article>
+    {{dynamic-render model.content model=model}}
+  </article>
+</section>

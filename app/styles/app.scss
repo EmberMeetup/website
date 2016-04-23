@@ -7,6 +7,8 @@ $maxWidth: 1400px;
 @import '_type';
 @import '_buttons';
 
+@import 'pages/_conference';
+
 @import 'components/_nav-header';
 @import 'components/_hero-image';
 @import 'components/_box-content';
@@ -16,6 +18,7 @@ $maxWidth: 1400px;
 @import 'components/_gem-sponsor-links';
 @import 'components/_gem-footer';
 @import 'components/_gem-cards';
+@import 'components/_box-noimage';
 
 .max-width {
   max-width: $maxWidth;

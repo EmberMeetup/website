@@ -3,6 +3,13 @@
   margin: 0 auto;
 }
 
+.gem-agenda-item {
+  @include outer-container(100%);
+}
 .gem-agenda-item--time {
-  width: 80px;
+  @include span-columns(3);
+}
+
+.gem-agenda-item--description {
+  @include span-columns(9);
 }
