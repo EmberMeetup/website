@@ -1,13 +1,15 @@
 import DS from 'ember-data';
-import PostModel from 'ember-wordpress/models/post';
+import Model from 'ember-data/model';
+import PostMixin from './post-mixin';
 
-const {
-  belongsTo,
-  attr
+const { 
+  belongsTo, 
+  attr 
 } = DS;
 
-export default PostModel.extend({
+export default Model.extend(PostMixin, {
   presenter: belongsTo('presenter', {async: true}),
   duration: attr('number'),
-  vimeo: attr()
+  vimeo: attr(),
+  featured: attr()
 });

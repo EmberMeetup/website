@@ -16,5 +16,7 @@
 npm-debug.log
 testem.log
 
+.vscodeignore
 .env.deploy.*
 .DS_Store
+jsconf.json

@@ -1,5 +1,6 @@
-import WordPressAdapter from 'ember-wordpress/adapters/wordpress';
+import JSONAPIAdapter from 'ember-data/adapters/json-api';
 
-export default WordPressAdapter.extend({
-  
+export default JSONAPIAdapter.extend({
+  host: 'http://embermeetup.com',
+  namespace: 'wp-json/wp/v2'
 });

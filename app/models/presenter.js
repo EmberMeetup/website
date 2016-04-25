@@ -1,16 +1,17 @@
 import DS from 'ember-data';
-import PostModel from 'ember-wordpress/models/post';
+import Model from 'ember-data/model';
+import PostMixin from './post-mixin';
 
-const {
-  hasMany,
-  attr
+const { 
+  hasMany, 
+  attr 
 } = DS;
 
-export default PostModel.extend({
+export default Model.extend(PostMixin, {
   firstName: attr(),
   lastName: attr(),
   twitter: attr(),
   linkedin: attr(),
   presentationTopics: hasMany(),
-  avatar: attr('image')
+  featured: attr()
 });

@@ -1,12 +1,13 @@
 import DS from 'ember-data';
-import PostModel from 'ember-wordpress/models/post';
+import Model from 'ember-data/model';
+import PostMixin from './post-mixin';
 
 const {
   attr
 } = DS;
 
-export default PostModel.extend({
+export default Model.extend(PostMixin, {
   companyName: attr(),
-  logo: attr('image'),
+  featured: attr(),
   link: attr()
 });

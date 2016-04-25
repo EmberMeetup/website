@@ -1,16 +1,15 @@
-import PostModel from 'ember-wordpress/models/post';
-import EventMixin from './event-mixin';
-
 import DS from 'ember-data';
+import Model from 'ember-data/model';
+import EventMixin from './event-mixin';
+import PostMixin from './post-mixin';
 
 const {
   attr,
   hasMany
 } = DS;
 
-export default PostModel.extend(EventMixin, {
+export default Model.extend(EventMixin, PostMixin, {
   eventbrite: attr(),
-  hero: attr('image'),
   sidebar: attr(),
   sponsors: hasMany()
 });

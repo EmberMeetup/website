@@ -21,10 +21,8 @@ module.exports = function(environment) {
     googleFonts: [
       'Dosis:400',
       'Pacifico'
-    ],
-
+    ]
     
-    wordpressHost: 'http://embermeetup.com'
   };
 
   if (environment === 'development') {

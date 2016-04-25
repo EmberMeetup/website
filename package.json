@@ -45,7 +45,6 @@
     "ember-pagefront": "0.11.1",
     "ember-resolver": "^2.0.3",
     "ember-truth-helpers": "1.2.0",
-    "ember-wordpress": "EmberSherpa/ember-wordpress#bce16b53854a6502dc5dbfa06e90166112c9c414",
     "loader.js": "^4.0.1"
   }
 }

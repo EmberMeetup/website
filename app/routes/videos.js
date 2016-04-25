@@ -6,8 +6,7 @@ export default Ember.Route.extend({
     return this.store.query('presentation_topic', {
       filter: {
         meta_query: [ { key: 'has_video', 'value': 1 }]
-      },
-      _embed: true
+      }
     });
   }
   

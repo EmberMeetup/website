@@ -1,9 +1,9 @@
-import Ember from 'ember';
 import DS from 'ember-data';
+import Ember from 'ember';
 
 const {
-  hasMany,
-  attr
+  attr,
+  hasMany
 } = DS;
 
 export default Ember.Mixin.create({

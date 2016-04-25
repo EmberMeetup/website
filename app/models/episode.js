@@ -1,7 +1,12 @@
 import DS from 'ember-data';
-import PostModel from 'ember-wordpress/models/post';
+import Model from 'ember-data/model';
 import EventMixin from './event-mixin';
+import PostMixin from './post-mixin';
 
-export default PostModel.extend(EventMixin, {
-  template: DS.attr()
+const {
+  attr
+} = DS;
+
+export default Model.extend(EventMixin, PostMixin, {
+  template: attr()
 });
