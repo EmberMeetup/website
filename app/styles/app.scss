@@ -10,6 +10,7 @@ $maxWidth: 1400px;
 
 @import 'pages/_conference';
 @import 'pages/_videos';
+@import 'pages/_video';
 
 @import 'components/_nav-header';
 @import 'components/_hero-image';
@@ -21,6 +22,7 @@ $maxWidth: 1400px;
 @import 'components/_gem-footer';
 @import 'components/_gem-cards';
 @import 'components/_box-noimage';
+@import 'components/_responsive-vimeo-video';
 
 .max-width {
   max-width: $maxWidth;
