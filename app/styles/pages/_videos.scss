@@ -1,0 +1,30 @@
+.videos-page {
+  // TODO: this should probably be a mixin
+  @include outer-container(100%);
+  padding: 20px;
+
+  .video-card {
+    margin-bottom: 20px;
+    
+    @include media($tablet) {
+      @include span-columns(6);
+      @include omega(2n);
+    }
+    @include media($mobile) {
+      @include span-columns(12);
+    }
+  }
+  
+  .video-card--image {
+    width: 100%;
+  }
+  
+  .video-card--title {
+    margin-top: 0;
+    
+    a {
+      text-decoration: none;
+      color: $darkerBlue;
+    }
+  }
+}

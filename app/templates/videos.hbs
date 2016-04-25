@@ -1,8 +1,17 @@
 {{nav-header}}
 
+<section class="videos-page">
 {{#each model as |video|}}
   <div class="video-card">
-    <h2 class="video-card--title">{{video.title}}</h2>
+    {{#link-to 'video' video.slug}}
+      <img class="video-card--image" src={{video.featured.media-details.sizes.large.source-url}}>
+    {{/link-to}}
+    <h3 class="video-card--title">
+      {{#link-to 'video' video.slug}}
+        {{video.title}} by {{video.presenter.title}}
+      {{/link-to}}
+    </h3>
     <div class="video-card--excerpt">{{video.excerpt}}</div>
   </div>
 {{/each}}
+</section>
