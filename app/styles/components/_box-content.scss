@@ -6,14 +6,19 @@
   padding: 30px;
   
   &.has-image .box-content--content {
-    padding-left: 45px;
+    // padding-left: 45px;
   }
 }
 
-.box-content--img {
-  @include span-columns(4);
+.box-content--img { 
+  // $tablet: new-breakpoint(min-width 768px);
+  @include media($tablet) {
+    @include span-columns(4);
+  }
 }
 
 .box-content--content {
-  @include span-columns(8);
+  @include media($tablet) {
+    @include span-columns(8);
+  }
 }

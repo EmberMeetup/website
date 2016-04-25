@@ -28,16 +28,19 @@
 
   .gem-topics--image,
   .gem-topics--content {
-    display: table-cell;
+    // display: table-cell;
     vertical-align: $gem-topics-image-vert-alignment;
   }
 
   .gem-topics--image {
     padding-right: $gem-topics-gutter;
-    @include span-columns(3);
+    @include media($tablet) {
+      @include span-columns(4);
+      text-align: right;
+    }
     > img {
       border-radius: $base-border-radius;
-      display: block;
+      // display: block;
       height: auto;
       max-width: none;
       padding: $gem-topics-image-padding;
@@ -51,8 +54,9 @@
   }
 
   .gem-topics--content {
-    width: 100%;
-    @include span-columns(9);
+    @include media($tablet) {
+      @include span-columns(8);
+    }
     h1 {
       font-size: 1em;
       margin: 0 0 0.5em 0;

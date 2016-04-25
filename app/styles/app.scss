@@ -1,8 +1,9 @@
 $maxWidth: 1400px;
 
 @import "bourbon";
-@import "neat";
 
+@import "neat";
+@import "grid-settings";
 @import '_colors';
 @import '_type';
 @import '_buttons';
