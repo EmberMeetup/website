@@ -1,6 +1,7 @@
 // @import "neat/neat-helpers"; // or "neat-helpers" when in Rails
 
 // Define your breakpoints
-$desktop: new-breakpoint(min-width 1400px);
+$jumbo: new-breakpoint(min-width 1201px);
+$desktop: new-breakpoint(min-width 992px);
 $tablet: new-breakpoint(min-width 768px);
-$mobile: new-breakpoint(max-width 480px);
+$mobile: new-breakpoint(max-width 767px);
