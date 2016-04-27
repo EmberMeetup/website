@@ -1,1 +1,43 @@
-{{outlet}}
+{{nav-header}}
+
+<article class="video-page">
+  <main>
+    {{responsive-vimeo-video video=model.vimeo}}
+  </main>
+  <aside>
+    {{#gem-topics is-aside=true}}
+      {{gem-topics-topic
+        image=model.presenter.featured.thumbnail.url
+        title=model.presenter.title
+        description=model.presenter.excerpt
+        twitter=model.presenter.twitter
+        linkedin=model.presenter.linkedin
+      }}
+    {{/gem-topics}}
+    <h1 class="video-page--title">{{model.title}}</h1>
+    <div class="video-page--description">
+      {{{model.excerpt}}}
+    </div>
+    <div class="video-page--badges">
+      {{#each (append model.categories model.tags) as |badge|}}
+        {{#link-to 'videos' (query-params type=badge.type slug=badge.slug)}}{{badge.name}}{{/link-to}}
+      {{/each}}
+    </div>
+    {{#if model.related}}
+      <div class="video-page--related">
+        <h3 class="video-page--section-title">Related Videos</h3>
+        {{#each model.related as |video|}}
+          {{video-card model=video size='medium'}}
+        {{/each}}
+      </div>
+    {{/if}}
+
+
+
+  </aside>
+  <section>
+    
+  </section>
+</article>
+  
+{{gem-footer}}

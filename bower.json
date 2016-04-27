@@ -2,12 +2,13 @@
   "name": "embermeetup",
   "dependencies": {
     "ember": "~2.4.3",
-    "ember-cli-shims": "0.1.1",
+    "ember-cli-shims": "~0.1.1",
     "ember-cli-test-loader": "0.2.2",
     "ember-qunit-notifications": "0.1.0",
     "bourbon": "4.2.6",
     "normalize-css": "normalize.css#^4.1.1",
     "neat": "^1.7.4",
-    "refills": "^0.1.0"
+    "refills": "^0.1.0",
+    "font-awesome": "~4.5.0"
   }
 }

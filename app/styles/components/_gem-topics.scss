@@ -1,77 +1,95 @@
 .gem-topics {
   max-width: 1000px;
   margin: 0 auto;
-}
+  margin-bottom: 0.75em;
+  
+  .gem-topics--topic {
+    $gem-topics-gutter: 1.4em;
+    $gem-topics-image-padding: 0;
+    $gem-topics-image-width: 4em;
+    $gem-topics-color: $base-font-color;
+    $gem-topics-detail-color: transparentize($gem-topics-color, 0.5);
+    $gem-topics-image-vert-alignment: top;
 
-.gem-topics--topic {
-  ///////////////////////////////////////////////////////////////////////////////////
-  $base-border-radius: 3px !default;
-  $base-spacing: 1.5em !default;
-  $dark-gray: #333 !default;
-  $base-font-color: $dark-gray !default;
-  //////////////////////////////////////////////////////////////////////////////////
+    border-bottom: $base-separator;
+    display: table;
+    margin-bottom: $base-spacing;
+    padding-bottom: 1em;
+    width: 100%;
 
-  $gem-topics-gutter: 1.4em;
-  $gem-topics-image-padding: 0;
-  $gem-topics-image-width: 4em;
-  $gem-topics-color: $base-font-color;
-  $gem-topics-detail-color: transparentize($gem-topics-color, 0.5);
-  $gem-topics-image-vert-alignment: top;
+    @include outer-container(100%);
 
-  border-bottom: 1px solid transparentize($gem-topics-color, 0.9);
-  display: table;
-  margin-bottom: $base-spacing;
-  padding-bottom: 1em;
-  width: 100%;
-
-  @include outer-container(100%);
-
-  .gem-topics--image,
-  .gem-topics--content {
-    // display: table-cell;
-    vertical-align: $gem-topics-image-vert-alignment;
-  }
-
-  .gem-topics--image {
-    padding-right: $gem-topics-gutter;
-    @include media($tablet) {
-      @include span-columns(4);
-      text-align: right;
-    }
-    > img {
-      border-radius: $base-border-radius;
-      // display: block;
-      height: auto;
-      max-width: none;
-      padding: $gem-topics-image-padding;
-      width: $gem-topics-image-width;
+    .gem-topics--image,
+    .gem-topics--content {
+      // display: table-cell;
+      vertical-align: $gem-topics-image-vert-alignment;
     }
 
-    .gem-topics--reverse-order & {
-      padding-right: 0;
-      padding-left: 10px;
-    }
-  }
+    .gem-topics--image {
+      padding-right: $gem-topics-gutter;
+      @include media($tablet) {
+        @include span-columns(4);
+      }
+      > img {
+        border-radius: $base-border-radius;
+        // display: block;
+        height: auto;
+        max-width: none;
+        padding: $gem-topics-image-padding;
+        width: $gem-topics-image-width;
+      }
 
-  .gem-topics--content {
-    @include media($tablet) {
-      @include span-columns(8);
+      .gem-topics--reverse-order & {
+        padding-right: 0;
+        padding-left: 10px;
+      }
     }
-    h1 {
+
+    .gem-topics--content {
+      @include media($tablet) {
+        @include span-columns(8);
+      }
+
+      p.gem-topics--detail {
+        color: $gem-topics-detail-color;
+        font-size: 0.9em;
+        font-style: italic;
+      }
+    }
+    
+    .gem-topics--description, .gem-topics--description p {
+      line-height: 1.5em;
+      margin-bottom: 0;
+    }
+  
+    .gem-topics--title {
       font-size: 1em;
       margin: 0 0 0.5em 0;
     }
-
-    p {
-      line-height: 1.5em;
-      margin-bottom: 0.5em;
+    
+    .gem-topics--links a {
+      color: $blue;
     }
-
-    p.gem-topics--detail {
-      color: $gem-topics-detail-color;
-      font-size: 0.9em;
-      font-style: italic;
+    
+    &:last-child {
+      margin-bottom: 0;
     }
   }
-}
+  
+  
+  &.is-aside {
+    
+    .gem-topics--title {
+      font-size: 24px;
+      margin-bottom: 0;
+    }
+    
+    .gem-topics--description, .gem-topics--description p {
+      margin-top: 0;
+      font-size: 18px;
+      line-height: 18px;
+    }
+    
+  }
 
+}

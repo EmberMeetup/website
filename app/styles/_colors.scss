@@ -3,6 +3,8 @@ $blue: #6FD1D8;
 $darkerBlue: #40AFB2;
 $navyBlue: #1D1737;
 $skyBlue: #DCF5FF;
+$dark-gray: #333;
+$base-font-color: $dark-gray;
 
 .red {
   color: $red;
@@ -22,4 +24,8 @@ $skyBlue: #DCF5FF;
 
 .skyBlue {
   color: $skyBlue;
+}
+
+.dark-grey {
+  color: $dark-gray;
 }

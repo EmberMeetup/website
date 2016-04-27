@@ -1,8 +1,7 @@
 {{nav-header}}
 
+<section class="videos-page">
 {{#each model as |video|}}
-  <div class="video-card">
-    <h2 class="video-card--title">{{video.title}}</h2>
-    <div class="video-card--excerpt">{{video.excerpt}}</div>
-  </div>
+  {{video-card model=video size='large'}}
 {{/each}}
+</section>

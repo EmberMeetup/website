@@ -1,0 +1,21 @@
+.video-card {
+  
+  &--image {
+    width: 100%;
+  }
+
+  &--title {
+    margin-top: 0;
+    
+    a {
+      text-decoration: none;
+      color: $darkerBlue;
+    }
+  }
+  
+  &.is-medium {
+    .video-card--title {
+      font-size: 18px;
+    }
+  }
+}

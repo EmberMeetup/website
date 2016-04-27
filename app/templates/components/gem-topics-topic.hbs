@@ -1,0 +1,24 @@
+<div class="gem-topics--image">
+  <img src={{image}}>
+</div>
+<div class="gem-topics--content">
+  <h2 class="gem-topics--title">{{title}}</h2>
+  {{#if description}}
+    <div class="gem-topics--description">
+      {{{description}}}
+    </div>
+  {{/if}}
+  {{#if by-line}}
+  <p class="gem-topics--detail">
+    {{#if by-line}}<span class="gem-topics--by-line"> by {{by-line}}</span>{{/if}}
+  </p>
+  {{/if}}
+  <div class="gem-topics--links">
+    {{#if twitter}}
+      <a href={{concat 'https://twitter.com/' twitter}}>{{fa-icon 'twitter'}}</a>
+    {{/if}}
+    {{#if linkedin}}
+      <a href={{linkedin}}>{{fa-icon 'linkedin'}}</a>
+    {{/if}}
+  </div>
+</div>
