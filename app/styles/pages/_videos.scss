@@ -14,17 +14,4 @@
       @include span-columns(12);
     }
   }
-  
-  .video-card--image {
-    width: 100%;
-  }
-  
-  .video-card--title {
-    margin-top: 0;
-    
-    a {
-      text-decoration: none;
-      color: $darkerBlue;
-    }
-  }
 }

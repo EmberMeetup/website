@@ -1,4 +1,6 @@
 $maxWidth: 1400px;
+$base-border-radius: 3px;
+$base-spacing: 1.5em;
 
 @import "bourbon";
 
@@ -7,6 +9,8 @@ $maxWidth: 1400px;
 @import '_colors';
 @import '_type';
 @import '_buttons';
+
+$base-separator: 1px solid transparentize($dark-gray, 0.9);
 
 @import 'pages/_conference';
 @import 'pages/_videos';
@@ -23,6 +27,7 @@ $maxWidth: 1400px;
 @import 'components/_gem-cards';
 @import 'components/_box-noimage';
 @import 'components/_responsive-vimeo-video';
+@import 'components/_video-card';
 
 .max-width {
   max-width: $maxWidth;

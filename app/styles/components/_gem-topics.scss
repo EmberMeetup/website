@@ -4,13 +4,6 @@
   margin-bottom: 0.75em;
   
   .gem-topics--topic {
-    ///////////////////////////////////////////////////////////////////////////////////
-    $base-border-radius: 3px !default;
-    $base-spacing: 1.5em !default;
-    $dark-gray: #333 !default;
-    $base-font-color: $dark-gray !default;
-    //////////////////////////////////////////////////////////////////////////////////
-
     $gem-topics-gutter: 1.4em;
     $gem-topics-image-padding: 0;
     $gem-topics-image-width: 4em;
@@ -18,7 +11,7 @@
     $gem-topics-detail-color: transparentize($gem-topics-color, 0.5);
     $gem-topics-image-vert-alignment: top;
 
-    border-bottom: 1px solid transparentize($gem-topics-color, 0.9);
+    border-bottom: $base-separator;
     display: table;
     margin-bottom: $base-spacing;
     padding-bottom: 1em;
@@ -66,7 +59,7 @@
     
     .gem-topics--description, .gem-topics--description p {
       line-height: 1.5em;
-      margin-bottom: 0.5em;
+      margin-bottom: 0;
     }
   
     .gem-topics--title {

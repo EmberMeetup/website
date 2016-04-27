@@ -1,0 +1,11 @@
+{{#link-to 'video' model.slug}}
+  <img class="video-card--image" src={{get model (concat 'featured.' size '.url')}}>
+{{/link-to}}
+<h3 class="video-card--title">
+  {{#link-to 'video' model.slug}}
+    {{model.title}} by {{model.presenter.title}}
+  {{/link-to}}
+</h3>
+{{#if show-excerpt}}
+  <div class="video-card--excerpt">{{model.excerpt}}</div>
+{{/if}}
