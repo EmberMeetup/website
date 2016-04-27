@@ -3,6 +3,8 @@
 <article class="video-page">
   <main>
     {{responsive-vimeo-video video=model.vimeo}}
+    
+    {{disqus-comments identifier=model.title}}
   </main>
   <aside>
     {{#gem-topics is-aside=true}}
@@ -31,9 +33,6 @@
         {{/each}}
       </div>
     {{/if}}
-
-
-
   </aside>
   <section>
     

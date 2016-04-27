@@ -39,6 +39,7 @@
     "ember-cli-uglify": "^1.2.0",
     "ember-composable-helpers": "0.22.1",
     "ember-data": "^2.4.2",
+    "ember-disqus": "0.2.0",
     "ember-dynamic-render": "1.0.0",
     "ember-export-application-global": "^1.0.5",
     "ember-font-awesome": "2.1.0",

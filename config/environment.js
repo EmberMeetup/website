@@ -21,7 +21,11 @@ module.exports = function(environment) {
     googleFonts: [
       'Dosis:400',
       'Pacifico'
-    ]
+    ],
+    
+    disqus: {
+      shortname: 'embermeetup'
+    }
     
   };
 
