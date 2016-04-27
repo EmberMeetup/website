@@ -2,7 +2,8 @@ import Ember from 'ember';
 import DS from 'ember-data';
 
 const {
-  attr
+  attr,
+  hasMany
 } = DS;
 
 export default Ember.Mixin.create({
@@ -13,5 +14,7 @@ export default Ember.Mixin.create({
   dateGmt: attr('date'),
   excerpt: attr(),
   featured: attr(),
-  modified: attr('date')
+  modified: attr('date'),
+  categories: hasMany(),
+  tags: hasMany()
 });
