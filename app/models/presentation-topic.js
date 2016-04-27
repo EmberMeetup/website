@@ -4,12 +4,15 @@ import PostMixin from './post-mixin';
 
 const { 
   belongsTo, 
-  attr 
+  attr,
+  hasMany
 } = DS;
 
 export default Model.extend(PostMixin, {
   presenter: belongsTo('presenter', {async: true}),
   duration: attr('number'),
   vimeo: attr(),
-  featured: attr()
+  featured: attr(),
+  categories: hasMany(),
+  postTags: hasMany('post-tag')
 });

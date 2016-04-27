@@ -1,3 +1,25 @@
 .video-page {
+  @include outer-container(100%);
   padding: 20px;
+  
+  main {
+    @include media($tablet) {
+      @include span-columns(12);
+    }
+    @include media($desktop) {
+      @include span-columns(9)
+    }
+  }
+  
+  aside {
+    @include media($tablet) {
+      @include span-columns(12);
+    }
+    @include media($desktop) {
+      @include span-columns(3);
+      @include omega();
+    }
+  }
+  
+  
 }

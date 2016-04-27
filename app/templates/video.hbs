@@ -1,9 +1,25 @@
 {{nav-header}}
 
 <article class="video-page">
-  {{responsive-vimeo-video video=model.vimeo}}
-  
-  
-</article>
+  <main>
+    {{responsive-vimeo-video video=model.vimeo}}
+  </main>
+  <aside>
+    {{#gem-topics}}
+      {{gem-topics-topic 
+        image=model.presenter.featured.media-details.sizes.thumbnail.source-url
+        title=model.presenter.title
+        description=model.presenter.excerpt
+        twitter=model.presenter.twitter
+        linkedin=model.presenter.linkedin
+      }}
+    {{/gem-topics}}
+    <h1>{{model.title}} <span class="tag">{{if (contains 'Code Talks' (map-by 'name' model.category)) 'code-talk'}}</span></h1>
 
+  </aside>
+  <section>
+    
+  </section>
+</article>
+  
 {{gem-footer}}

@@ -8,6 +8,7 @@
     "bourbon": "4.2.6",
     "normalize-css": "normalize.css#^4.1.1",
     "neat": "^1.7.4",
-    "refills": "^0.1.0"
+    "refills": "^0.1.0",
+    "font-awesome": "~4.5.0"
   }
 }
