@@ -6,17 +6,17 @@
   .gem-topics--topic {
     $gem-topics-gutter: 1.4em;
     $gem-topics-image-padding: 0;
-    $gem-topics-image-width: 4em;
+    $gem-topics-image-width: 100%;
     $gem-topics-color: $base-font-color;
     $gem-topics-detail-color: transparentize($gem-topics-color, 0.5);
     $gem-topics-image-vert-alignment: top;
 
-    border-bottom: $base-separator;
+    // border-bottom: $base-separator;
     display: table;
     margin-bottom: $base-spacing;
     padding-bottom: 1em;
     width: 100%;
-
+    background-color: $light-gray;
     @include outer-container(100%);
 
     .gem-topics--image,
@@ -26,10 +26,18 @@
     }
 
     .gem-topics--image {
-      padding-right: $gem-topics-gutter;
+      // padding-right: $gem-topics-gutter;
       @include media($tablet) {
-        @include span-columns(4);
+        @include span-columns(2);
       }
+      @include media($mobile) {
+        @include span-columns(2);
+      }
+      @include media($desktop) {
+        @include span-columns(5);
+      }
+      padding-left: 12px;
+      padding-top: 12px;
       > img {
         border-radius: $base-border-radius;
         // display: block;
@@ -43,13 +51,20 @@
         padding-right: 0;
         padding-left: 10px;
       }
+      
     }
 
     .gem-topics--content {
+      padding-top: 10px;
       @include media($tablet) {
-        @include span-columns(8);
+        @include span-columns(10);
       }
-
+      @include media($mobile) {
+        @include span-columns(10);
+      }
+      @include media($desktop) {
+        @include span-columns(7);
+      }
       p.gem-topics--detail {
         color: $gem-topics-detail-color;
         font-size: 0.9em;
