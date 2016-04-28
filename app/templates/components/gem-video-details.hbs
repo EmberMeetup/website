@@ -1,0 +1,18 @@
+<h1 class="video-page--title">{{model.title}}</h1>
+<div class="video-page--description">
+    {{{model.excerpt}}}
+</div>
+<div class="video-page--badges">
+    {{#each (append model.categories model.tags) as |badge|}}
+        {{#link-to 'videos' (query-params type=badge.type slug=badge.slug)}}{{badge.name}}{{/link-to}}
+    {{/each}}
+</div>
+{{#gem-topics is-aside=true}}
+    {{gem-topics-topic
+        image=model.presenter.featured.thumbnail.url
+        title=model.presenter.title
+        description=model.presenter.excerpt
+        twitter=model.presenter.twitter
+        linkedin=model.presenter.linkedin
+    }}
+{{/gem-topics}}
