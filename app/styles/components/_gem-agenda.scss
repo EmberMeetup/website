@@ -1,15 +1,19 @@
-.gem-agenda {
-  max-width: 800px;
-  margin: 0 auto;
-}
+// .gem-agenda {
+//   max-width: 800px;
+//   margin: 0 auto;
+// }
 
-.gem-agenda-item {
+.gem-agenda-container {
   @include outer-container(100%);
 }
 .gem-agenda-item--time {
-  @include span-columns(3);
+  @include media($tablet) {
+    @include span-columns(4);
+  }
 }
 
 .gem-agenda-item--description {
-  @include span-columns(9);
+  @include media($tablet) {
+    @include span-columns(8);
+  }
 }
