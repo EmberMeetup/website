@@ -1,8 +1,8 @@
 {{nav-header}}
 
 <section class="videos-page">
-  {{#gem-search-tools as |tools|}}
-  
+    
+  {{#gem-search-tools as |tools|}}    
     {{#with (hash 
         category=(if category (find-by 'slug' category model.categories))
         tag=(if tag (find-by 'slug' tag model.tags))
