@@ -1,35 +1,49 @@
 import Ember from 'ember';
 
 const {
-  isEmpty
+  RSVP,
+  getProperties
 } = Ember;
 
 export default Ember.Route.extend({
   
   queryParams: {
-    page: {
+    category: {
+      refreshModel: true
+    },
+    tag: {
       refreshModel: true
     }
   },
   
-  model({ page, type, slug }) {
-
-    let filter = {
-        meta_query: [ { key: 'has_video', 'value': 1 }]
-      };
+  isFirstTime: true,
+  
+  model(params) {
+    
+    if ( this.get('isFirstTime') ) {
+      this.set('isFirstTime', false);
       
-    if (!isEmpty(type) && !isEmpty(slug)) {
-      if (type === 'category') {
-        filter['category_name'] = slug;
-      } else {
-        filter['tag'] = slug;
-      }
+      return RSVP.hash({
+        categories: this.store.findAll('category'),
+        tags: this.store.peekAll('tag'),
+        params
+      });
     }
     
-    return this.store.query('presentation-topic', {
-      filter,
-      page
+    return RSVP.hash({
+      categories: this.store.peekAll('category'),
+      tags: this.store.peekAll('tag'),
+      params
     });
-  }
+  },
   
+  actions: {
+    
+    updateFilter(item) {
+      let {slug, type} = getProperties(item, 'slug', 'type');
+      
+      this.transitionTo({ queryParams: { [type]: slug, page: 1 } });
+    }
+    
+  }
 });

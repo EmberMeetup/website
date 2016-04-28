@@ -1,9 +1,44 @@
 {{nav-header}}
 
 <section class="videos-page">
-{{#each model as |video|}}
-  {{video-card model=video size='large'}}
-{{/each}}
-
-{{gem-pagination page=model.meta.page total-pages=model.meta.total-pages}}
+  {{#gem-search-tools as |tools|}}
+  
+    {{#with (hash 
+        category=(if category (find-by 'slug' category model.categories))
+        tag=(if tag (find-by 'slug' tag model.tags))
+      ) as |selections|}}
+      {{#tools.filter 
+        label='Format'
+      }}
+        {{#power-select 
+          options=(append (hash type='category' name='---' slug=null) model.categories)
+          searchPlaceholder="Select format"
+          searchField="name"
+          selected=selections.category
+          onchange=(route-action 'updateFilter')
+          as |option|
+        }}
+          {{option.name}}
+        {{/power-select}}
+      {{/tools.filter}}
+      
+      {{#tools.filter 
+        label='Topic'
+      }}
+        {{#power-select 
+          options=(append (hash type='tag' name='---' slug=null) model.tags)
+          searchPlaceholder="Select topic"
+          selected=selections.tag
+          searchField="name"
+          onchange=(route-action 'updateFilter')
+          as |option|
+        }}
+          {{option.name}}
+        {{/power-select}}
+        
+      {{/tools.filter}}
+    {{/with}}
+  {{/gem-search-tools}}
+  
+  {{outlet}}
 </section>

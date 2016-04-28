@@ -1,19 +1,29 @@
 .videos-page {
-  // TODO: this should probably be a mixin
   @include outer-container(100%);
+  // TODO: this should probably be a mixin
   padding: 20px;
 
-  .video-card {
-    margin-bottom: 20px;
+  .video-cards {
+    @include outer-container(100%);
     
-    @include media($tablet) {
-      @include span-columns(6);
-      @include omega(2n);
-    }
-    @include media($mobile) {
-      @include span-columns(12);
-    }
+    .video-card {
+      margin-bottom: 20px;
+      
+      @include media($tablet) {
+        @include span-columns(6);
+        @include omega(2n);
+      }
+      @include media($mobile) {
+        @include span-columns(12);
+      }
+    }    
   }
+
+ 
+ .gem-search-tools {
+   @include span-columns(12);
+   margin-bottom: $base-spacing;
+ }
   
   .gem-pagination {
     @include span-columns(12);

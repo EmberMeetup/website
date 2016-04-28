@@ -11,7 +11,7 @@ Router.map(function() {
   this.route('conferences');  
   this.route('conference', { path: 'conferences/:slug' });
   this.route('pages', { path: 'pages/:slug' });
-  this.route('videos');
+  this.route('videos', function() {});
   this.route('video', { path: 'videos/:slug' });
 });
 

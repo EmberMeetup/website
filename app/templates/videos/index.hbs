@@ -1,0 +1,7 @@
+<div class="video-cards">
+  {{#each model as |video|}}
+    {{video-card model=video size='large'}}
+  {{/each}}
+</div>
+
+{{gem-pagination page=model.meta.page total-pages=model.meta.total-pages}}

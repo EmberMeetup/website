@@ -11,7 +11,7 @@ export default Ember.Component.extend({
     return this.get('page') + 1;
   }),
   
-  hasNext: computed('next', function(){
+  hasNext: computed('next', 'total-pages', function(){
     return this.get('next') <= this.get('total-pages');
   }),
   

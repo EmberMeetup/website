@@ -3,9 +3,11 @@ $base-border-radius: 3px;
 $base-spacing: 1.5em;
 
 @import "bourbon";
-
 @import "neat";
 @import "grid-settings";
+
+@import "ember-power-select";
+
 @import '_colors';
 @import '_type';
 @import '_buttons';
@@ -29,6 +31,7 @@ $base-separator: 1px solid transparentize($dark-gray, 0.9);
 @import 'components/_responsive-vimeo-video';
 @import 'components/_video-card';
 @import 'components/_gem-pagination';
+@import 'components/_gem-search-tools';
 
 .max-width {
   max-width: $maxWidth;
