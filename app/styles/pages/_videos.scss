@@ -14,4 +14,8 @@
       @include span-columns(12);
     }
   }
+  
+  .gem-pagination {
+    @include span-columns(12);
+  }
 }

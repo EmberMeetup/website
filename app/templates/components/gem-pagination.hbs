@@ -1,0 +1,6 @@
+{{#if hasPrevious}}
+  {{#link-to (query-params page=previous) title="Go to previous page"}}&larr;{{/link-to}}
+{{/if}}
+{{#if hasNext}}
+  {{#link-to (query-params page=next) title="Go to next page"}}&rarr;{{/link-to}}
+{{/if}}

@@ -28,6 +28,7 @@ $base-separator: 1px solid transparentize($dark-gray, 0.9);
 @import 'components/_box-noimage';
 @import 'components/_responsive-vimeo-video';
 @import 'components/_video-card';
+@import 'components/_gem-pagination';
 
 .max-width {
   max-width: $maxWidth;
