@@ -8,5 +8,6 @@ const {
 } = DS;
 
 export default Model.extend(EventMixin, PostMixin, {
-  template: attr()
+  number: attr(),
+  season: attr()
 });
