@@ -3,8 +3,8 @@
 {{else}}
   {{#each topics as |topic|}}
     {{gem-topics-topic
-      image=topic.presenter.featured
-      title=topic.presenter.title
+      image=topic.presenter.featured.url
+      title=topic.title
       description=topic.excerpt
       by-line=topic.presenter.title
     }}  

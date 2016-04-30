@@ -1,17 +1,3 @@
-section.conference {
-  @include display(flex);
-  @include flex-direction()
-
-  aside {
-    @include flex(1);
-    @include box-ordinal-group(1);
-    order: 2;
-  }
-  article {
-    @include flex(4);
-    @include box-ordinal-group(0);
-    order: 1;
-  }
+.conference {
+  
 }
-
-@include span-columns(6);

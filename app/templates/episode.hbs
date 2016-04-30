@@ -1,7 +1,11 @@
-<h2>{{model.slug}} - {{model.title}}</h2>
+{{nav-header}}
 
-<ul>
-  {{#each model.presentationTopics as |topic|}}
-    <li>{{topic.duration}} - {{{topic.title}}} - {{topic.presenter.title}}</li>
-  {{/each}}
-</ul>
+<div class="episode-page">
+  <main>
+    <div class="page-hero">
+      <h1 class="page-title">{{model.title}}</h1>
+    </div>
+    {{gem-topics topics=model.presentationTopics}}
+  </main>
+</div>
+

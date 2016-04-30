@@ -1,0 +1,12 @@
+.episode-page {
+  @include outer-container(100%);
+  padding: 20px;
+  
+  main {
+    @include media($tablet) {
+      @include span-columns(12);
+    }
+  }
+  
+  
+}
