@@ -33,6 +33,7 @@ $base-separator: 1px solid transparentize($dark-gray, 0.9);
 @import 'components/_video-card';
 @import 'components/_gem-pagination';
 @import 'components/_gem-search-tools';
+@import 'components/_gem-episode-call-to-action';
 
 .max-width {
   max-width: $maxWidth;

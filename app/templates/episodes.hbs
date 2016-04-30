@@ -9,6 +9,9 @@
           <h4 class="frame-title">Episode {{episode.number}}</h4>
           <h2 class="episode-title">{{#link-to 'episode' episode.slug}}{{episode.title}}{{/link-to}}</h2>
           <div class="episode-date"><strong>{{moment-format episode.eventDate 'MMMM DD, YYYY'}}</strong> at {{moment-format episode.eventDate 'h:mm a'}}</div>
+          
+          {{gem-episode-call-to-action episode=episode}}
+
       </div>
       <div class="episodes-pages--frame episode-topics-frame">
         <h4 class="frame-title">Topics</h4>

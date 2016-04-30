@@ -25,6 +25,10 @@ module.exports = function(environment) {
     
     disqus: {
       shortname: 'embermeetup'
+    },
+    
+    moment: {
+      includeTimezone: '2010-2020'
     }
     
   };

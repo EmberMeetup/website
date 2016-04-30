@@ -9,7 +9,7 @@ const {
 export default Ember.Mixin.create({
   presenters: hasMany('presenter', {async: true}),
   presentationTopics: hasMany('presentation-topic', {async: true}),
-  eventDate: attr('date'),
+  eventDate: attr('pods-datetime'),
   duration: attr('number'),
   bigmarker: attr()
 });

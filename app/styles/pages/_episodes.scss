@@ -31,7 +31,7 @@
     .episode-title {
       margin: -0.25em 0 0.25em 0;
       
-      a {
+      &, a {
         text-decoration: none;
         font-size: 28px;
         color: $red;
