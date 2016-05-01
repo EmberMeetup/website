@@ -1,8 +1,7 @@
 import Ember from 'ember';
 
 const {
-  RSVP,
-  get
+  RSVP
 } = Ember;
 
 export default Ember.Route.extend({
@@ -21,24 +20,22 @@ export default Ember.Route.extend({
   
   isFirstTime: true,
   
-  model(params) {
-    
+  model() {
+     
     if ( this.get('isFirstTime') ) {
       this.set('isFirstTime', false);
       
       return RSVP.hash({
         categories: this.store.findAll('category'),
         tags: this.store.findAll('tag'),
-        episodes: this.store.findAll('episode'),
-        params
+        episodes: this.store.findAll('episode')
       });
     }
     
     return RSVP.hash({
       categories: this.store.peekAll('category'),
       tags: this.store.peekAll('tag'),
-      episodes: this.store.peekAll('episode'),
-      params
+      episodes: this.store.peekAll('episode')
     });
   }
 });

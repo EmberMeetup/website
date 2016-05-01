@@ -18,11 +18,47 @@
       }
     }    
   }
-
+  
+  .filter-text {
+    text-transform: uppercase;
+    color: $dark-gray;
+  }
+  
+  .filter-title {
+    margin-top: 0;
+  }  
  
  .gem-search-tools {
    @include span-columns(12);
    margin-bottom: $base-spacing;
+   position: relative;
+   min-height: 60px;
+   
+  .episode-code {
+    text-transform: uppercase;
+  }
+   
+   .expand-trigger {
+     @include transition(color 0.25s ease-in 0s);
+     position: absolute;
+     top: 10px;
+     right: 10px;
+     z-index: 1;
+     
+     border: none;
+     background: none;
+     color: $blue;
+     cursor: pointer;
+     
+     &:hover {
+       color: $darkerBlue;
+     }     
+   }
+   
+   &.is-expanded .expand-trigger {
+     color: $darkerBlue;
+   }
+   
  }
   
   .gem-pagination {

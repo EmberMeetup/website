@@ -1,28 +1,51 @@
 <section class="videos-page">
   
-  {{#gem-search-tools as |tools|}}    
+  {{#gem-search-tools
+    is-expanded=filters
+    as |tools|
+  }}    
     {{#tools.filter 
       models=model.episodes
       label='Episodes'
       as |episode|
     }}
-      {{#link-to (query-params episode=episode.slug category=null tag=null)}}<span class="episode-code">{{episode.slug}}</span> - {{episode.title}}{{/link-to}}
+      {{#link-to (query-params episode=episode.slug category=null tag=null filters=false)}}<span class="episode-code">{{episode.slug}}</span> - {{episode.title}}{{/link-to}}
     {{/tools.filter}}
     {{#tools.filter 
       models=model.categories
       label='Categories'
       as |category|
     }}
-      {{#link-to (query-params category=category.slug episode=null tag=null)}}{{category.name}}{{/link-to}}
+      {{#link-to (query-params category=category.slug episode=null tag=null filters=false)}}{{category.name}}{{/link-to}}
     {{/tools.filter}}
     {{#tools.filter 
       models=model.tags
       label='Tags'
       as |tag|
     }}
-      {{#link-to (query-params tag=tag.slug category=null episode=null)}}{{tag.name}}{{/link-to}}
+      {{#link-to (query-params tag=tag.slug category=null episode=null filters=false)}}{{tag.name}}{{/link-to}}
     {{/tools.filter}}
   {{/gem-search-tools}}
+  
+  {{#with (or 
+      (if episode (find-by 'slug' episode model.episodes))
+      (if tag (find-by 'slug' tag model.tags))
+      (if category (find-by 'slug' category model.categories))
+    ) as |active|
+  }}
+    {{#if active}}
+      <div class="filter-text">
+        {{#if (eq active.constructor.modelName 'tag')}}
+          Videos tagged with
+        {{else if (eq active.constructor.modelName 'category')}}
+          Videos in category
+        {{else}}
+          Videos from episode
+        {{/if}}        
+      </div>
+      <h1 class="filter-title">{{or active.title active.name}}</h1>
+    {{/if}}
+  {{/with}}
   
   {{outlet}}
 </section>

@@ -1,5 +1,8 @@
-<div class="filters">
-  {{yield (hash
-    filter=(component 'gem-search-tool-filter')
-  )}}
+<button class="expand-trigger" {{action (toggle "is-expanded" this)}}>{{fa-icon 'filter'}} Filters</button>
+<div class="filters">    
+  {{#liquid-if is-expanded}}
+    {{yield (hash
+      filter=(component 'gem-search-tool-filter')
+    )}}
+  {{/liquid-if}}    
 </div>
