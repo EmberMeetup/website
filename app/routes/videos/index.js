@@ -1,7 +1,8 @@
 import Ember from 'ember';
 
 const {
-  isEmpty
+  isEmpty,
+  get
 } = Ember;
 
 export default Ember.Route.extend({
@@ -13,12 +14,22 @@ export default Ember.Route.extend({
   },
   
   model({ page }) {
+    
+    let { category, tag, episode } = this.paramsFor('videos');
+
+    if (!isEmpty(episode)) {
+      return this.store.queryRecord('episode', {
+        filter: { 
+          name: episode 
+        } 
+      }).then(function(models){
+        return get(models, 'firstObject.presentationTopics');
+      });
+    }
 
     let filter = {
         meta_query: [ { key: 'has_video', 'value': 1 } ]
       };
-
-    let { category, tag } = this.paramsFor('videos');
     
     if (!isEmpty(category)) {
       filter['category_name'] = category;

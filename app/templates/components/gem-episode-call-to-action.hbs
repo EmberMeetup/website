@@ -3,7 +3,7 @@
   end=(moment-add (moment episode.eventDate) episode.duration 'minutes')
 ) as |event|}}
   {{#if (moment-is-after (now) event.end)}}
-    {{#link-to 'episode' episode class="button watch-videos"}}
+    {{#link-to 'videos' (query-params episode=episode.slug tag=null category=null page=1) class="button watch-videos"}}
       Watch
     {{/link-to}}
   {{else if (moment-is-after (now) event.date)}}

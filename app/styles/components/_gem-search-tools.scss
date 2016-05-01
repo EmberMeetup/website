@@ -2,4 +2,20 @@
 
 .gem-search-tools {
   @extend .search-tools;
+
+  background-color: lighten($skyBlue, 5%);
+  border: none;
+  
+  .filter > div {
+    border: none;
+  }
+  
+  a {
+    display: block;
+    padding: 5px;
+  }
+  
+  .episode-code {
+    text-transform: uppercase;
+  }
 }

@@ -1,7 +1,7 @@
 <nav>
   {{link-to '' 'index' classNames="go-home" title="Go home"}}
   {{#if isCollapsible}}
-    <button {{action (action (toggle "isCollapsed" this))}} class="toggle-menu">Menu</button>
+    <button {{action (action (toggle "isCollapsed" this))}} class="toggle-menu">{{title}}</button>
     {{#liquid-if isCollapsed}}
       {{yield}}
     {{/liquid-if}}

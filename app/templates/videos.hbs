@@ -1,41 +1,27 @@
 <section class="videos-page">
-    
+  
   {{#gem-search-tools as |tools|}}    
-    {{#with (hash 
-        category=(if category (find-by 'slug' category model.categories))
-        tag=(if tag (find-by 'slug' tag model.tags))
-      ) as |selections|}}
-      {{#tools.filter 
-        label='Format'
-      }}
-        {{#power-select 
-          options=(append (hash type='category' name='---' slug=null) model.categories)
-          searchPlaceholder="Select format"
-          searchField="name"
-          selected=selections.category
-          onchange=(route-action 'updateFilter')
-          as |option|
-        }}
-          {{option.name}}
-        {{/power-select}}
-      {{/tools.filter}}
-      
-      {{#tools.filter 
-        label='Topic'
-      }}
-        {{#power-select 
-          options=(append (hash type='tag' name='---' slug=null) model.tags)
-          searchPlaceholder="Select topic"
-          selected=selections.tag
-          searchField="name"
-          onchange=(route-action 'updateFilter')
-          as |option|
-        }}
-          {{option.name}}
-        {{/power-select}}
-        
-      {{/tools.filter}}
-    {{/with}}
+    {{#tools.filter 
+      models=model.episodes
+      label='Episodes'
+      as |episode|
+    }}
+      {{#link-to (query-params episode=episode.slug category=null tag=null)}}<span class="episode-code">{{episode.slug}}</span> - {{episode.title}}{{/link-to}}
+    {{/tools.filter}}
+    {{#tools.filter 
+      models=model.categories
+      label='Categories'
+      as |category|
+    }}
+      {{#link-to (query-params category=category.slug episode=null tag=null)}}{{category.name}}{{/link-to}}
+    {{/tools.filter}}
+    {{#tools.filter 
+      models=model.tags
+      label='Tags'
+      as |tag|
+    }}
+      {{#link-to (query-params tag=tag.slug category=null episode=null)}}{{tag.name}}{{/link-to}}
+    {{/tools.filter}}
   {{/gem-search-tools}}
   
   {{outlet}}

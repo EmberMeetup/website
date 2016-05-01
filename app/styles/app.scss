@@ -36,6 +36,11 @@ $base-separator: 1px solid transparentize($dark-gray, 0.9);
 @import 'components/_gem-search-tools';
 @import 'components/_gem-episode-call-to-action';
 
+a {
+  color: $darkerBlue;
+  text-decoration: none;
+}
+
 .max-width {
   max-width: $maxWidth;
 }

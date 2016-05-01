@@ -1,7 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  queryParams: ['category', 'tag'],
+  queryParams: ['category', 'tag', 'episode'],
   category: null,
-  tag: null
+  tag: null,
+  episode: null
 });

@@ -2,7 +2,9 @@
   <label>{{label}}</label>
 {{/if}}
 <div>
-  <div class="fiter-list">
-    {{yield}}
+  <div class="filter-list">
+    {{#each models as |model|}}
+      {{yield model}}
+    {{/each}}
   </div>
 </div>

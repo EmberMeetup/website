@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 const {
   RSVP,
-  getProperties
+  get
 } = Ember;
 
 export default Ember.Route.extend({
@@ -12,6 +12,9 @@ export default Ember.Route.extend({
       refreshModel: true
     },
     tag: {
+      refreshModel: true
+    },
+    episode: {
       refreshModel: true
     }
   },
@@ -25,7 +28,8 @@ export default Ember.Route.extend({
       
       return RSVP.hash({
         categories: this.store.findAll('category'),
-        tags: this.store.peekAll('tag'),
+        tags: this.store.findAll('tag'),
+        episodes: this.store.findAll('episode'),
         params
       });
     }
@@ -33,17 +37,8 @@ export default Ember.Route.extend({
     return RSVP.hash({
       categories: this.store.peekAll('category'),
       tags: this.store.peekAll('tag'),
+      episodes: this.store.peekAll('episode'),
       params
     });
-  },
-  
-  actions: {
-    
-    updateFilter(item) {
-      let {slug, type} = getProperties(item, 'slug', 'type');
-      
-      this.transitionTo({ queryParams: { [type]: slug, page: 1 } });
-    }
-    
   }
 });
