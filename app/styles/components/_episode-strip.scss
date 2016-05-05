@@ -1,0 +1,194 @@
+.episode-strip {
+  @include clearfix;
+  
+  margin-bottom: $base-spacing;
+  padding-top: $base-spacing;
+  
+  border-top: 3px solid transparentize($dark-gray, 0.9);
+  
+  .liquid-container {
+    clear: both;
+  }
+  
+  
+}
+
+.episode-strip--frame {
+    height: 100%;
+    position: relative;
+    
+    .frame-title {
+      margin: 0 0 $base-spacing / 2 0;
+      padding-bottom: 0.25em;
+          
+      color: black;
+      font-weight: lighter;
+      
+      border-bottom: $base-separator;
+    }
+
+    .frame-rows {
+      @include clearfix;
+      margin: 0;
+      padding: 0;
+          
+      list-style-type: none;
+    }
+
+    .frame-row {
+      @include clearfix;
+      min-height: 65px;
+      border-bottom: $base-separator;
+      
+      .row-title {
+        margin: 0;
+        font-size: 24px;
+      }
+      
+      p {
+        margin: 0;
+        font-size: 18px;
+      }
+      
+      &:last-of-type {
+        margin-bottom: 0;
+        border-bottom: none;
+      }
+    }
+
+    .row-thumbnail {
+      height: 60px;
+      float: left;
+      border-radius: $base-border-radius;
+      margin-right: 10px;
+      padding-top: 2px;
+    }
+  }
+
+
+.episode-strip--frame.title-frame {
+  
+  @include media($mobile, $tablet) {
+    @include span-columns(12);
+  }
+  
+  @include media($desktop, $jumbo) {
+    @include span-columns(4);
+  }
+  
+  .episode-buttons {    
+    margin: $base-spacing / 2 0;
+    
+    .button {
+      display: inline-block;
+      padding: 3px 20px 3px 20px;
+
+      font-size: 22px;
+      color: white;
+      border-radius: 25px;
+
+      text-decoration: none;    
+      border: none;
+    }
+    
+    .expand-details {
+      background: $blue;
+      border-radius: 20px;
+    }
+    
+    .watch-videos, .bigmarker-rsvp {
+      @include transition(background-color 0.25s ease-in 0s);
+      background-color: $dark-green;
+      
+      &:hover {
+        background-color: lighten($dark-green, 5%);
+      }
+    }
+    
+    .bigmarker-live {
+      @include transition(background-color 0.25s ease-in 0s);
+      background-color: $red;
+      
+      &:hover {
+        background-color: lighten($dark-green, 5%);
+      }
+    }
+    
+    .sub-text {
+      font-size: 32px;
+      text-align: center;
+    }
+    
+  }
+
+  .episode-date {
+    color: $darkerBlue;      
+  }
+  
+  .episode-title {
+    margin: -0.25em 0 0.25em 0;
+    
+    &, a {
+      text-decoration: none;
+      font-size: 28px;
+      color: $red;
+    }
+  }
+}
+
+.episode-strip--frame.details-frame {
+  
+  @include media($mobile) {
+    
+    .frame-row {
+      padding: $base-spacing / 2 0;
+    }
+    
+    .topic-column {
+      margin-bottom: $base-spacing / 4;
+    }
+    
+    .topic-title, .presenter-title {
+      margin: 0;
+    }
+    
+    .topic-title {
+      font-size: 24px;
+    }
+    
+    .presenter-title {
+      font-size: 18px;
+    }
+    
+  }
+  
+  @include media($tablet) {
+    
+    .frame-row, .column-headings {
+      @include outer-container(100%);
+      
+      .topic-column, .guest-column, .frame-title {
+        @include span-columns(6);
+      }
+      
+    }
+    
+    .frame-title {
+      margin-bottom: 0;
+    }
+    
+    .frame-row {
+      padding: $base-spacing / 4 0;
+    }
+    
+  }
+  
+  @include media($desktop, $jumbo) {
+    @include span-columns(8);
+    
+    .frame-title {
+      font-size: 24px;
+    }
+  }
+  
+}

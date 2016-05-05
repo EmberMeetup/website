@@ -1,0 +1,22 @@
+{{#if (or media.isTablet media.isDesktop media.isJumbo)}}
+  <div class="column-headings">
+    <h5 class="frame-title topic-column">Topics</h5>
+    <h5 class="frame-title guest-column">Guests</h5>
+  </div>
+{{/if}}
+
+<ul class="frame-rows">
+  {{#each episode.presentationTopics as |topic|}}
+    <li class="frame-row">
+      <div class="topic-column">
+        <h4 class="row-title topic-title">{{topic.title}}</h4>
+        {{{topic.excerpt}}}
+      </div>
+      <div class="guest-column">
+        <img class="row-thumbnail" src={{topic.presenter.featured.thumbnail.url}} alt={{topic.presenter.title}}>
+        <h4 class="row-title presenter-title">{{topic.presenter.title}}</h4>
+        {{{topic.presenter.excerpt}}}
+      </div>
+    </li>
+  {{/each}}
+</ul>
