@@ -1,9 +1,26 @@
 {{#nav-header title="Menu"}}
-  {{link-to 'Conferences' 'conferences'}}
-  {{link-to 'Episodes' 'episodes'}}
+  {{link-to 'GEMconf' 'gemconf'}}
+  {{link-to 'The Ember Show' 'show'}}
   {{link-to 'Videos' 'videos' (query-params page=1 category=null tag=null)}}
 {{/nav-header}}
 
 {{liquid-outlet}}
 
-{{gem-footer}}
+{{#gem-footer}}
+  <ul>
+    <li><h3>For you</h3></li>
+    <li>{{link-to 'GEMconf' 'gemconf'}}</li>
+    <li>{{link-to 'The Ember Show' 'show'}}</li>
+    <li>{{link-to 'Videos' 'videos'}}</li>
+  </ul>
+  <ul>
+    <li><h3>Contribute</h3></li>
+    <li>{{link-to 'Give a talk' 'pages' 'speak'}}</li>
+    <li>{{link-to 'Become a sponsor' 'pages' 'sponsorship'}}</li>
+  </ul>
+  <ul>
+    <li><h3>Follow Us</h3></li>
+    <li><a href="https://twitter.com/embermeetup">Twitter</a></li>
+    <li><a href="https://vimeo.com/globalembermeetup">Vimeo</a></li>
+  </ul>
+{{/gem-footer}}
