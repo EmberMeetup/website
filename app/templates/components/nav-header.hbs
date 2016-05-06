@@ -1,11 +1,15 @@
-<nav>
-  {{link-to '' 'index' classNames="go-home" title="Go home"}}
-  {{#if isCollapsible}}
-    <button {{action (action (toggle "isCollapsed" this))}} class="toggle-menu">{{title}}</button>
-    {{#liquid-if isCollapsed}}
+{{#if headData.image}}
+  {{hero-image hero=headData.image}}
+{{else}}
+  <nav>
+    {{link-to '' 'index' classNames="go-home" title="Go home"}}
+    {{#if isCollapsible}}
+      <button {{action (action (toggle "isCollapsed" this))}} class="toggle-menu">{{title}}</button>
+      {{#liquid-if isCollapsed}}
+        {{yield}}
+      {{/liquid-if}}
+    {{else}}
       {{yield}}
-    {{/liquid-if}}
-  {{else}}
-    {{yield}}
-  {{/if}}
-</nav>
+    {{/if}}
+  </nav>
+{{/if}}

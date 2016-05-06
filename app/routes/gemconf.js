@@ -20,7 +20,17 @@ export default Route.extend({
   },
   
   afterModel(model) {
-    this.set('headData.title', get(model, 'title'));
+    this.setProperties({
+      'headData.title': get(model, 'title'),
+      'headData.image': get(model, 'featured.url')
+    });
+  },
+  
+  deactivate() {
+    this.setProperties({
+      'headData.title': null,
+      'headData.image': null
+    });
   }
   
 });

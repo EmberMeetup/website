@@ -1,4 +1,4 @@
-{{#if image}}
+{{#if (and image (not media.isMobile))}}
   <div class="box-content--img">
     <img src={{image}}>
   </div>
