@@ -1,0 +1,12 @@
+<!-- `app/templates/head.hbs` -->
+<!-- Add content you wish automatically added to the documents head -->
+<!-- here. The 'model' available in this template can be populated by -->
+<!-- setting values on the 'head-data' service. -->
+{{#if model.title}}
+<title>{{model.title}} | Global Ember Meetup</title>
+<meta property="og:title" content={{model.title}} />
+{{else}}
+<title>Global Ember Meetup</title>
+{{/if}}
+
+<meta name="description" content="">

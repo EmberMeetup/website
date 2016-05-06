@@ -1,6 +1,14 @@
 import Ember from 'ember';
 
-export default Ember.Route.extend({
+const {
+  inject,
+  get,
+  Route
+} = Ember;
+
+export default Route.extend({
+  
+  headData: inject.service(),
   
   model({slug}) {
     return this.store.query('conference', {
@@ -9,6 +17,10 @@ export default Ember.Route.extend({
       // TODO: replace this when is fixed https://github.com/emberjs/data/pull/4300#issuecomment-214479678
       return model.get('firstObject');
     });
+  },
+  
+  afterModel(model) {
+    this.set('headData.title', get(model, 'title'));
   }
   
 });
