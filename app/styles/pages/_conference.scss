@@ -1,3 +1,68 @@
 .conference {
+  @include outer-container(100%);
+
+  .box-content {
+    padding: 0 $base-spacing;
+    margin: $base-spacing 0;
+  }
   
+  .box-content:first-of-type {
+    margin-top: 0;
+  }
+  
+  .box-callout {
+    padding: $base-spacing;
+  }
+  
+  .has-margin-bottom {
+    margin-bottom: $base-spacing;
+  }
+  
+  .has-margin-top {
+    margin-top: $base-spacing;
+  }
+  
+  main {
+    @include outer-container(100%);
+  }
+  
+  article {
+    @include media($mobile) {
+      @include span-columns(12);
+    }
+    @include media($desktop) {
+      @include span-columns(8);
+    }
+  }
+  
+  aside {
+    @include media($mobile) {
+      @include span-columns(12);
+    }
+    @include media($desktop) {
+      @include span-columns(4);
+    }
+    padding: 0 $base-spacing;
+    
+    .box-content {
+      padding: 0;
+    }
+    
+    .gem-cards {
+      @include outer-container(100%);
+      
+      .gem-cards--card {
+        @include media($mobile) {
+          @include span-columns(12);
+        }
+        @include media($tablet) {
+          @include span-columns(6);
+        }
+        @include media($desktop) {
+          @include span-columns(12);
+        }
+      }
+    }
+  }
+
 }

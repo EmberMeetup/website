@@ -1,7 +1,4 @@
 .gem-topics {
-  max-width: 1000px;
-  margin: 0 auto;
-  margin-bottom: 0.75em;
   
   .gem-topics--topic {
     $gem-topics-gutter: 1.4em;
@@ -14,9 +11,7 @@
     // border-bottom: $base-separator;
     display: table;
     margin-bottom: $base-spacing;
-    padding-bottom: 1em;
     width: 100%;
-    background-color: $light-gray;
     @include outer-container(100%);
 
     .gem-topics--image,
@@ -26,21 +21,11 @@
     }
 
     .gem-topics--image {
-      // padding-right: $gem-topics-gutter;
-      @include media($tablet) {
-        @include span-columns(2);
-      }
-      @include media($mobile) {
-        @include span-columns(2);
-      }
-      @include media($desktop) {
-        @include span-columns(5);
-      }
-      padding-left: 12px;
-      padding-top: 12px;
+      @include span-columns(2);
+      line-height: 0;
+      
       > img {
         border-radius: $base-border-radius;
-        // display: block;
         height: auto;
         max-width: none;
         padding: $gem-topics-image-padding;
@@ -55,16 +40,8 @@
     }
 
     .gem-topics--content {
-      padding-top: 10px;
-      @include media($tablet) {
-        @include span-columns(10);
-      }
-      @include media($mobile) {
-        @include span-columns(10);
-      }
-      @include media($desktop) {
-        @include span-columns(7);
-      }
+      @include span-columns(10);
+
       p.gem-topics--detail {
         color: $gem-topics-detail-color;
         font-size: 0.9em;
@@ -86,13 +63,15 @@
       color: $blue;
     }
     
-    &:last-child {
+    &:last-of-type {
       margin-bottom: 0;
     }
   }
   
   
   &.is-aside {
+    padding: 12px;    
+    background-color: $light-gray;    
     
     .gem-topics--title {
       font-size: 24px;
@@ -105,6 +84,13 @@
       line-height: 18px;
     }
     
+    .gem-topics--image {
+      @include span-columns(3);
+    }
+    
+    .gem-topics--content {
+      @include span-columns(9);
+    }
   }
 
 }

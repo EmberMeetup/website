@@ -28,7 +28,6 @@ $base-separator: 1px solid transparentize($dark-gray, 0.9);
 @import 'components/_gem-sponsor-links';
 @import 'components/_gem-footer';
 @import 'components/_gem-cards';
-@import 'components/_box-noimage';
 @import 'components/_responsive-vimeo-video';
 @import 'components/_video-card';
 @import 'components/_gem-pagination';
@@ -51,4 +50,8 @@ a {
 
 .gem-article {
   margin: 0 30px;
+}
+
+.no-top-margin {
+  margin-top: 0;
 }

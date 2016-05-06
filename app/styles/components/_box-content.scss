@@ -1,24 +1,28 @@
 .box-content {
-  @include outer-container(100%);
-  max-width: $maxWidth;
-  margin: 0 auto;
-
-  padding: 30px;
   
-  &.has-image .box-content--content {
-    // padding-left: 45px;
-  }
-}
+  &.has-image {
+    @include outer-container(100%);
 
-.box-content--img { 
-  // $tablet: new-breakpoint(min-width 768px);
-  @include media($tablet) {
-    @include span-columns(4);
-  }
-}
+    .box-content--img {
+      padding: $base-spacing;
 
-.box-content--content {
-  @include media($tablet) {
-    @include span-columns(8);
+      @include media($mobile) {
+        padding: 0;
+        @include span-columns(12);
+      }
+      @include media($tablet) {
+        @include span-columns(4);
+      }
+    }
+
+    .box-content--content {
+      @include media($mobile) {
+        @include span-columns(12);
+      }
+      @include media($tablet) {
+        @include span-columns(8);
+      }
+    }   
   }
+  
 }

@@ -1,12 +1,6 @@
-<div class="box_content">
 {{#if image}}
-  <box class="box-content--img">
+  <div class="box-content--img">
     <img src={{image}}>
-  </box>
+  </div>
 {{/if}}
-{{#if image}}
-  <box class="box-content--content">{{yield}}</box>
-{{else}}
-  <box class="box-content--content">{{yield}}</box>
-{{/if}}
-</div>
+<div class="box-content--content">{{yield}}</div>

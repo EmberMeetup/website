@@ -5,7 +5,16 @@ const {
 } = Ember;
 
 export default Ember.Component.extend({
-  classNameBindings: [':box-callout', 'hasImage', 'imagePosition', 'isRed', 'isSkyBlue', 'isSky'],
+  classNameBindings: [
+    ':box-callout', 
+    'hasImage', 
+    'imagePosition', 
+    'isRed', 
+    'isSkyBlue', 
+    'isSky',
+    'has-margin-bottom',
+    'has-margin-top'
+  ],
   hasImage: computed.notEmpty('image'),
   imagePosition: computed('position', function(){
     let position = this.get('position');

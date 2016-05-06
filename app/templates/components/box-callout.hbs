@@ -1,17 +1,11 @@
-<div class="box-callout">
-  {{#if (and image (eq position 'left'))}}
-    <box class="box-callout--img-left" md=2 sm=4 xs=12>
-      <img src={{image}}>
-    </box>
-  {{/if}}
-  {{#if image}}
-    <box class="box-callout--content" md=10 sm=8 xs=12>{{yield}}</box>
-  {{else}}
-    <box class="box-callout--content" md=12 sm=8 xs=12>{{yield}}</box>
-  {{/if}}
-  {{#if (and image (eq position 'right'))}}
-    <box class="box-callout--img-right" md=2 sm=4 xs=12>
-      <img src={{image}}>
-    </box>
-  {{/if}}  
-</div>
+{{#if (and image (eq position 'left'))}}
+  <div class="box-callout--img-left">
+    <img src={{image}}>
+  </div>
+{{/if}}
+<div class="box-callout--content">{{yield}}</div>
+{{#if (and image (eq position 'right'))}}
+  <div class="box-callout--img-right">
+    <img src={{image}}>
+  </div>
+{{/if}}  
