@@ -1,5 +1,6 @@
 .box-callout {
   @include outer-container(100%);
+  margin: $base-spacing * 1.5 0;
   
   .box-callout--content {
    & > h1, & > h2, & > h3, & > h4 {

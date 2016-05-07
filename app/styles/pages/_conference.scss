@@ -3,7 +3,6 @@
 
   .box-content {
     padding: 0 $base-spacing;
-    margin: $base-spacing 0;
   }
   
   .box-content:first-of-type {
@@ -12,6 +11,10 @@
   
   .box-callout {
     padding: $base-spacing;
+  }
+  
+  .box-callout:last-of-type {
+    margin-bottom: 0;
   }
   
   .has-margin-bottom {
@@ -33,6 +36,10 @@
     @include media($desktop) {
       @include span-columns(8);
     }
+  }
+  
+  h2 {
+    margin: $base-spacing * 0.75 0;
   }
   
   aside {

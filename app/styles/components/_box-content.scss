@@ -4,7 +4,7 @@
     @include outer-container(100%);
 
     .box-content--img {
-      padding: $base-spacing;
+      padding: $base-spacing * 1.5 $base-spacing $base-spacing $base-spacing;
 
       @include media($mobile) {
         padding: 0;

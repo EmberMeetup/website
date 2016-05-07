@@ -14,6 +14,8 @@
     width: 100%;
     @include outer-container(100%);
 
+    font-size: 21.7px;
+
     .gem-topics--image,
     .gem-topics--content {
       // display: table-cell;
@@ -68,8 +70,10 @@
     }
   }
   
-  
-  &.is-aside {
+}
+
+
+.gem-topics.is-aside {
     padding: 12px;    
     background-color: $light-gray;    
     
@@ -85,6 +89,7 @@
     }
     
     .gem-topics--image {
+      margin-top: 4px;
       @include span-columns(3);
     }
     
@@ -92,5 +97,3 @@
       @include span-columns(9);
     }
   }
-
-}
