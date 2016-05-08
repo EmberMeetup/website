@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  
+
   model({season}) {
     return this.store.query('episode', {
       filter: {
@@ -9,5 +9,5 @@ export default Ember.Route.extend({
       }
     });
   }
-  
+    
 });

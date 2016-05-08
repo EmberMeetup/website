@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  
+
   model({slug}) {
     return this.store.query('presentation-topic', {
       filter: { name: slug }
@@ -10,5 +10,5 @@ export default Ember.Route.extend({
       return model.get('firstObject');
     });
   }
-  
+    
 });

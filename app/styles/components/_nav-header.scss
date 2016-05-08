@@ -21,6 +21,10 @@ header {
     background: none;
     border: none;
   }
+  
+  a.active {
+    font-weight: bold;
+  }
 
   .go-home {
     display: block;

@@ -1,7 +1,7 @@
 {{#nav-header title="Menu"}}
   {{link-to 'GEMconf' 'gemconf'}}
   {{link-to 'The Ember Show' 'show'}}
-  {{link-to 'Videos' 'videos' (query-params page=1 category=null tag=null)}}
+  {{link-to 'Videos' 'videos' (query-params page=1 category=null tag=null episode=null)}}
 {{/nav-header}}
 
 {{liquid-outlet}}
@@ -11,7 +11,7 @@
     <li><h3>For you</h3></li>
     <li>{{link-to 'GEMconf' 'gemconf'}}</li>
     <li>{{link-to 'The Ember Show' 'show'}}</li>
-    <li>{{link-to 'Videos' 'videos'}}</li>
+    <li>{{link-to 'Videos' 'videos' (query-params page=1 episode=null tag=null category=null)}}</li>
   </ul>
   <ul>
     <li><h3>Contribute</h3></li>
