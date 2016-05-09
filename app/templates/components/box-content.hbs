@@ -1,6 +1,5 @@
 {{#if (and image (not media.isMobile))}}
-  <div class="box-content--img">
-    <img src={{image}}>
+  <div class="box-content--img" style="background-image: url({{image}});">
   </div>
 {{/if}}
 <div class="box-content--content">{{yield}}</div>

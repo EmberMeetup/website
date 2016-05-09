@@ -7,7 +7,9 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('show', { path: 'the-ember-show' } );
-  this.route('gemconf');
+  this.route('gemconf', function() {
+    this.route('training');
+  });
   this.route('pages', { path: 'pages/:slug' });
   this.route('videos', function() {});
   this.route('video', { path: 'videos/:slug' });

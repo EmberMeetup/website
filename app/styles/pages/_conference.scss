@@ -29,7 +29,7 @@
     @include outer-container(100%);
   }
   
-  article {
+  .with-aside {
     @include media($mobile) {
       @include span-columns(12);
     }
@@ -59,9 +59,6 @@
       @include outer-container(100%);
       
       .gem-cards--card {
-        @include media($mobile) {
-          @include span-columns(12);
-        }
         @include media($tablet) {
           @include span-columns(6);
         }
@@ -71,5 +68,48 @@
       }
     }
   }
+}
 
+.conference .training {
+  @include outer-container(100%);
+
+  .columns {
+    @include outer-container(100%);
+  }
+  
+  .col-1, .col-2 {
+    @include clearfix;
+    
+    @include media($tablet) {
+      @include span-columns(6);
+    }
+  }
+  
+  .three-cards .gem-cards--card{
+    
+    @include media($tablet) {
+      @include span-columns(4);
+    }
+    
+  }
+  
+  .instructors {
+    img {
+      float: left;
+      max-width: 200px;
+      border-radius: 25px;
+    }
+    
+    .instructor h3, .instructor p {
+      margin-left: 225px;
+    }
+  }
+ 
+  .margin-bottom-0 {
+    margin-bottom: 0;
+  } 
+  
+  .box-content {
+    margin-bottom: $base-spacing * 2;
+  }
 }

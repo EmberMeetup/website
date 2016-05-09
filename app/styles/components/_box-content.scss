@@ -1,17 +1,21 @@
 .box-content {
+  @include clearfix;
   
   &.has-image {
     @include outer-container(100%);
 
     .box-content--img {
-      padding: $base-spacing * 1.5 $base-spacing $base-spacing $base-spacing;
-
+      margin: 25px 0;
+      height: 200px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right center;
+      
       @include media($mobile) {
-        padding: 0;
         @include span-columns(12);
       }
       @include media($tablet) {
-        @include span-columns(4);
+        @include span-columns(3);
       }
     }
 
@@ -20,7 +24,7 @@
         @include span-columns(12);
       }
       @include media($tablet) {
-        @include span-columns(8);
+        @include span-columns(9);
       }
     }   
   }

@@ -1,0 +1,183 @@
+<main class="training">
+  <article>
+    
+    {{#box-content 
+      classNames="intro"
+      image="http://embermeetup.com/wp-content/uploads/training.svg"
+    }}
+      <h2>Live training at GEMconf</h2>
+      <p>
+        This training is designed to quickly level up your Ember skills. 
+        The fast paced curriculum will focus on building a solid foundation 
+        in Ember and dive into advanced Ember techniques.
+      </p>
+    {{/box-content}}
+    
+    {{#box-content}}
+      <h2>Your Instructors</h2>
+      <div class="columns instructors">
+        <div class="col-1 instructor">
+          <img src="http://embermeetup.com/wp-content/uploads/Ea52Geux.png">
+          <h3>Chase McCarthy</h3>
+          <p class="subtext">Ember Weekend Co-Host & Senior Developer, Hashrocket</p>
+        </div>
+        <div class="col-2 instructor">
+          <img src="http://embermeetup.com/wp-content/uploads/jonathan-jackson-a8c641ae1a7950aead6c0d97448d5b58.png">
+          <h3>Jonathan Jackson</h3>
+          <p class="subtext">Ember Weekend Co-Host & Senior Developer, Hashrocket</p>
+        </div>
+      </div>
+    {{/box-content}}
+    
+    {{#box-content}}   
+      <h2 class="margin-bottom-0">Schedule</h2> 
+      <div class="columns">
+        <div class="col-1">
+          <h3>Day 1 - Ember.js Fast Track</h3>
+          <p class="red">Monday May 23, 2016, 9am-6pm</p>
+          <p>
+            Level up and develop a solid understanding of the Ember.js building blocks by utilizing 
+            advanced community driven solutions to common problems.
+          </p>
+          <p>
+            Some of the techniques we teach will include exploration into Ember's rich 
+            <a href="https://www.emberaddons.com/">add-on ecosystem</a>, 
+            <a href="http://emberobserver.com/categories/authentication">authorization / authentication</a>, 
+            and <a href="https://guides.emberjs.com/v2.3.0/testing/">advanced testing techniques</a>.
+          </p>
+          <p>
+            This day is great for developers who have zero Ember.js experience.
+          </p>
+          <p>
+            This course is also great for developers who understand Ember.js but need to 
+            develop a stronger understanding of how to utilize Ember.js to create ambitious web apps.
+          </p>
+          <h4>Key Concepts</h4>
+          <dl>
+            <dt>Creating a new project</dt>
+            <dd>Use <a href="http://ember-cli.com/">Ember CLI</a> to create a new project and go over the basic structure of an app.</dd>
+            <dt>Running the server</dt>
+            <dd>Serve an ember app in development.</dd>
+            <dt>Basic testing</dt>
+            <dd>Generate an acceptance test and run the <a href="https://guides.emberjs.com/v2.3.0/testing/">test suite</a>.</dd>
+            <dt>Promises</dt>
+            <dd>Introduce how Ember deals with asynchronous behavior.</dd>
+            <dt>Routes</dt>
+            <dd>Learn what gives structure to an Ember application.</dd>
+            <dt>Components</dt>
+            <dd>Share reusable templates and behavior.</dd>
+            <dt>Actions</dt>
+            <dd>Trigger changes based on user input.</dd>
+            <dt>Services</dt>
+            <dd>Move persistent state out of short lived components.</dd>
+            <dt>Add-ons</dt>
+            <dd>Utilize community driven and proven solutions.</dd>
+            <dt>Helpers</dt>
+            <dd>Extract small pieces of reusable template code.</dd>                  
+          </dl>
+        </div>
+        <div class="col-2">
+          <h3>Day 2 - Ember.js Expansion Track</h3>
+          <p class="red">Tuesday May 24, 2016, 9am-6pm PDT</p>
+          <p>
+            Attendance of Day 1 is not required, but recommended you understand 
+            all fundamental basics listed under key concepts.
+          </p>
+          <p>
+            Strengthen your Ember.js knowledge and level up your skills using the 
+            framework. We will also build on the foundation of the app we create in Day 1.
+          </p>
+          <p>
+              We'll start this day off with training focused on what to do when your app is 
+              more complete. We'll walk through the structure of a complex Ember app by showcasing 
+              key features listed below.
+          </p>
+          <h4>Key Concepts</h4>
+            <dl>
+              <dt>Advanced testing</dt>
+              <dd>
+                <ul>
+                  <li>Acceptance tests</li>
+                  <li>Page Objects</li>
+                  <li>Integration tests (components)</li>
+                  <li>Unit tests (helpers, routes, services)</li>
+                </ul>
+              </dd>
+              <dt>Authentication using Torii and Ember-Simple-Auth</dt>
+              <dd>
+                <ul>
+                  <li>Account creation</li>
+                  <li>Account update</li>
+                  <li>OAuth sign in</li>
+                </ul>
+              </dd>
+              <dt>APIs and EmberCLI Mirage</dt>
+              <dd>
+                <ul>
+                  <li>JSONAPI specification</li>
+                  <li>Mocking an API</li>
+                  <li>Live JSONAPI</li>
+                </ul>
+              </dd>
+              <dt>Ember Data</dt>
+              <dd>
+                <ul>
+                  <li>Creating a model</li>          
+                  <li>Persisting data</li>
+                </ul>
+              </dd>
+              <dt>Deployment</dt>
+              <dd>Deploy your Ember apps easily and confidently with <a href="http://ember-cli.com/ember-cli-deploy/">ember-cli-deploy</a>.</dd>
+              <dt>Sockets</dt>
+              <dd>Learn how to integrate real-time data into Ember Data with sockets.</dd>
+            </dl>
+        </div>
+      </div>
+    {{/box-content}}
+
+    {{#box-content}}
+      <h2>Learn Remotely</h2>
+      
+      {{#gem-cards classNames="three-cards" as |cards|}}
+        {{#cards.card 'Day 1 - Fast Track'}}
+          <p>This training is designed to quickly level up your Ember skills.</p>
+          <a class="button red-button" href={{model.eventbrite}}>$349</a>
+        {{/cards.card}}
+
+        {{#cards.card 'Day 2 - Expansion'}}
+          <p>Strengthen your Ember.js knowledge and level up your skills using the framework.</p>
+          <a class="button red-button" href={{model.eventbrite}}>$349</a>
+        {{/cards.card}}
+        
+        {{#cards.card 'Day 1 & Day 2 - Complete'}}
+          <p>Everything you need to build your first Ember.js application.</p>
+          <a class="button red-button" href={{model.eventbrite}}>$599</a>
+        {{/cards.card}}
+      {{/gem-cards}}
+      
+    {{/box-content}}
+    
+    {{#box-content}}
+    
+      <h2>Learn in Redwood City, CA</h2>      
+      {{#gem-cards classNames="three-cards" as |cards|}}
+        {{#cards.card 'Day 1 - Fast Track'}}
+          <p>This training is designed to quickly level up your Ember skills.</p>
+          <a class="button red-button" href={{model.eventbrite}}>$599</a>
+        {{/cards.card}}
+
+        {{#cards.card 'Day 2 - Expansion'}}
+          <p>Strengthen your Ember.js knowledge and level up your skills using the framework.</p>
+          <a class="button red-button" href={{model.eventbrite}}>$599</a>
+        {{/cards.card}}
+        
+        {{#cards.card 'Day 1 & Day 2 - Complete'}}
+          <p>Everything you need to build your first Ember.js application.</p>
+          <a class="button red-button" href={{model.eventbrite}}>$1099</a>
+        {{/cards.card}}
+      {{/gem-cards}}
+      
+    {{/box-content}}
+    
+  </article>
+</main>
