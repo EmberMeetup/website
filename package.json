@@ -40,6 +40,7 @@
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^1.2.0",
     "ember-composable-helpers": "0.22.1",
+    "ember-crumbly": "1.0.2",
     "ember-data": "^2.4.2",
     "ember-disqus": "0.2.0",
     "ember-export-application-global": "^1.0.5",
