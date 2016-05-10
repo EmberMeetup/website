@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "ember build",
-    "start": "./node_modules/.bin/ember fastboot",
+    "start": "ember fastboot",
     "test": "ember test"
   },
   "repository": "",
