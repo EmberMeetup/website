@@ -20,3 +20,4 @@ testem.log
 .env.deploy.*
 .DS_Store
 jsconf.json
+fastboot-dist
