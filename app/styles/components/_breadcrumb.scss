@@ -1,0 +1,20 @@
+.breadcrumb {
+  
+  ol {
+    list-style: none;
+  }
+  
+  li {
+    display: inline-block;
+    
+    &:after {
+      content: '\003E';
+      font-weight: bold;
+    }
+    
+    &:last-of-type:after {
+      content: none;
+    }
+  }
+  
+}
