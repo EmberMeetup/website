@@ -12,12 +12,12 @@
         Watch
       {{/link-to}}
     {{else if (moment-is-after (now) event.date)}}
-      <a href={{episode.bigmarker}} class="button cta-button bigmarker-live">
+      <a href={{episode.bigmarker}} class="button cta-button bigmarker-live" target="_blank">
         <span class="bigmarker-logo">BigMarker</span>
         <span class="sub-text">LIVE on</span>
       </a>
     {{else}}
-      <a href={{episode.bigmarker}} class="button cta-button bigmarker-rsvp">
+      <a href={{episode.bigmarker}} class="button cta-button bigmarker-rsvp" target="_blank">
         <span class="sub-text">RSVP on</span>
         <span class="bigmarker-logo">BigMarker</span>      
       </a>
