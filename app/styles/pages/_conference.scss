@@ -4,31 +4,31 @@
   .box-content {
     padding: 0 $base-spacing;
   }
-  
+
   .box-content:first-of-type {
     margin-top: 0;
   }
-  
+
   .box-callout {
     padding: $base-spacing;
   }
-  
+
   .box-callout:last-of-type {
     margin-bottom: 0;
   }
-  
+
   .has-margin-bottom {
     margin-bottom: $base-spacing;
   }
-  
+
   .has-margin-top {
     margin-top: $base-spacing;
   }
-  
+
   main {
     @include outer-container(100%);
   }
-  
+
   .with-aside {
     @include media($mobile) {
       @include span-columns(12);
@@ -37,11 +37,11 @@
       @include span-columns(8);
     }
   }
-  
+
   h2 {
     margin: $base-spacing * 0.75 0;
   }
-  
+
   aside {
     @include media($mobile) {
       @include span-columns(12);
@@ -50,14 +50,14 @@
       @include span-columns(4);
     }
     padding: 0 $base-spacing;
-    
+
     .box-content {
       padding: 0;
     }
-    
+
     .gem-cards {
       @include outer-container(100%);
-      
+
       .gem-cards--card {
         @include media($tablet) {
           @include span-columns(6);
@@ -76,40 +76,58 @@
   .columns {
     @include outer-container(100%);
   }
-  
+
   .col-1, .col-2 {
     @include clearfix;
-    
+
     @include media($tablet) {
       @include span-columns(6);
     }
   }
-  
+
   .three-cards .gem-cards--card{
-    
+
     @include media($tablet) {
       @include span-columns(4);
     }
-    
+
   }
-  
+
   .instructors {
     img {
       float: left;
       max-width: 200px;
       border-radius: 25px;
     }
-    
+
     .instructor h3, .instructor p {
       margin-left: 225px;
     }
   }
- 
+
   .margin-bottom-0 {
     margin-bottom: 0;
-  } 
-  
+  }
+
   .box-content {
     margin-bottom: $base-spacing * 2;
+  }
+}
+
+.gem-agenda-content {
+  h2 {
+    text-align: center;
+  }
+}
+.gem-agenda {
+  table {
+    margin: 0 auto;
+  }
+}
+.gemconf-sponsors.box-callout {
+  .box-callout--content {
+    text-align: center;
+    float: none;
+    margin: 0 auto !important;
   }
 }
