@@ -1,8 +1,11 @@
 module.exports = function(deployTarget) {  
   return {
-    pagefront: {
-      app: 'embermeetup',
-      key: process.env.PAGEFRONT_KEY
+    'gcloud': {
+      bucket: 'global-ember-meetup-frontend',
+      key: 'fastboot-release.json'      
+    },
+    'gcloud-storage': {
+        bucket: 'global-ember-meetup-frontend'
     }
   };
 };

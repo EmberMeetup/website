@@ -9,6 +9,9 @@ module.exports = function(defaults) {
         'bower_components/neat/app/assets/stylesheets',
         'bower_components/refills/source/stylesheets/refills'
       ]      
+    },
+    fingerprint: {
+      prepend: 'https://storage.googleapis.com/global-ember-meetup-frontend/'
     }
   });
 

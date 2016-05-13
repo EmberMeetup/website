@@ -21,3 +21,6 @@ testem.log
 .DS_Store
 jsconf.json
 fastboot-dist
+
+.idea
+.vscode
