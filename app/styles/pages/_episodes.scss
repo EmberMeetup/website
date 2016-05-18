@@ -1,9 +1,0 @@
-.episodes-page {
-  @include outer-container(100%);
-  padding: 20px;
-  
-  $gw-column: 100px;
-  $gw-gutter: 20px;
- 
-  @import 'grid/private';
-}
