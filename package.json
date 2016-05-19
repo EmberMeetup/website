@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "ember build",
-    "start": "ember fastboot",
+    "start": "ember fastboot --serve-assets",
     "test": "ember test",
     "deploy": "GCLOUD_PROJECT=global-ember-meetup-frontend ember deploy production"
   },

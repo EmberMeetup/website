@@ -10,7 +10,10 @@ export default HeadDataService.extend({
   change(props) {
     this.setProperties(merge({
       title: null,
-      image: null
+      image: null,
+      classNames: null,
+      heroTitle: null,
+      heroSubTitle: null
     }, props));
   }
   

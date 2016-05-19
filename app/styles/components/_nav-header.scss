@@ -1,6 +1,5 @@
-header {
+.nav-header {
   background: $skyBlue;
-  padding: 0 20px;
   
   nav {
     @include clearfix;
@@ -11,6 +10,11 @@ header {
     color: $darkerBlue;
     text-transform: uppercase;
     text-decoration: none;
+  }
+
+  .go-home {    
+    text-indent: -2000px;
+    background: url(images/gem-flag.svg) center top no-repeat;
   }
 
   .toggle-menu {
@@ -24,17 +28,6 @@ header {
   
   a.active {
     font-weight: bold;
-  }
-
-  .go-home {
-    display: block;
-    float: left;
-    width: 70px;
-    height: 100px;
-    padding: 40px 20px;
-    
-    text-indent: -2000px;
-    background: url(images/gem-flag.svg) center top no-repeat;
   }
 
   @include media($mobile) {
@@ -64,4 +57,45 @@ header {
     }
   }
   
+}
+
+.nav-header.no-hero { 
+  .go-home {
+    display: block;
+    float: left;
+    width: 70px;
+    height: 100px;
+    padding: 40px 20px;
+  }
+}
+
+.nav-header.with-hero {
+  h1 {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .go-home{
+    position: absolute;
+    top: 0;
+      
+    @include media($mobile) {
+      left: 20px;
+      height: 70px;
+      width: 49px;
+    }
+
+    @include media($tablet) {
+      left: 20px;
+      height: 120px;
+      width: 84px;
+    }
+      
+    @include media($desktop) {
+      left: 120px;
+      height: 180px;
+      width: 126px;
+    }   
+  }
 }
