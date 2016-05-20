@@ -15,8 +15,23 @@
   .go-home {    
     text-indent: -2000px;
     background: url(images/gem-flag.svg) center top no-repeat;
-  }
+  }  
+}
 
+.nav-header.no-hero { 
+  nav {
+    padding: 0 20px;
+  }
+  
+  .go-home {
+    display: block;
+    float: left;
+    width: 70px;
+    height: 100px;
+    padding: 40px 20px;
+  }
+  
+  
   .toggle-menu {
     display: inline-block;
     margin-top: 30px;
@@ -56,21 +71,6 @@
       padding: 40px 20px;
     }
   }
-  
-}
-
-.nav-header.no-hero { 
-  nav {
-    padding: 0 20px;
-  }
-  
-  .go-home {
-    display: block;
-    float: left;
-    width: 70px;
-    height: 100px;
-    padding: 40px 20px;
-  }
 }
 
 .nav-header.with-hero {
@@ -83,6 +83,7 @@
   .go-home{
     position: absolute;
     top: 0;
+    z-index: 1;
       
     @include media($mobile) {
       left: 20px;
