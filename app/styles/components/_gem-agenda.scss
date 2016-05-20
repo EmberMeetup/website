@@ -1,19 +1,23 @@
-// .gem-agenda {
-//   max-width: 800px;
-//   margin: 0 auto;
-// }
-
 .gem-agenda-container {
   @include outer-container(100%);
 }
 .gem-agenda-item--time {
+  text-align: right;
   @include media($tablet) {
-    @include span-columns(4);
+    @include span-columns(3);
   }
 }
 
 .gem-agenda-item--description {
   @include media($tablet) {
-    @include span-columns(8);
+    @include span-columns(9);
+  }
+}
+
+.gem-agenda-heading {
+  .gem-agenda-item--time, .gem-agenda-item--description {
+    border-bottom: 2px solid $skyBlue;
+    padding-bottom: 3px;
+    margin-bottom: 3px;
   }
 }

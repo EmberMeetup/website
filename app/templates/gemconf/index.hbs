@@ -68,24 +68,25 @@
 
 {{#box-content class='gem-agenda-content'}}
   <h2>Schedule</h2>
-
+    
   {{#gem-agenda as |agenda|}}
+    {{agenda.heading 'San Francisco' 'Description'}}
     {{agenda.item '9:00' 'Gathering'}}
-    {{agenda.item '9:30' 'Keynote by Taras and Tracy'}}
-    {{agenda.item '10:00' "What's up in Emberland? with EmberWeekend"}}
-    {{agenda.item '10:15' 'Showdown of Speakers'}}
-    {{agenda.item '10:30' 'Speaker 1'}}
-    {{agenda.item '11:15' 'Ember Game'}}
-    {{agenda.item '11:25' 'Speaker 2'}}
-    {{agenda.item '12:05' 'Lunch'}}
-    {{agenda.item '1:00' 'Lightning Talks'}}
-    {{agenda.item '1:20' 'Speaker 3'}}
-    {{agenda.item '1:55' 'Ember Jeopardy'}}
-    {{agenda.item '2:10' 'Speaker 4'}}
-    {{agenda.item '2:55' 'Closing Keynote'}}
-    {{agenda.item '3:00' 'Snack Break'}}
-    {{agenda.item '3:15' 'Contributor Workshop'}}
-    {{agenda.item '6:30' 'End'}}
+    {{agenda.item '9:30' 'Keynote'}}
+    {{agenda.item '10:00' "What's up in Emberland?"}}
+    {{agenda.item '10:15' 'Building excellent engineering culture by Juan Pablo Buritica'}}
+    {{agenda.item '11:00' 'Ember Game'}}    
+    {{agenda.item '11:10' 'CSS is Impossible by Chris Thoburn'}}    
+    {{agenda.item '12:00' 'Lunch'}}
+    {{agenda.item '13:00' 'Lightning Talks'}}
+    {{agenda.item '13:20' 'Living Immutably by Charles Lowell'}}
+    {{agenda.item '14:05' 'Ember Jeopardy'}}
+    {{agenda.item '14:20' 'Building an ambitious open source application by Joel Worrall'}}
+    {{agenda.item '15:05' 'Building Real-Time Applications with Websockets by Ben Limmer'}}
+    {{agenda.item '15:50' 'Closing Keynote'}}
+    {{agenda.item '16:00' 'Snack Break'}}
+    {{agenda.item '16:15' 'Contributor Workshop'}}
+    {{agenda.item '6:30' 'Long break until next GEMconf'}}
   {{/gem-agenda}}
 {{/box-content}}
 
