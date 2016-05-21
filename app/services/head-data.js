@@ -13,7 +13,9 @@ export default HeadDataService.extend({
       image: null,
       classNames: null,
       heroTitle: null,
-      heroSubTitle: null
+      heroSubTitle: null,
+      buttonUrl: null,
+      buttonText: null
     }, props));
   }
   

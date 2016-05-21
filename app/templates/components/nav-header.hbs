@@ -4,6 +4,11 @@
   {{#if headData.heroSubTitle}}
     <span class="font-bree-semibold hero-sub-title">{{headData.heroSubTitle}}</span>
   {{/if}}
+  {{#if withButton}}
+    <div class="call-to-action">
+      <a class="button red-button" href={{headData.buttonUrl}}>{{headData.buttonText}}</a>
+    </div>
+  {{/if}}
 {{else}}
   <nav>
     {{link-to '' 'index' classNames="go-home" title="Go home"}}
