@@ -29,7 +29,7 @@
     "ember-cli-dependency-checker": "^1.2.0",
     "ember-cli-deploy": "0.6.1",
     "ember-cli-deploy-build": "0.1.1",
-    "ember-cli-deploy-gcloud": "0.1.0",
+    "ember-cli-deploy-gcloud": "0.1.1",
     "ember-cli-deploy-gcloud-storage": "taras/ember-cli-deploy-gcloud-storage",
     "ember-cli-fastboot": "ember-fastboot/ember-cli-fastboot#v1.0.0-beta.1",
     "ember-cli-google-fonts": "2.3.0",
