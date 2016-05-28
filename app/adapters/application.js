@@ -7,5 +7,5 @@ export default JSONAPIAdapter.extend({
     const url = this.buildURL(type.modelName, null, null, 'findAll');
     
     return this.ajax(url, 'GET', { data: { paged: -1 } });
-  },
+  }
 });

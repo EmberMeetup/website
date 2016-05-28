@@ -1,21 +1,32 @@
 .video-card {
-  
-  &--image {
-    width: 100%;
-  }
+  background: $skyBlue;
+  height: 100%;
+  width: 100%;
+}
 
-  &--title {
-    margin-top: 0;
-    
-    a {
-      text-decoration: none;
-      color: $darkerBlue;
-    }
-  }
+.video-card--title, .video-card--presenter {
+  position: absolute;
+}
+
+.video-card--title {
   
-  &.is-medium {
-    .video-card--title {
-      font-size: 18px;
-    }
-  }
+}
+
+.video-card--presenter {
+  width: 100%;
+  top: 250px;
+}
+
+.video-card--presenter-avatar {
+  border-radius: 100px;
+  max-width: 125px;
+  float: left;
+}
+
+.video-card--presenter-name {
+  margin-left: 125px;
+}
+
+.video-card--presenter-twitter {
+  margin-left: 125px;  
 }

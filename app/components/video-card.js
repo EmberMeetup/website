@@ -10,4 +10,6 @@ export default Ember.Component.extend({
   size: 'medium',
   
   isMedium: computed.equal('size', 'medium')
+}).reopenClass({
+  positionalParams: ['model']
 });

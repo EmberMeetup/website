@@ -4,7 +4,7 @@ import PostMixin from './post-mixin';
 
 const { 
   hasMany, 
-  attr 
+  attr
 } = DS;
 
 export default Model.extend(PostMixin, {

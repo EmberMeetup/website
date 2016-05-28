@@ -1,11 +1,12 @@
-{{#link-to 'video' model.slug}}
-  <img class="video-card--image" src={{get model (concat 'featured.' size '.url')}}>
-{{/link-to}}
 <h3 class="video-card--title">
-  {{#link-to 'video' model.slug}}
-    {{model.title}} by {{model.presenter.title}}
-  {{/link-to}}
+    {{model.title}}
 </h3>
-{{#if show-excerpt}}
-  <div class="video-card--excerpt">{{model.excerpt}}</div>
-{{/if}}
+<div class="video-card--presenter">
+  <img src={{model.presenter.featured.thumbnail.url}} class="video-card--presenter-avatar" alt="{{model.presenter.title}} avatar">
+  <h4 class="video-card--presenter-name">{{model.presenter.title}}</h4>
+  {{#if model.presenter.twitter}}
+    <a class="video-card--presenter-twitter" href={{twitter-url model.presenter.twitter}}>
+      @{{model.presenter.twitter}}
+    </a>
+  {{/if}}
+</div>

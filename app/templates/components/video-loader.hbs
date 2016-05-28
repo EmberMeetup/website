@@ -1,0 +1,11 @@
+{{one-way-input slug onenter=(action 'load')}}
+
+<div class="video-loader--content">
+  {{#if state.isLoaded}}
+    {{yield state.model}}
+  {{else if state.isLoading}}
+    Loading...
+  {{else if state.isError}}
+    <span class="error">{{state.message}}</span>
+  {{/if}}
+</div>

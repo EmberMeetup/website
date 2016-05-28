@@ -1,0 +1,8 @@
+<div class="thumbnails-page">
+  {{#video-loader slug
+    onload=(action (mut slug))
+    as |video|
+  }}
+    {{video-card video}}
+  {{/video-loader}}
+</div>

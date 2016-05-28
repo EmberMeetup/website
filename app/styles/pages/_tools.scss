@@ -1,0 +1,13 @@
+.thumbnails-page {
+  padding: 20px;
+  
+  .video-loader {
+    width: 715px;
+    height: 402.54px;
+  }
+    
+  .video-loader--content {
+    padding: 20px;    
+    @include clearfix;
+  }
+}
