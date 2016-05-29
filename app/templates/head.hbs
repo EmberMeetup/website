@@ -3,10 +3,31 @@
 <!-- here. The 'model' available in this template can be populated by -->
 <!-- setting values on the 'head-data' service. -->
 {{#if model.title}}
-<title>{{model.title}} on Global Ember Meetup</title>
-<meta property="og:title" content={{model.title}} />
+  <title>{{model.title}} on Global Ember Meetup</title>
+  <meta property="og:title" content={{model.title}} />
+  <meta name="twitter:title" content={{model.title}}>
 {{else}}
-<title>Global Ember Meetup</title>
+  <title>Global Ember Meetup</title>
 {{/if}}
 
-<meta name="description" content="">
+{{#if model.description}}
+  <meta name="description" content={{model.description}}>
+  <meta name="og:description" content={{model.description}}>
+  <meta name="twitter:description" content={{model.description}}>
+{{/if}}
+
+{{#if model.image}}
+	<meta name="twitter:image" content={{model.image}}>
+  <meta name="og:image" content={{model.image}}>
+{{/if}}
+
+{{#if model.twitter:creator}}
+  	<meta name="twitter:creator" content={{model.twitter:creator}}>
+{{/if}}
+
+<meta name="twitter:card" content={{model.twitter:card}}>   
+<meta name="twitter:site" content="@EmberMeetup">
+
+{{#if model.twitter:player}}
+    <meta name="twitter:player" content={{model.twitter:player}}>
+{{/if}}
