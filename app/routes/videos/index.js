@@ -18,13 +18,7 @@ export default Ember.Route.extend({
     let { category, tag, episode } = this.paramsFor('videos');
 
     if (!isEmpty(episode)) {
-      return this.store.queryRecord('episode', {
-        filter: { 
-          name: episode 
-        } 
-      }).then(function(models){
-        return get(models, 'firstObject.presentationTopics');
-      });
+      return this.store.queryRecordBySlug('episode', episode);
     }
 
     let filter = {
@@ -41,7 +35,8 @@ export default Ember.Route.extend({
     
     return this.store.query('presentation-topic', {
       filter,
-      page
+      page,
+      per_page: 9
     });
   }
   
