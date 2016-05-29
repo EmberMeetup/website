@@ -1,6 +1,11 @@
 <div class="video-card--header">
-  <h3 class="video-card--title">{{model.title}}</h3>
+  <h3 class="video-card--title">
+    {{#link-to 'video' model classNames='red'}}
+      {{model.title}}
+    {{/link-to}}
+  </h3>
 </div>
+{{#if show-presenter}}
 <div class="video-card--body">
   <div class="video-card--presenter">
     <img src={{model.presenter.featured.thumbnail.url}} class="video-card--presenter-avatar" alt="{{model.presenter.title}} avatar">
@@ -17,8 +22,9 @@
     </div>
   </div>
 </div>
-{{#if hasFooter}}
+{{/if}}
+{{#if show-footer}}
 <div class="video-card--footer">
-    
+    {{#link-to 'video' model class="button small red red-outline"}}Watch Video{{/link-to}}
 </div>
 {{/if}}

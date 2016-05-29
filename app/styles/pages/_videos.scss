@@ -7,15 +7,8 @@
     
     .medium-card-holder {
       margin-bottom: 20px;
-      
-      @include media($mobile) {
-        height: 260px;
-      }
-      
-      @include media($tablet) {
-        height: 320px;
-      }
-      
+      height: 260px;  
+                  
       @include media($desktop) {
         @include span-columns(4);
         @include omega(3n);

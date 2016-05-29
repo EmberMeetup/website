@@ -19,7 +19,7 @@
       <div class="video-page--related">
         <h3 class="video-page--section-title">Related Videos</h3>
         {{#each model.related as |video|}}
-          {{video-card model=video size='medium'}}
+          {{video-card model=video size='small' show-presenter=false show-footer=true}}
         {{/each}}
       </div>
     {{/if}}

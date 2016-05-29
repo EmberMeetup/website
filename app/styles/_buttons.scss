@@ -1,15 +1,23 @@
-.button {
+.button { 
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 25px;
   
-  &.red-button {
-    display: inline-block;
-    
+  text-decoration: none; 
+  line-height: 28px;
+  
+  &.red-button {    
     background: $red;
     color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
-    
-    text-decoration: none;
-    line-height: 28px;
+  }
+  
+  &.small {
+    font-size: 22px;
+    line-height: 22px;
+  }
+  
+  &.red-outline {
+    border: 1px solid $red;
   }
   
 }
