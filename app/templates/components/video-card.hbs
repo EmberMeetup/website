@@ -24,15 +24,26 @@
 </div>
 {{/if}}
 {{#if show-footer}}
-<div class="video-card--footer">
   {{#event-status (or model.episode model.conference)
     as |event|
   }}
-    {{#if (and event.isFinished model.hasVideo)}}
-      {{#link-to 'video' model class="button small red red-outline"}}Watch Video{{/link-to}}
-    {{else if event.isHappening}}
-      
-    {{/if}}
+    {{#with (hash
+      hasVideo=(and event.isFinished model.hasVideo)
+      ) as |footer|
+    }}
+      <div class="video-card--footer {{if footer.hasVideo 'with-video' 'with-cta'}}">
+        {{#if footer.hasVideo}}
+          {{#link-to 'video' model class="button small red red-outline"}}Watch Video{{/link-to}}
+        {{else}}
+          <p>
+            Watch live on <strong>
+              {{moment-format event.event.eventDate 'LLLL' timeZone='America/New_York'}} 
+              {{moment-tz-guess 'z'}}
+            </strong><br>
+            <a href="http://bit.ly/the-ember-show" class="red">bit.ly/the-ember-show</a>
+          </p>
+        {{/if}}
+      </div>
+    {{/with}}
   {{/event-status}}
-</div>
 {{/if}}

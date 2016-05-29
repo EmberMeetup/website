@@ -1,6 +1,7 @@
 import DS from 'ember-data';
 import Model from 'ember-data/model';
 import PostMixin from './post-mixin';
+import Ember from 'ember';
 
 const { 
   belongsTo, 
@@ -19,5 +20,5 @@ export default Model.extend(PostMixin, {
   related: hasMany('presentation-topic'),
   episode: belongsTo(),
   conference: belongsTo(),
-  hasVideo: notEmpty('vimeo')  
+  hasVideo: notEmpty('vimeo')
 });

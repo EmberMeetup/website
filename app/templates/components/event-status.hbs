@@ -1,11 +1,12 @@
 {{#with (hash 
   date=(moment event.eventDate)
   end=(moment-add (moment event.eventDate) episode.duration 'minutes')
-) as |event|}}
+) as |_event|}}
   {{yield (hash
-    date=event.date
-    end=event.end
-    isFinished=(moment-is-after (now) event.end)
-    isHappening=(and (moment-is-after (now) event.date) (moment-is-before (now) event.end))
+    event=event
+    date=_event.date
+    end=_event.end
+    isFinished=(moment-is-after (now) _event.end)
+    isHappening=(and (moment-is-after (now) event.date) (moment-is-before (now) _event.end))
   )}}
 {{/with}}

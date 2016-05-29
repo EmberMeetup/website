@@ -23,12 +23,12 @@
 
   &--footer {
     flex: 1;
-    margin-bottom: 10px;    
+    margin-bottom: 10px; 
   }
 
   &--title {
     margin: auto;
-    
+        
     text-align: center;
   }
 
@@ -79,6 +79,14 @@
 
   &--presenter-twitter {  
     color: $blue;
+  }
+  
+  &--footer.with-cta {
+    text-align: center;    
+    
+    p {
+      margin: 0;
+    }
   }
   
   .button.small {
