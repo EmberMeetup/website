@@ -2,31 +2,71 @@
   background: $skyBlue;
   height: 100%;
   width: 100%;
-}
-
-.video-card--title, .video-card--presenter {
-  position: absolute;
-}
-
-.video-card--title {
   
-}
+  display: flex;
+  flex-direction: column;
+  
+  &--header, &--body, &--footer {    
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+  }
+  
+  &--header {
+    flex: 1;    
+  }
+  
+  &--body {
+    flex: 2;
+  }
 
-.video-card--presenter {
-  width: 100%;
-  top: 250px;
-}
+  &--footer {
+    flex: 1;
+  }
 
-.video-card--presenter-avatar {
-  border-radius: 100px;
-  max-width: 125px;
-  float: left;
-}
+  &--title {
+    margin: auto;
+    padding: 0 10%;
+    
+    text-align: center;
+    font-family: 'Bree';
+  }
 
-.video-card--presenter-name {
-  margin-left: 125px;
-}
+  &--presenter {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    
+    font-family: 'Dosis';
+  }
 
-.video-card--presenter-twitter {
-  margin-left: 125px;  
+  &--info {
+    padding-left: 15px;
+    margin: auto 0;
+  }
+
+  &--presenter-avatar {
+    border-radius: 15px;
+
+    height: 112px;
+    width: 112px;
+  }
+
+  &--presenter-name {
+    margin: 0;
+    color: $darkerBlue;
+    font-weight: bold;
+  }
+
+  &--presenter-twitter {  
+    color: $blue;
+  }
+  
+  @include media($tablet) {
+    &--title, &--presenter-name {
+      font-size: 40px;      
+    }        
+  }
+  
 }

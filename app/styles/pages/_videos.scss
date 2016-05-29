@@ -1,22 +1,27 @@
 .videos-page {
   @include outer-container(100%);
-  // TODO: this should probably be a mixin
   padding: 20px;
-
+  
   .video-cards {
     @include outer-container(100%);
     
-    .video-card {
+    .medium-card-holder {
       margin-bottom: 20px;
       
-      @include media($tablet) {
-        @include span-columns(6);
-        @include omega(2n);
-      }
       @include media($mobile) {
-        @include span-columns(12);
+        height: 260px;
       }
-    }    
+      
+      @include media($tablet) {
+        height: 320px;
+      }
+      
+      @include media($desktop) {
+        @include span-columns(4);
+        @include omega(3n);
+      }      
+    }
+    
   }
   
   .filter-text {

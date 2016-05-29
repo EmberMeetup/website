@@ -1,6 +1,8 @@
 <div class="video-cards">
   {{#each model as |video|}}
-    {{video-card model=video size='large'}}
+    <div class="medium-card-holder">
+      {{video-card model=video size='large'}}
+    </div>
   {{/each}}
 </div>
 

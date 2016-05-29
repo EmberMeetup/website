@@ -5,11 +5,8 @@ const {
 } = Ember;
 
 export default Ember.Component.extend({
-  classNameBindings: [':video-card', 'isMedium'],
-  
-  size: 'medium',
-  
-  isMedium: computed.equal('size', 'medium')
+  classNameBindings: [':video-card', 'hasFooter'],
+  hasFooter: false
 }).reopenClass({
   positionalParams: ['model']
 });

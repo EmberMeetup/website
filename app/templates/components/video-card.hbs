@@ -1,12 +1,24 @@
-<h3 class="video-card--title">
-    {{model.title}}
-</h3>
-<div class="video-card--presenter">
-  <img src={{model.presenter.featured.thumbnail.url}} class="video-card--presenter-avatar" alt="{{model.presenter.title}} avatar">
-  <h4 class="video-card--presenter-name">{{model.presenter.title}}</h4>
-  {{#if model.presenter.twitter}}
-    <a class="video-card--presenter-twitter" href={{twitter-url model.presenter.twitter}}>
-      @{{model.presenter.twitter}}
-    </a>
-  {{/if}}
+<div class="video-card--header">
+  <h3 class="video-card--title">{{model.title}}</h3>
 </div>
+<div class="video-card--body">
+  <div class="video-card--presenter">
+    <img src={{model.presenter.featured.thumbnail.url}} class="video-card--presenter-avatar" alt="{{model.presenter.title}} avatar">
+    <div class="video-card--info">
+      <h4 class="video-card--presenter-name">{{model.presenter.title}}</h4>
+      {{#if model.presenter.twitter}}
+        <a class="video-card--presenter-twitter" 
+           href={{twitter-url model.presenter.twitter}}
+           title="Link to {{model.presenter.firstName}}'s Twitter"
+           target="_blank">
+          @{{model.presenter.twitter}}
+        </a>
+      {{/if}}      
+    </div>
+  </div>
+</div>
+{{#if hasFooter}}
+<div class="video-card--footer">
+
+</div>
+{{/if}}
