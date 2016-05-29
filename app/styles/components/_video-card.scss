@@ -11,7 +11,7 @@
     align-content: center;
     justify-content: space-around;
   }
-  
+    
   &--header {
     flex: 1;
     margin-top: 10px;
@@ -28,9 +28,28 @@
 
   &--title {
     margin: auto;
-    padding: 0 10%;
     
     text-align: center;
+  }
+
+  &.show-flag {
+    background: url(images/gem-flag.svg) 10px 0px no-repeat $skyBlue;
+    background-size: 80px 100px;
+    
+    .video-card--header {
+      padding-left: 100px;
+    }
+    
+    .video-card--title {
+      padding: 0 10px 0 0;
+      text-indent: -50px;
+    }
+  }
+  
+  &.no-flag {
+    .video-card--title {
+      padding: 0 10px;
+    }
   }
 
   &--presenter {
