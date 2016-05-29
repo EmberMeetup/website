@@ -15,7 +15,9 @@ Router.map(function() {
   this.route('video', { path: 'videos/:slug' });
 
   this.route('tools', function() {
-    this.route('thumbnails');
+    this.route('thumbnails', function() {
+      this.route('thumbnail', { path: ':slug' });
+    });
   });
 });
 

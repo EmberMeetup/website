@@ -18,7 +18,10 @@ export default Ember.Route.extend({
     let { category, tag, episode } = this.paramsFor('videos');
 
     if (!isEmpty(episode)) {
-      return this.store.queryRecordBySlug('episode', episode);
+      return this.store.queryRecordBySlug('episode', episode)
+        .then((episode = {})=>{
+          return get(episode, 'presentationTopics');
+        });
     }
 
     let filter = {

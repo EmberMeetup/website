@@ -25,6 +25,14 @@
 {{/if}}
 {{#if show-footer}}
 <div class="video-card--footer">
-    {{#link-to 'video' model class="button small red red-outline"}}Watch Video{{/link-to}}
+  {{#event-status (or model.episode model.conference)
+    as |event|
+  }}
+    {{#if (and event.isFinished model.hasVideo)}}
+      {{#link-to 'video' model class="button small red red-outline"}}Watch Video{{/link-to}}
+    {{else if event.isHappening}}
+      
+    {{/if}}
+  {{/event-status}}
 </div>
 {{/if}}

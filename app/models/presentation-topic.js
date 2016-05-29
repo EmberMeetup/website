@@ -8,9 +8,16 @@ const {
   hasMany
 } = DS;
 
+const {
+  computed: { notEmpty }
+} = Ember;
+
 export default Model.extend(PostMixin, {
-  presenter: belongsTo('presenter'),
+  presenter: belongsTo(),
   duration: attr('number'),
   vimeo: attr(),
-  related: hasMany('presentation-topic')
+  related: hasMany('presentation-topic'),
+  episode: belongsTo(),
+  conference: belongsTo(),
+  hasVideo: notEmpty('vimeo')  
 });

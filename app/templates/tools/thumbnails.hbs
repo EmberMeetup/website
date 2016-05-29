@@ -1,8 +1,10 @@
 <div class="thumbnails-page">
-  {{#video-loader slug
-    onload=(action (mut slug))
-    as |video|
-  }}
-    {{video-card video show-footer=true}}
-  {{/video-loader}}
+  <ul class="videos">
+    {{#each model as |video|}}
+      <li>{{link-to video.title 'tools.thumbnails.thumbnail' video}}</li>
+    {{/each}}
+  </ul>
+  <div class="details">
+    {{outlet}}  
+  </div>
 </div>

@@ -1,15 +1,14 @@
-{{#with (hash 
-  date=(moment episode.eventDate)
-  end=(moment-add (moment episode.eventDate) episode.duration 'minutes')
-) as |event|}}
-  {{#if (moment-is-after (now) event.end)}}
+{{#event-status episode
+  as |status|
+}}
+  {{#if status.isFinished}}
     {{#link-to 'videos' (query-params episode=episode.slug tag=null category=null page=1) class="button watch-videos"}}
       Watch
     {{/link-to}}
-  {{else if (moment-is-after (now) event.date)}}
+  {{else if status.isHappening}}
     <a href={{episode.bigmarker}} class="button bigmarker-live">
       <span class="bigmarker-logo">BigMarker</span>
-      <span class="sub-text">LIVE on</span>
+      <span class="sub-text">Happening Now on</span>
     </a>
   {{else}}
     <a href={{episode.bigmarker}} class="button bigmarker-rsvp">
@@ -17,4 +16,4 @@
       <span class="bigmarker-logo">BigMarker</span>      
     </a>
   {{/if}}
-{{/with}}
+{{/event-status}}

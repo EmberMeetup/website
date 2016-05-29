@@ -1,9 +1,23 @@
 .thumbnails-page {
   padding: 20px;
   
-  .video-loader--content {
-    width: 506px;
-    height: 253px;
+  .video-card-holder {
+    width: 600px;
+    height: 300px;
     padding: 20px;
   }
+  
+  .videos {
+    max-height: 700px;
+    overflow: auto;
+    float: left;
+  }
+   
+  .videos li {
+    list-style: none;
+  }
+ 
+  .details {
+    float: left;
+  }   
 }

@@ -6,6 +6,6 @@ export default JSONAPIAdapter.extend({
   findAll(store, type) {
     const url = this.buildURL(type.modelName, null, null, 'findAll');
     
-    return this.ajax(url, 'GET', { data: { paged: -1 } });
+    return this.ajax(url, 'GET', { data: { filter: { posts_per_page: 100 } } });
   }
 });
