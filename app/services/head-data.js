@@ -2,14 +2,14 @@ import Ember from 'ember';
 import HeadDataService from 'ember-cli-head/services/head-data';
 
 const {
-  merge
+  assign
 } = Ember;
 
 export default HeadDataService.extend({
   fastboot: Ember.inject.service(),
 
   change(props) {
-    this.setProperties(merge({
+    this.setProperties(assign({
       title: null,
       description: null,
       image: null,
