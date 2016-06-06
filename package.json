@@ -65,8 +65,5 @@
     "liquid-fire": "0.23.0",
     "loader.js": "^4.0.1",
     "memory-scroll": "0.2.0"
-  },
-  "dependencies": {
-    "ember-chimp": "0.1.0"
   }
 }
