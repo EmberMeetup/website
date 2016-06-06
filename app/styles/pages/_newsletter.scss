@@ -1,0 +1,23 @@
+.newsletter-page {
+  margin: 50px 0;
+  text-align: center;
+
+  .subscription-form {
+    margin: 50px 0;
+
+    input {
+      width: 300px;
+      display: inline-block;
+    }
+
+    input, button {
+      padding: 10px;
+    }
+        
+    button {
+      background: $red;
+      color: white;
+      border: 2px solid $red;
+    }
+  }
+}

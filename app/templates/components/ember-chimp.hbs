@@ -1,0 +1,26 @@
+{{#with (hash
+    input=(component 'one-way-email' value
+      update=(pipe (action (mut value)) (action 'valueDidChange'))
+      placeholder=placeholder
+      data-validate=true
+      name="EMAIL"
+    )
+    message=chimpSays
+    isLoading=isLoading
+    buttonText=(if isLoading loadingText buttonText)
+  ) as |form|}}
+ 
+  {{#if hasBlock}}
+
+    {{yield form}}
+
+  {{else}}
+
+   {{form.input}}<button type="submit">{{form.buttonText}}</button>
+   {{#if form.message}}
+    <div class="message">{{form.message}}</div>
+   {{/if}}
+
+  {{/if}}
+
+{{/with}}

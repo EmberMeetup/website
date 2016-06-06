@@ -4,7 +4,9 @@
   {{link-to 'Videos' 'videos' (query-params page=1 category=null tag=null episode=null)}}
 {{/nav-header}}
 
-{{liquid-outlet}}
+<div class={{concat (slugify currentRouteName) '-' 'page'}}>
+  {{liquid-outlet}}
+</div>
 
 {{#gem-footer}}
   <ul>

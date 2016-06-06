@@ -19,6 +19,7 @@ Router.map(function() {
       this.route('thumbnail', { path: ':slug' });
     });
   });
+  this.route('newsletter');
 });
 
 export default Router;
