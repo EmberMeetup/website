@@ -3,9 +3,9 @@
       {{#box-content
         image="https://embermeetup.com/wp-content/uploads/wifi-image.svg"
       }}
-        <h2>Broadcasting Live from San Francisco</h2>
+        <h2>Broadcasting Live from Triangle</h2>
         <p>
-          Join us in beautiful San Francisco for a free,
+          Join us in beautiful Triangle for a free,
           one–day Ember.js conference packed with informative tech talks,
           friendly competitions and non-stop fun.
         </p>
@@ -40,16 +40,15 @@
         {{#gem-cards as |cards|}}
           {{#cards.card 'Fast Track'}}
             <p>This training is designed to quickly level up your Ember skills.</p>
-            <p>Monday May 23, 2016, 9am-6pm PDT</p>
+            <p>Monday August 15, 2016, 9am-6pm EST</p>
             {{link-to 'Remote' 'gemconf.training' (query-params location='remote') classNames="button red-button"}}
-            {{link-to 'In San Francisco' 'gemconf.training' (query-params location='onsite') classNames="button red-button"}}
+            {{link-to 'In Durham' 'gemconf.training' (query-params location='onsite') classNames="button red-button"}}
           {{/cards.card}}
 
           {{#cards.card 'Expansion'}}
             <p>Strengthen your Ember.js knowledge and level up your skills using the framework.</p>
-            <p>Tuesday May 24, 2016, 9am-6pm PDT</p>
+            <p>Tuesday August 16, 2016, 9am-6pm EST</p>
             {{link-to 'Remote' 'gemconf.training' (query-params location='remote') classNames="button red-button"}}
-            {{link-to 'In San Francisco' 'gemconf.training' (query-params location='onsite') classNames="button red-button"}}
           {{/cards.card}}
         {{/gem-cards}}
       {{/box-content}}
@@ -70,7 +69,7 @@
   <h2>Schedule</h2>
     
   {{#gem-agenda as |agenda|}}
-    {{agenda.heading 'San Francisco' 'Description'}}
+    {{agenda.heading 'Triangle' 'Description'}}
     {{agenda.item '9:00' 'Gathering'}}
     {{agenda.item '9:30' 'Keynote'}}
     {{agenda.item '10:00' "What's up in Emberland?"}}
