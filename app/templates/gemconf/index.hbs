@@ -1,93 +1,122 @@
   <main>
-    <article class="with-aside">
+    <article>
       {{#box-content
         image="https://embermeetup.com/wp-content/uploads/wifi-image.svg"
       }}
-        <h2>Broadcasting Live from Triangle</h2>
+        <h2>Bringing Ember.js to The Research Triangle</h2>
         <p>
-          Join us in beautiful Triangle for a free,
-          one–day Ember.js conference packed with informative tech talks,
-          friendly competitions and non-stop fun.
+          GEMconf is an <strong>#emberjs</strong> conference that revolves around discussions, 
+          learning, and sharing ideas in the Ember.js community.
         </p>
       {{/box-content}}
 
       {{#box-content}}
 
-        <h2 class="give-whitespace">Err, so... fun, yes. And what am I going to learn?</h2>
+        <h2 class="give-whitespace center">What makes GEMconf different?</h2>
+
+        <p>Unlike any other conference you've been to, GEMconf is focused on engaging discussions after each talk to explore concepts and developments in technology and Ember.</p>
+
+        <p>Preceding GEMconf Conference Day is a free 4 Hour Intro to Ember and Rapid Prototyping Workshop.</p>
+
+        <p>Immediately following conference day is an intense 2 day workshop for beginners and intermediate Ember developers.</p>
+
+      {{/box-content}}
+
+      {{#box-content}}
+
+        <h2 class="give-whitespace center">The #GEMconf Schedule (8/12 - 8/16)</h2>
+
+        <h4>Friday 8/12</h4>
+
+        <p><strong>1pm-5pm</strong> - Free 4 Hour Intro to Ember and Rapid Prototyping Workshop with Taras Mankovski and Brendan O'Hara.</p>
+
+        <h4>Saturday 8/13</h4>
+        <p><strong>9am-5pm</strong> - GEMconf Conference Day & Talks at Bronto Software</p>
+
+        <h4>Monday 8/15</h4>
+        <p><strong>9am-530pm</strong> - Training & Workshop with Ember Fast Track with Ember Weekend</p>
+
+        <h4>Tuesday 8/16</h4>
+        <p><strong>9am-530pm</strong> - Training & Workshop with Ember Expansion Track with Ember Weekend</p>
+
+      {{/box-content}}
+
+      {{#box-content}}
+
+        <h2 class="give-whitespace center">Features</h2>
+
+        <h4>Friday 8/12</h4>
+
+        <p>Intro to Ember and Rapid Prototyping, a 4 hour workshop with Taras Mankovski and Brendan O'Hara</p>
+
+        <h4>Saturday 8/13</h4>
 
         {{gem-topics topics=model.presentationTopics}}
 
+        <p>Lightning Talks</p>
+        <p>Community led discussions</p>
+
+        <h4>Monday 8/15 & Tuesday 8/16</h4>
+
+        <p>Ember Fast Track & Expansion Pack training with Ember Weekend</p>
+
       {{/box-content}}
+
+
+    {{#box-callout
+      image="https://embermeetup.com/wp-content/uploads/2016/04/microphone.svg" position="right" backgroundColor="red"
+    }}
+      <h2>Lightning talks</h2>
+      <p>
+        If you're attending in person and would like to give a lightning talk.<br>
+        Send us an email <a href="mailto:t@embersherpa.com">t@embersherpa.com</a>
+      </p>
+    {{/box-callout}}
+
+    {{#box-content class='gem-agenda-content'}}
+      <h2 class="center">GEMconf Conference Day Schedule (8/13)</h2>
+        
+      {{#gem-agenda as |agenda|}}
+        {{agenda.heading 'Time' 'Description'}}
+
+        {{agenda.item '9:00' 'Gathering & Breakfast'}}
+        {{agenda.item '9:30' 'Keynote with Taras (@embersherpa) and Tracy (@ladyleet)'}}
+        {{agenda.item '10:00' 'Keynote with Todd Jordan (@tddjordan), Learning Core Team member'}}        
+
+        {{agenda.item '10:10' "What's up in Emberland with EmberWeekend (@emberweekend)"}}
+
+        {{agenda.item '10:20' 'Building an Open Source Commercial Application with Ember.js with Harvey Kandola (@harveykandola)'}}
+        {{agenda.item '10:50' 'Community Discussion'}}    
+
+        {{agenda.item '11:10' 'Cardstack CMS with Edward Faulkner (@eaf4)'}}    
+        {{agenda.item '11:40' 'Community Discussion'}}
+
+        {{agenda.item '12:00' 'Lunch'}}
+
+        {{agenda.item '13:00' 'Ember Jeopardy'}}
+        {{agenda.item '13:15' 'Lightning Talks'}}
+
+        {{agenda.item '13:30' "Reflections on Accessibility in the Workplace: from a Deaf Engineer's Perspective with James Tranovich (@cantsin_)"}}
+        {{agenda.item '14:00' 'Community Discussion'}}
+
+        {{agenda.item '14:25' 'Ember Game'}}
+
+        {{agenda.item '14:35' 'Landing your first PRs in the Ember Open Source Community with Tracy Lee (@ladyleet)'}}
+        {{agenda.item '15:05' 'Community Discussion'}}        
+
+        {{agenda.item '15:30' 'Ember Jeopardy'}}
+
+        {{agenda.item '15:45' 'Rapid prototyping with Ember.js by Brendan OHara'}}
+        {{agenda.item '16:15' 'Community Discussion'}}        
+
+        {{agenda.item '16:40' 'Closing Keynote'}}
+
+      {{/gem-agenda}}
+    {{/box-content}}
 
     </article>
-    <aside>
-      {{#box-content}}
-        <h2>Get your free ticket</h2>
-        {{#gem-cards as |cards|}}
-          {{#cards.card 'Participate in person'}}
-            <p>Participate in games and the contributor workshop.</p>
-            <a class="button red-button" href={{model.eventbrite}}>RSVP on Eventbrite</a>
-          {{/cards.card}}
 
-          {{#cards.card 'Participate online'}}
-            <p>Enjoy talks and discussion from the comfort of your home.</p>
-            <a class="button red-button" href={{model.bigmarker}}>RSVP on BigMarker</a>
-          {{/cards.card}}
-        {{/gem-cards}}
-      {{/box-content}}
-      {{#box-content}}
-        <h2>Training</h2>
-        {{#gem-cards as |cards|}}
-          {{#cards.card 'Fast Track'}}
-            <p>This training is designed to quickly level up your Ember skills.</p>
-            <p>Monday August 15, 2016, 9am-6pm EST</p>
-            {{link-to 'Remote' 'gemconf.training' (query-params location='remote') classNames="button red-button"}}
-            {{link-to 'In Durham' 'gemconf.training' (query-params location='onsite') classNames="button red-button"}}
-          {{/cards.card}}
-
-          {{#cards.card 'Expansion'}}
-            <p>Strengthen your Ember.js knowledge and level up your skills using the framework.</p>
-            <p>Tuesday August 16, 2016, 9am-6pm EST</p>
-            {{link-to 'Remote' 'gemconf.training' (query-params location='remote') classNames="button red-button"}}
-          {{/cards.card}}
-        {{/gem-cards}}
-      {{/box-content}}
-    </aside>
   </main>
-
-{{#box-callout
-  image="https://embermeetup.com/wp-content/uploads/2016/04/microphone.svg" position="right" backgroundColor="red"
-}}
-  <h2>Lightning talks</h2>
-  <p>
-    If you're attending in person and would like to give a lightning talk.<br>
-    Send us an email <a href="mailto:t@embersherpa.com">t@embersherpa.com</a>
-  </p>
-{{/box-callout}}
-
-{{#box-content class='gem-agenda-content'}}
-  <h2>Schedule</h2>
-    
-  {{#gem-agenda as |agenda|}}
-    {{agenda.heading 'Triangle' 'Description'}}
-    {{agenda.item '9:00' 'Gathering'}}
-    {{agenda.item '9:30' 'Keynote'}}
-    {{agenda.item '10:00' "What's up in Emberland?"}}
-    {{agenda.item '10:15' 'Building excellent engineering culture by Juan Pablo Buritica'}}
-    {{agenda.item '11:00' 'Ember Game'}}    
-    {{agenda.item '11:10' 'CSS is Impossible by Chris Thoburn'}}    
-    {{agenda.item '12:00' 'Lunch'}}
-    {{agenda.item '13:00' 'Lightning Talks'}}
-    {{agenda.item '13:20' 'Living Immutably by Charles Lowell'}}
-    {{agenda.item '14:05' 'Ember Jeopardy'}}
-    {{agenda.item '14:20' 'Building an ambitious open source application by Joel Worrall'}}
-    {{agenda.item '15:05' 'Building Real-Time Applications with Websockets by Ben Limmer'}}
-    {{agenda.item '15:50' 'Closing Keynote'}}
-    {{agenda.item '16:00' 'Snack Break'}}
-    {{agenda.item '16:15' 'Contributor Workshop'}}
-    {{agenda.item '6:30' 'Long break until next GEMconf'}}
-  {{/gem-agenda}}
-{{/box-content}}
 
 {{#box-callout backgroundColor="sky" class="gemconf-sponsors"}}
   <h2>Sponsors</h2>

@@ -58,9 +58,16 @@ header.gemconf {
 
 .conference {
   @include outer-container(100%);
+  $max-width: 1420px;  
+
+  .center {
+    text-align: center;
+  }
 
   .box-content {
     padding: 0 $base-spacing;
+    max-width: $max-width;
+    margin: 0 auto;
   }
 
   .box-content:first-of-type {
@@ -172,16 +179,6 @@ header.gemconf {
   }
 }
 
-.gem-agenda-content {
-  h2 {
-    text-align: center;
-  }
-}
-.gem-agenda {
-  table {
-    margin: 0 auto;
-  }
-}
 .gemconf-sponsors.box-callout {
   .box-callout--content {
     text-align: center;
