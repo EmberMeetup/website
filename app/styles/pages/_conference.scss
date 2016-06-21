@@ -158,6 +158,12 @@ header.gemconf {
 
   }
 
+  .two-cards .gem-cards--card{
+    @include media($tablet) {
+      @include span-columns(6);
+    }
+  }
+
   .instructors {
     img {
       float: left;
