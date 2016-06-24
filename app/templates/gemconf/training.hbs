@@ -1,24 +1,32 @@
 <main class="training">
-  
+
   {{bread-crumbs tagName="ol" linkable=true}}
-  
+
   <article>
-    
-    {{#box-content 
+
+    {{#box-content
       classNames="intro"
       image="https://embermeetup.com/wp-content/uploads/training.svg"
     }}
       <h2>Live training at GEMconf</h2>
-      <p>
-        We are offering 2 training courses as part of GEMconf Triangle, Fundamentals & Advanced. Whether you're looking for a solid understanding of all the fundamentals needed to be an effective Ember developer, or looking to dive deeper into the issues that face developers of larger, more complex Ember apps, we've got you covered. Both are intensive learning experiences, aiming to accelerate your career by ensuring a complete understanding of the topics covered.
+      <h3>We are offering 2 training courses as part of GEMconf Triangle, Fundamentals & Advanced.</h3>
+      <p>        
+        Whether you're looking for a solid understanding of all the fundamentals needed to be an effective 
+        Ember developer, or looking to dive deeper into the issues that face developers of larger, more 
+        complex Ember apps, we've got you covered. Both are intensive learning experiences, aiming to 
+        accelerate your career by ensuring a complete understanding of the topics covered.
       </p>
       <p>
-        We believe learning happens best when supported by connections to others in the community. We'd love to have you join us this August in the Triangle.
+        We believe learning happens best when supported by connections to others in the community. 
+        We'd love to have you join us this August in the Triangle.
+      </p>
+      <p>
+          <a class="button red-button" href={{model.eventbrite}}>Register Today</a>
       </p>
     {{/box-content}}
-    
+
     {{#box-content}}
-      <h2>Your Instructors</h2>
+      <h2 class="give-whitespace center">Your Instructors</h2>
       <div class="columns instructors">
         <div class="col-1 instructor">
           <img src="https://embermeetup.com/wp-content/uploads/Ea52Geux.png">
@@ -32,19 +40,23 @@
         </div>
       </div>
     {{/box-content}}
-    
-    {{#box-content}}   
-      <h2 class="margin-bottom-0">Schedule</h2> 
-      <div class="columns">
-        <div class="col-1">
+
+    {{#box-content}}
+      <h2 class="give-whitespace center">Schedule</h2>
+      <div id="day-1">
           <h3>Day 1 - Ember Fundamentals</h3>
-          <p class="red">Monday Aug 15, 2016, 9am-6pm</p>
+          <p class="red">Monday Aug 15, 2016, 10am-6pm ET</p>
           <p>
-            This course is designed to give the learner an in-depth understanding of all the fundamentals needed to build a complex Ember app. It includes access to pre-recorded videos and a live, hands-on and project-based workshop.
+            <a class="button red-button" href={{model.eventbrite}}>Participate remotely - $599</a>
+            <a class="button red-button" href={{model.eventbrite}}>Participate in the Research Triangle - $1099</a>
+          </p>
+          <p>
+            This course is designed to give the learner an in-depth understanding of all the 
+            fundamentals needed to build a complex Ember app. It includes access to pre-recorded 
+            videos and a live, hands-on and project-based workshop.
           </p>
           <h4>Who is this for?</h4>
-          <p>
-            Whether you're:</p>
+          <p>Whether you're:</p>
             <ul>
               <li>a complete beginner to Ember</li>
               <li>have been working with it for 1–3 years</li>
@@ -94,9 +106,14 @@
                 Along the way, you’ll hear stories from Chase and Jonathan about working on the front lines of a busy consulting shop and get to ask them about issues specific to your projects! 
               </p>
         </div>
-        <div class="col-2">
+
+        <div id="day-2">
           <h3>Day 2 - Ember Advanced</h3>
-          <p class="red">Tuesday Aug 16, 2016, 9am-6pm</p>
+          <p class="red">Tuesday Aug 16, 2016, 10am-6pm ET</p>
+          <p>
+            <a class="button red-button" href={{model.eventbrite}}>Participate remotely - $599</a>
+            <a class="button red-button" href={{model.eventbrite}}>Participate in the Research Triangle - $1099</a>
+          </p>
           <p>
             Attendance of Day 1 is not required, but we recommended you ensure you have a good understanding of how to do all of the things we cover in the Fundamentals course.
           </p>
@@ -133,7 +150,7 @@
               <dt>Ember Data</dt>
               <dd>
                 <ul>
-                  <li>Creating a model</li>          
+                  <li>Creating a model</li>
                   <li>Persisting data</li>
                 </ul>
               </dd>
@@ -143,26 +160,24 @@
               <dd>Deploy your Ember apps easily and confidently with <a href="https://ember-cli.com/ember-cli-deploy/">ember-cli-deploy</a>.</dd>          
             </dl>
         </div>
-      </div>
+
     {{/box-content}}
 
     {{#box-content}}
       <h2>Buy Tickets</h2>
-      
+
       {{#gem-cards classNames="two-cards" as |cards|}}
-        
+
         {{#cards.card 'Learn Remotely'}}
-          <p>Everything you need to build your first Ember.js application.</p>
           <a class="button red-button" href={{model.eventbrite}}>$599</a>
         {{/cards.card}}
-        
+
         {{#cards.card 'Learn in the Research Triangle'}}
-          <p>Everything you need to build your first Ember.js application.</p>
           <a class="button red-button" href={{model.eventbrite}}>$1099</a>
         {{/cards.card}}
       {{/gem-cards}}
-      
+
     {{/box-content}}
-    
+
   </article>
 </main>

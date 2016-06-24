@@ -5,9 +5,10 @@
       }}
         <h2>Bringing Ember.js to The Research Triangle</h2>
         <p>
-          GEMconf is an <strong>#emberjs</strong> conference that revolves around discussions, 
+          GEMconf is an <strong>#emberjs</strong> conference that revolves around discussions,
           learning, and sharing ideas in the Ember.js community.
         </p>
+        <a class="button red-button" href={{model.eventbrite}}>Register Today</a>
       {{/box-content}}
 
       {{#box-content}}
@@ -18,7 +19,7 @@
 
         <p>Preceding GEMconf Conference Day is a free 4 Hour Intro to Ember and Rapid Prototyping Workshop.</p>
 
-        <p>Immediately following conference day is an intense 2 day workshop for beginners and intermediate Ember developers.</p>
+        <p>Immediately following conference day is an intense {{link-to '2 day workshop' 'gemconf.training'}} for beginners and intermediate Ember developers.</p>
 
       {{/box-content}}
 
@@ -26,28 +27,30 @@
 
         <h2 class="give-whitespace center">The #GEMconf Schedule (8/12 - 8/16)</h2>
 
-        <h4>Friday 8/12</h4>
+        <h4>Friday 8/12, 1pm-5pm</h4>
 
-        <p><strong>1pm-5pm</strong> - Free 4 Hour Intro to Ember and Rapid Prototyping Workshop with Taras Mankovski and Brendan O'Hara.</p>
+        <p>Free 4 Hour Intro to Ember and Rapid Prototyping Workshop with Taras Mankovski and Brendan O'Hara.</p>
 
-        <h4>Saturday 8/13</h4>
-        <p><strong>9am-5pm</strong> - GEMconf Conference Day & Talks at Bronto Software</p>
+        <h4>Saturday 8/13, 9am-5pm</h4>
+        <p>GEMconf Conference Day & Talks at Bronto Software</p>
 
-        <h4>Monday 8/15</h4>
-        <p><strong>9am-530pm</strong> - Training & Workshop with Ember Fast Track with Ember Weekend</p>
+        <h4>Monday 8/15, 10am-6pm</h4>
+        <p>Training & Workshop with Ember Fast Track with Ember Weekend ({{link-to 'Course Details' 'gemconf.training'}}.)</p>
 
-        <h4>Tuesday 8/16</h4>
-        <p><strong>9am-530pm</strong> - Training & Workshop with Ember Expansion Track with Ember Weekend</p>
+        <h4>Tuesday 8/16, 10am-6pm</h4>
+        <p>Training & Workshop with Ember Expansion Track with Ember Weekend ({{link-to 'Course Details' 'gemconf.training'}}.)</p>
 
       {{/box-content}}
 
       {{#box-content}}
 
-        <h2 class="give-whitespace center">Features</h2>
+        <h2 class="give-whitespace center">Free 4 Hour Ember.JS Workshop</h2>
 
         <h4>Friday 8/12</h4>
 
         <p>Intro to Ember and Rapid Prototyping, a 4 hour workshop with Taras Mankovski and Brendan O'Hara</p>
+
+        <h2 class="give-whitespace center">Conference Day & Talks</h2>
 
         <h4>Saturday 8/13</h4>
 
@@ -56,11 +59,43 @@
         <p>Lightning Talks</p>
         <p>Community led discussions</p>
 
+        <h2 class="give-whitespace center">2 Day Ember.JS Training</h2>
+
         <h4>Monday 8/15 & Tuesday 8/16</h4>
 
-        <p>Ember Fast Track & Expansion Pack training with Ember Weekend</p>
+        <p>Ember Fast Track & Expansion Pack training with Ember Weekend.</p>
+        <p>This training is designed to quickly level up your Ember skills. The fast paced curriculum will focus on building a solid foundation in Ember and dive into advanced Ember techniques.</p>
+        <p>Receive video access to Ember training content prior to this 2 day training.</p>
+        <p>Full details on training {{link-to 'here' 'gemconf.training'}}.</p>
+        <a class="button red-button" href={{model.eventbrite}}>Register Today</a>
 
       {{/box-content}}
+
+      {{#box-content}}
+
+        {{!-- <h2 class="give-whitespace center">Community Leads</h2>
+
+        {{#gem-topics}}
+          {{gem-topics-topic
+            title='Hi Tracy'
+            description=" you so awesome!"
+            by-line='Yep yep'
+          }}
+          {{gem-topics-topic
+            title='Hi Tracy'
+            description=" you so awesome!"
+            by-line='Yep yep'
+          }}
+          {{gem-topics-topic
+            title='Hi Tracy'
+            description=" you so awesome!"
+            by-line='Yep yep'
+          }}
+        {{/gem-topics}} --}}
+
+
+      {{/box-content}}
+
 
 
     {{#box-callout
@@ -75,20 +110,20 @@
 
     {{#box-content class='gem-agenda-content'}}
       <h2 class="center">GEMconf Conference Day Schedule (8/13)</h2>
-        
+
       {{#gem-agenda as |agenda|}}
         {{agenda.heading 'Time' 'Description'}}
 
         {{agenda.item '9:00' 'Gathering & Breakfast'}}
         {{agenda.item '9:30' 'Keynote with Taras (@embersherpa) and Tracy (@ladyleet)'}}
-        {{agenda.item '10:00' 'Keynote with Todd Jordan (@tddjordan), Learning Core Team member'}}        
+        {{agenda.item '10:00' 'Keynote with Todd Jordan (@tddjordan), Learning Core Team member'}}
 
         {{agenda.item '10:10' "What's up in Emberland with EmberWeekend (@emberweekend)"}}
 
         {{agenda.item '10:20' 'Building an Open Source Commercial Application with Ember.js with Harvey Kandola (@harveykandola)'}}
-        {{agenda.item '10:50' 'Community Discussion'}}    
+        {{agenda.item '10:50' 'Community Discussion'}}
 
-        {{agenda.item '11:10' 'Cardstack CMS with Edward Faulkner (@eaf4)'}}    
+        {{agenda.item '11:10' 'Cardstack CMS with Edward Faulkner (@eaf4)'}}
         {{agenda.item '11:40' 'Community Discussion'}}
 
         {{agenda.item '12:00' 'Lunch'}}
@@ -102,12 +137,12 @@
         {{agenda.item '14:25' 'Ember Game'}}
 
         {{agenda.item '14:35' 'Landing your first PRs in the Ember Open Source Community with Tracy Lee (@ladyleet)'}}
-        {{agenda.item '15:05' 'Community Discussion'}}        
+        {{agenda.item '15:05' 'Community Discussion'}}
 
         {{agenda.item '15:30' 'Ember Jeopardy'}}
 
         {{agenda.item '15:45' 'Rapid prototyping with Ember.js by Brendan OHara'}}
-        {{agenda.item '16:15' 'Community Discussion'}}        
+        {{agenda.item '16:15' 'Community Discussion'}}
 
         {{agenda.item '16:40' 'Closing Keynote'}}
 
@@ -119,6 +154,10 @@
   </main>
 
 {{#box-callout backgroundColor="sky" class="gemconf-sponsors"}}
+
+{{/box-callout}}
+
+{{#box-callout class="gemconf-sponsors"}}
   <h2>Sponsors</h2>
   <p>Big 🙇 to our sponsors for helping us bring this event to you.</p>
 
