@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('show', { path: 'the-ember-show' } );
   this.route('gemconf', function() {
     this.route('training');
+    this.route('code-of-conduct');
   });
   this.route('pages', { path: 'pages/:slug' });
   this.route('videos', function() {});
