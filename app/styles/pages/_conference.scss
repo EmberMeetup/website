@@ -107,32 +107,12 @@ header.gemconf {
     margin: $base-spacing * 0.75 0;
   }
 
-  aside {
-    @include media($mobile) {
-      @include span-columns(12);
-    }
-    @include media($desktop) {
-      @include span-columns(4);
-    }
-    padding: 0 $base-spacing;
-
-    .box-content {
-      padding: 0;
-    }
-
-    .gem-cards {
-      @include outer-container(100%);
-
-      .gem-cards--card {
-        @include media($tablet) {
-          @include span-columns(6);
-        }
-        @include media($desktop) {
-          @include span-columns(12);
-        }
-      }
+  .img-size-150px {
+    img {
+      height: 150px;
     }
   }
+
 }
 
 .conference .training {
