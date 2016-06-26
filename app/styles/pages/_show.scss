@@ -2,24 +2,9 @@ header.the-ember-show {
   background: url(images/The-Ember-Show-Header.svg) no-repeat center, url(images/The-Ember-Show-Header-Background.svg) center repeat-x;
   background-size: cover, cover;
   height: 665px;
-  
-  @include media($mobile) {
-    h1 {
-      font-size: 64px;
-      line-height: 64px;
-    }
-  }
-  
-  @include media($tablet) {
-    h1 {
-      font-size: 72px;
-    }
-  }
-    
-  @include media($desktop) {
-    h1 {
-      font-size: 88px;
-    }
+
+  .hero-title {
+    padding-top: 60px;
   }
 }
 
