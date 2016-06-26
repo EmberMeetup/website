@@ -1,0 +1,24 @@
+header.rock-and-roll-ember {
+  background: url(images/RARE-Background.svg) #0A1D25 no-repeat center;
+  height: 658px;
+
+  text-align: center;
+
+  .hero-image {
+    padding-top: 60px;
+    img {
+      height: 543px;
+    }
+  }
+
+  .hero-sub-title {
+    display: inline-block;
+    margin-top: -60px;
+    max-width: 600px;
+    
+    font-family: 'Dosis';
+    font-size: 36px;
+    color: white;
+    font-weight: 100;
+  }
+}

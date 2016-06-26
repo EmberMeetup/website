@@ -1,6 +1,13 @@
 {{#if withHero}}
   {{link-to '' 'index' classNames="go-home" title="Go home"}}
-  <span class="hero-title">{{headData.heroTitle}}</span>
+  {{#if headData.heroTitle}}
+    <span class="hero-title">{{headData.heroTitle}}</span>
+  {{/if}}
+  {{#if headData.heroImage}}
+  <div class="hero-image">
+    <img src="{{headData.heroImage}}" alt="Hero Image">
+  </div>
+  {{/if}}
   {{#if headData.heroSubTitle}}
     <span class="hero-sub-title">{{headData.heroSubTitle}}</span>
   {{/if}}
