@@ -6,11 +6,11 @@ const {
 
 export default Ember.Component.extend({
   classNameBindings: [
-    ':box-callout', 
-    'hasImage', 
-    'imagePosition', 
-    'isRed', 
-    'isSkyBlue', 
+    ':box-callout',
+    'hasImage',
+    'imagePosition',
+    'isRed',
+    'isSkyBlue',
     'isSky',
     'has-margin-bottom',
     'has-margin-top'

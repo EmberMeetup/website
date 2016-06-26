@@ -5,11 +5,37 @@
 }}
 {{scroll-to position=0}}
 
+{{#box-content classNames="max-width auto-margin padding-30px"}}
+
+  {{#gem-cards classNames="two-cards"}}
+    {{#gem-card
+      title="GEMconf in the Triangle (Aug 12-16th)"  
+    }}
+    <p>
+      Join us in the Research Triangle for community focused discussions, 
+      talks, and training.
+    </p>
+    {{link-to 'Registration' 'gemconf' classNames="button sky-button"}}
+    {{/gem-card}}
+    {{#gem-card
+      title="EmberWeekend Training at GEMconf Triangle (Aug 15-16th)"  
+    }}
+      <p>
+        Gain solid understanding of all Ember.js fundamentals and build an 
+        realistic application during EmberWeekend training workshop. 
+      </p>
+      {{link-to 'More Info' 'gemconf.training' classNames="button red-button"}}    
+    {{/gem-card}}
+  {{/gem-cards}}
+
+{{/box-content}}
+
 <div class="episodes-page">
+
   <h1 class="episodes-page--title">Season {{season}}</h1>
-  
+
   {{#each model as |episode|}}
     {{episode-strip episode=episode}}
   {{/each}}
-  
+
 </div>

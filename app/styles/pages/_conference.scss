@@ -149,21 +149,7 @@ header.gemconf {
       @include span-columns(6);
     }
   }
-
-  .three-cards .gem-cards--card{
-
-    @include media($tablet) {
-      @include span-columns(4);
-    }
-
-  }
-
-  .two-cards .gem-cards--card{
-    @include media($tablet) {
-      @include span-columns(6);
-    }
-  }
-
+  
   .instructors {
     img {
       float: left;
