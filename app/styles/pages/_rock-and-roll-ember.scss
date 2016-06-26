@@ -93,4 +93,28 @@ section.rock-and-roll-ember {
     }
   }
 
+  .img-max-height-150px {
+    img {
+      max-height: 150px;
+    }
+  }
+
+  .date-list {
+    margin: 0;
+    dt, dd {
+      display: inline-block;
+      padding: 5px 0;
+    }
+    dt {
+      width: 220px;
+    }
+  }
+
+  .content-max-width-600px {
+    .box-content--content {
+      max-width: 600px;
+      margin: 0 auto;      
+    }
+  }
+
 }
