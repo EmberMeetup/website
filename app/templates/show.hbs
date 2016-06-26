@@ -5,27 +5,30 @@
 }}
 {{scroll-to position=0}}
 
-{{#box-callout backgroundColor='red' class="padding-left"}}
-  <h2>August 12th - Triangle GEMconf</h2>
-  <p>
-     Join us in Raleigh/Durham 8/12-8/16 for community focused discussions, talks, and training. Online and in person options available.
-  </p>
-  <p class="button sky-blue-background">
-    {{link-to 'Registration' 'gemconf'}}
-  </p>
-{{/box-callout}}
+{{#box-content classNames="max-width auto-margin padding-30px"}}
 
-{{#box-callout backgroundColor='sky' class="padding-left-15px"}}
-  <h2>2 Day Ember.js Training with EmberWeekend (8/15-8/16)</h2>
-  <p>
-    Whether you're looking for a solid understanding of all the fundamentals needed to be an effective
-    Ember developer, or looking to dive deeper into the issues that face developers of larger, more
-    complex Ember apps, we've got you covered in this 2 day workshop.
-  </p>
-  <p class="button red-button">
-    {{link-to 'More Info' 'gemconf.training'}}
-  </p>
-{{/box-callout}}
+  {{#gem-cards classNames="two-cards"}}
+    {{#gem-card
+      title="GEMconf in the Triangle (Aug 12-16th)"  
+    }}
+    <p>
+      Join us in the Research Triangle for community focused discussions, 
+      talks, and training.
+    </p>
+    {{link-to 'Registration' 'gemconf' classNames="button sky-button"}}
+    {{/gem-card}}
+    {{#gem-card
+      title="EmberWeekend Training at GEMconf Triangle (Aug 15-16th)"  
+    }}
+      <p>
+        Gain solid understanding of all Ember.js fundamentals and build an 
+        realistic application during EmberWeekend training workshop. 
+      </p>
+      {{link-to 'More Info' 'gemconf.training' classNames="button red-button"}}    
+    {{/gem-card}}
+  {{/gem-cards}}
+
+{{/box-content}}
 
 <div class="episodes-page">
 

@@ -1,3 +1,20 @@
+.gem-cards {
+  &.three-cards .gem-cards--card{
+
+    @include media($tablet) {
+      @include span-columns(4);
+    }
+
+  }
+
+  &.two-cards .gem-cards--card{
+    @include media($tablet) {
+      @include span-columns(6);
+    }
+  }
+}
+
+
 .gem-cards--card {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
