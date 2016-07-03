@@ -7,6 +7,8 @@ $base-spacing: 1.5em;
 @import "grid-settings";
 
 @import "ember-power-select";
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";
 
 @import '_colors';
 @import '_type';
@@ -59,7 +61,7 @@ a {
   margin: 0 30px;
 }
 
-.no-top-margin {
+.no-top-margin, .margin-top-none {
   margin-top: 0;
 }
 
@@ -92,8 +94,16 @@ a {
   margin-bottom: 60px;
 }
 
+.margin-bottom-80px {
+  margin-bottom: 80px;
+}
+
 .margin-top-60px {
   margin-top: 60px;
+}
+
+.margin-top-80px {
+  margin-top: 80px;
 }
 
 .margin-right-30px {
