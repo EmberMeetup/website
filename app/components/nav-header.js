@@ -1,11 +1,18 @@
 import Ember from 'ember';
 
+const {
+  computed: { alias, and, or },
+  inject: { service }
+} = Ember;
+
 export default Ember.Component.extend({
   tagName: 'header',
-  classNameBindings: [':nav-header', 'isCollapsible', 'headData.classNames', 'withHero:with-hero:no-hero'],
-  isCollapsible: Ember.computed.or('media.isMobile', 'media.isTablet'),
-  media: Ember.inject.service(),
-  headData: Ember.inject.service(),
-  withHero: Ember.computed.notEmpty('headData.heroImage'),
-  withButton: Ember.computed.and('headData.buttonUrl', 'headData.buttonText')
+  classNameBindings:  [':nav-header', 'isCollapsible', 'headData.classNames', 'withHero:with-hero:no-hero'],
+
+  media:              service(),
+  headData:           service(),
+  
+  withHero:           alias('headData.withHero'),
+  withButton:         and('headData.buttonUrl', 'headData.buttonText'),
+  isCollapsible:      or('media.isMobile', 'media.isTablet')  
 });

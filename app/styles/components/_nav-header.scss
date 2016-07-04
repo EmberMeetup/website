@@ -74,11 +74,6 @@
 }
 
 .nav-header.with-hero {
-  h1 {
-    position: absolute;
-    text-align: center;
-    width: 100%;
-  }
   
   .go-home{
     position: absolute;
@@ -102,5 +97,38 @@
       height: 180px;
       width: 126px;
     }   
+  }
+}
+
+.hero-style {
+  .hero-title {
+    @extend .font-bree-semibold;
+
+    display: block;
+    width: 100%;
+
+    text-align: center;
+    color: $red;
+  }
+}
+
+.nav-header.with-hero {
+  @include media($mobile) {
+    .hero-title {
+      font-size: 64px;
+      line-height: 64px;
+    }
+  }
+  
+  @include media($tablet) {
+    .hero-title {
+      font-size: 72px;
+    }
+  }
+    
+  @include media($desktop) {
+    .hero-title {
+      font-size: 88px;
+    }
   }
 }

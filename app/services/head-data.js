@@ -14,6 +14,7 @@ export default HeadDataService.extend({
       description: null,
       image: null,
       classNames: null,
+      withHero: false,
       heroImage: null,
       heroTitle: null,
       heroSubTitle: null,

@@ -2,14 +2,12 @@
   @include clearfix;
   
   &.has-image {
-    @include outer-container(100%);
-
     .box-content--img {
       margin: 25px 0;
       height: 200px;
       background-size: contain;
       background-repeat: no-repeat;
-      background-position: right center;
+      background-position: right top;
       
       @include media($mobile) {
         @include span-columns(12);

@@ -35,17 +35,21 @@
   &.is-sky-blue {
     background-color: $skyBlue;
   }
-  
-  .box-callout--content {
-    @include span-columns(10);
+
+  .box-callout--img-left {
+    float: left;
+    margin-right: 15px;
+    margin-left: 15px;
   }
-  
+
+  .box-callout--img-right {
+    float: right;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
   .box-callout--img-left, .box-callout--img-right {
-    @include span-columns(2);
-        
-    img {
-      max-height: 110px;      
-    }
+    line-height: 0;
   }
   
 }

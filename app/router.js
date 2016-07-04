@@ -14,6 +14,7 @@ Router.map(function() {
   this.route('pages', { path: 'pages/:slug' });
   this.route('videos', function() {});
   this.route('video', { path: 'videos/:slug' });
+  this.route('rock-and-roll-ember');
 
   this.route('tools', function() {
     this.route('thumbnails', function() {

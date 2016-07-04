@@ -2,9 +2,9 @@ header.gemconf {
   background: url(images/Global-Meetup-Header-Triangle-Final.svg) $skyBlue no-repeat center;
   height: 658px;
   
-  h1 {
+  .hero-title {
     color: $darkerBlue;
-    margin: 0;
+    padding-top: 80px;    
   }
   
   .hero-sub-title, .call-to-action {
@@ -19,7 +19,7 @@ header.gemconf {
   }
   
   @include media($mobile) {
-    h1 {
+    .hero-title {
       font-size: 64px;
       top: 100px;
     }
@@ -34,7 +34,7 @@ header.gemconf {
   }
   
   @include media($tablet) {
-    h1 {
+    .hero-title {
       font-size: 86px;
       top: 80px;
     }
@@ -107,32 +107,12 @@ header.gemconf {
     margin: $base-spacing * 0.75 0;
   }
 
-  aside {
-    @include media($mobile) {
-      @include span-columns(12);
-    }
-    @include media($desktop) {
-      @include span-columns(4);
-    }
-    padding: 0 $base-spacing;
-
-    .box-content {
-      padding: 0;
-    }
-
-    .gem-cards {
-      @include outer-container(100%);
-
-      .gem-cards--card {
-        @include media($tablet) {
-          @include span-columns(6);
-        }
-        @include media($desktop) {
-          @include span-columns(12);
-        }
-      }
+  .img-size-150px {
+    img {
+      height: 150px;
     }
   }
+
 }
 
 .conference .training {

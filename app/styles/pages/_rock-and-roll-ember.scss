@@ -1,0 +1,407 @@
+header.rock-and-roll-ember {
+  background: url(images/RARE-Background.svg) #0A1D25 no-repeat center;
+  height: 658px;
+
+  text-align: center;
+
+  .hero-image {
+    padding-top: 60px;
+    img {
+      @include media($mobile) {
+        max-width: 100%;
+      }
+      @include media($tablet) {
+        height: 543px;
+      }
+    }
+  }
+
+  .hero-sub-title {
+    display: inline-block;
+    max-width: 600px;
+    
+    font-family: 'Dosis';
+    color: white;
+    font-weight: 100;
+
+    @include media($mobile) { 
+      margin-top: -30px; 
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @include media($tablet) {
+      margin-top: -60px;      
+      font-size: 36px;
+    }
+  }
+}
+
+section.rock-and-roll-ember {
+
+  @include media($mobile) {
+    font-size: 90%;
+  }
+
+  @include media($tablet) {
+    font-size: 100%;
+  }
+
+  .heading {
+    margin: 80px auto;
+
+    @include media($desktop) {
+      max-width: 600px;
+    }
+  }
+
+  .rocker-gabby-callout {
+    background-color: $red;
+    display: flex;
+    align-content: center;
+    margin-bottom: 80px;
+
+    h2 {
+      max-width: 800px;
+      padding-left: 10px;
+      padding-right: 10px;
+      color: white;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 64px;
+    }
+
+    @include media($tablet) {
+      padding-right: 200px;
+      background: $red url(https://embermeetup.com/wp-content/uploads/RARE-Gabby.svg) calc(100% - 10px) bottom no-repeat;
+      background-size: 200px auto;
+      min-height: 260px;
+    }
+  }
+
+  .release-date {
+    font-size: 80%;
+    display: block;
+
+    @include media($desktop) {
+      float: right;
+      maring-right: 30px;
+    }
+  }
+
+  .key-message {
+    background-color: $red;
+    display: flex;
+    justify-content: center;    
+    align-content: center;
+    margin-bottom: 80px;
+
+    h2 {
+      max-width: 800px;
+      padding-left: 10px;
+      padding-right: 10px;
+      color: white;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 64px;
+    }
+
+    @include media($tablet) {
+      background: $red url(https://embermeetup.com/wp-content/uploads/RARE-key.png) calc(100% - 20px) center no-repeat;
+      padding-right: 170px;
+      min-height: 210px;
+      background-size: 150px auto;
+    }
+  }
+
+  .max-width-800px {
+    max-width: 800px;
+  }
+  
+  .float-right {
+    float: right;
+  }
+
+  .video-list {
+    li {
+      list-style: none;
+      background: url(https://embermeetup.com/wp-content/uploads/RARE-Film.svg) left center no-repeat;
+      padding: 5px 0px 5px 60px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .smaller-font {
+    font-weight: 100;
+    font-size: 80%;
+  }
+
+  .rare-lightning-background {
+    background: url(images/RARE-lightning-background.svg) center no-repeat $skyBlue;
+    
+    .box-content--content {
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    p {
+      font-size: 120%;      
+    }
+  }
+
+  .schedule {
+    background-color: $skyBlue;
+    padding: 20px;
+    margin-bottom: 80px;
+
+    h2 {
+      margin-top: 0;
+    }
+
+    @include media($tablet) {
+      background: $skyBlue url(https://embermeetup.com/wp-content/uploads/RARE-calendar.png) calc(100% - 20px) center no-repeat;
+      padding-right: 170px;
+      min-height: 210px;
+      background-size: 150px auto;
+    }
+  }
+
+  .two-columns {
+    @include outer-container(100%);
+
+    .column {
+      text-align: center;
+      h3 {
+        text-align: center;
+        font-weight: 100;
+      }
+      img {
+        max-height: 300px;
+        max-width: 100%;
+      }
+      @include media($mobile) {
+        @include span-columns(12);
+      }
+      @include media($tablet) {
+        @include span-columns(6);
+      }
+    }
+  }
+
+  .img-max-height-150px {
+    img {
+      max-height: 150px;
+    }
+  }
+
+  .date-list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      dt {
+        width: 240px;
+      }
+    }
+
+    dt, dd {
+      padding: 5px 0;
+      margin-left: 0;
+    }
+  }
+
+  .content-max-width-600px {
+    .box-content--content {
+      max-width: 600px;
+      margin: 0 auto;      
+    }
+  }
+
+  .packages-table {
+    display: flex;
+    flex-direction: row;
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &--plan {
+      display: flex;
+      flex-direction: column;
+
+      .header {
+        margin-bottom: 0;
+        text-align: center;
+      }
+
+      .sub {
+        display: block;
+        font-size: 80%;
+      }
+
+      .content {
+        flex: 1 0 auto;
+        padding-left: 0;
+      }
+
+      .item {
+        padding: 20px 0 0 0;
+        font-size: 60%;
+        list-style: none;
+        padding-left: 60px;
+
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: 30px auto;   
+
+        u {
+          display: inline-block;
+          width: 100%;
+          padding-bottom: 20px;
+
+          text-decoration: none;
+          border-bottom: 1px solid $navyBlue;
+        }
+      }
+
+      .footer {
+        text-align: center;
+      }
+
+      .call-to-action {
+        display: inline-block;
+        cursor: pointer;      
+      }
+    }
+
+    &--plan.primary {
+      width: 320px;
+      padding: 20px;      
+      border: $red 6px solid;
+      border-radius: 3px;
+
+      .header {
+        margin-top: 20px;
+        min-height: 70px;
+      }
+
+      .content {
+        margin-bottom: 40px;
+      }
+
+      .footer {
+        position: relative;
+      }
+
+      .call-to-action {
+        left: calc(50% - 145px);
+        width: 290px;
+        position: absolute;
+
+        background: $blue;
+        color: white;
+        font-weight: bold;
+        border: none;
+      }
+    }
+
+    &--plan.secondary {
+      width: 300px;
+      padding: 10px 15px 30px 15px;
+      margin: 30px 0 40px 0;
+      background-color: $skyBlue;
+
+      .header {
+        margin-top: 10px;
+        font-weight: 100;
+      }
+
+      .call-to-action {
+        border: 2px solid $darkerBlue;
+        padding: 5px 30px;
+        border-radius: 20px;
+        color: $red;
+        background-color: white;
+        font-size: 80%;
+      }
+    }
+
+    &--footer {
+      display: flex;
+      flex-direction: row;
+
+      .main {
+        width: 50%;
+
+        .call-to-action {
+          width: 100%;
+          background-color: $red;
+          color: white;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .early-bird {
+    display: flex;
+    flex-direction: row;
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+
+    .main {
+      margin-left: 25%;
+      width: 50%;
+    }
+
+    .call-to-action {
+      width: 100%;
+
+      background-color: $red;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+    }
+    
+    .right {
+      padding-left: 10px;
+    }
+  }
+
+  .videos-icon {
+    background-image: url(https://embermeetup.com/wp-content/uploads/RARE-Player.png);
+  }
+
+  .workshop-icon {
+    background-image: url(https://embermeetup.com/wp-content/uploads/RARE-Monitor.png);
+  }
+
+  .slack-icon {
+    background-image: url(https://embermeetup.com/wp-content/uploads/RARE-Slack.svg);
+  }
+
+  .screenhero-icon {
+    background-image: url(https://embermeetup.com/wp-content/uploads/RARE-Screenhero.svg);
+  }
+
+  .trees-icon {
+    background-image: url(https://embermeetup.com/wp-content/uploads/RARE-trees.png);
+  }
+}
+
+.pricing-modal {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+
+  @include media($tablet) {
+    max-width: 800px;
+    max-height: 420px;
+  }
+}
