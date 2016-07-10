@@ -10,7 +10,8 @@ export default Ember.Component.extend({
     'show-footer:has-footer', 
     'isSmall:is-small:is-not-small', 
     'show-presenter:has-presenter',
-    'show-flag:show-flag:no-flag'
+    'show-flag:show-flag:no-flag',
+    'use-featured:with-featured:without-featured'
   ],
   isSmall: computed.equal('size', 'small'),
   "show-presenter": true
