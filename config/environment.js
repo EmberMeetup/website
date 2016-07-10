@@ -29,6 +29,10 @@ module.exports = function(environment) {
     
     moment: {
       includeTimezone: '2010-2020'
+    },
+
+    fastboot: {
+      hostWhitelist: ['embermeetup.com']
     }
     
   };
