@@ -1,5 +1,7 @@
 header.gemconf {
-  background: url(images/Global-Meetup-Header-Triangle-Final.svg) $skyBlue no-repeat center;
+  background-color: $skyBlue;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 658px;
   
   .hero-title {
@@ -157,4 +159,12 @@ header.gemconf {
     float: none;
     margin: 0 auto !important;
   }
+}
+
+header.gemconf-triangle-2016 {
+  background-image: url(images/Global-Meetup-Header-Triangle-Final.svg);
+}
+
+header.sf-2016 {
+  background-image: url(images/GEMconf-SF-Header.svg);
 }

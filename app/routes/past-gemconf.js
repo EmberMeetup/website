@@ -18,7 +18,7 @@ export default Ember.Route.extend({
       withHero: true,
       heroTitle: get(model, 'heroTitle'),
       heroSubTitle: get(model, 'heroSubTitle'),
-      classNames: ['gemconf hero-style']
+      classNames: `gemconf hero-style ${get(model, 'slug')}`
     });
   }
 });
