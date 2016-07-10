@@ -65,7 +65,7 @@
     "ember-route-action-helper": "0.3.1",
     "ember-truth-helpers": "1.2.0",
     "flexi": "1.1.9",
-    "liquid-fire": "0.23.0",
+    "liquid-fire": "0.24.0",
     "loader.js": "^4.0.1",
     "memory-scroll": "0.2.0"
   },

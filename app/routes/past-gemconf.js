@@ -18,9 +18,7 @@ export default Ember.Route.extend({
       withHero: true,
       heroTitle: get(model, 'heroTitle'),
       heroSubTitle: get(model, 'heroSubTitle'),
-      classNames: 'gemconf hero-style',
-      buttonUrl: "https://www.eventbrite.com/e/global-ember-meetup-conference-live-in-the-triangle-gemconf-tickets-22584175878",
-      buttonText: "RSVP"
+      classNames: ['gemconf hero-style']
     });
   }
 });

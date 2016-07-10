@@ -1,0 +1,13 @@
+{{remember-document-scroll key="past-conferences"}}
+
+<section class="past-conferences">
+
+  <div class="video-cards">
+    {{#each model.presentationTopics as |video|}}
+      <div class="card-holder">
+        {{video-card model=video use-featured=true}}
+      </div>
+    {{/each}}
+  </div>
+
+</section>

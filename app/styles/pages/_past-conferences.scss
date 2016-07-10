@@ -1,0 +1,12 @@
+.past-conferences {
+  @extend .auto-margin;
+  max-width: $max-width;
+  padding-top: 20px;
+
+ .card-holder {
+   @include span-columns(4);
+   @include omega(3n);
+   margin-bottom: 20px;
+ }
+
+}
