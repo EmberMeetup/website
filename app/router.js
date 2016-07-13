@@ -13,7 +13,7 @@ Router.map(function() {
     this.route('code-of-conduct');
   });
   this.route('past-gemconf', { path: 'gemconf/:slug' } );
-  
+
   this.route('pages', { path: 'pages/:slug' });
   this.route('videos', function() {});
   this.route('video', { path: 'videos/:slug' });
@@ -25,6 +25,7 @@ Router.map(function() {
     });
   });
   this.route('newsletter');
+  this.route('gemconfand');
 });
 
 export default Router;
