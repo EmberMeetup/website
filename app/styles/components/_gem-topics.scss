@@ -23,7 +23,6 @@
     }
 
     .gem-topics--image {
-      @include span-columns(2);
       line-height: 0;
       
       > img {
@@ -40,10 +39,21 @@
       }
       
     }
+    
+    &.is-small {
+      .gem-topics--image {
+        @include span-columns(1);        
+      }
+    }
+
+    &.is-regular {
+      .gem-topics--image {
+        @include span-columns(2);      
+      }
+    }
+
 
     .gem-topics--content {
-      @include span-columns(10);
-
       p.gem-topics--detail {
         color: $gem-topics-detail-color;
         font-size: 0.9em;
@@ -51,6 +61,18 @@
       }
     }
     
+    &.is-small {
+      .gem-topics--content {
+        @include span-columns(11);      
+      }
+    }
+
+    &.is-regular {
+      .gem-topics--content {
+        @include span-columns(10);      
+      }
+    }
+
     .gem-topics--description, .gem-topics--description p {
       line-height: 1.5em;
       margin-bottom: 0;

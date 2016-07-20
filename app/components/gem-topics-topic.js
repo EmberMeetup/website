@@ -1,5 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  classNames: ['gem-topics--topic']
+  classNameBindings: [
+    ':gem-topics--topic',
+    'is-small:is-small:is-regular'
+  ]
 });

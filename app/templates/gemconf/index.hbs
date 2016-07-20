@@ -101,28 +101,16 @@
 
           <h2 class="give-whitespace center">Community Leads</h2>
 
-          {{#gem-topics}}
-            {{gem-topics-topic
-              title='Jeff Schilling'
-              description="SVP Development, Q2e Banking"
-            }}
-            {{gem-topics-topic
-              title='Julie David'
-              description= "MEAN Developer, EmployUs"
-            }}
-            {{gem-topics-topic
-              title='Todd Jordan'
-              description="Senior Software Engineer, Interactive Intelligence"
-            }}
-            {{gem-topics-topic
-              title="Brendan O'Hara"
-              description="Founder, ViaCapita"
-            }}
-            {{gem-topics-topic
-              title='Taras Mankovski'
-              description="Founder, EmberSherpa"
-            }}
-          {{/gem-topics}}
+         {{#gem-topics}}
+            {{#each model.communityLeads as |lead|}}
+              {{gem-topics-topic
+                is-small=true
+                image=lead.featured.url
+                title=lead.title
+                description=lead.excerpt
+              }}
+            {{/each}}
+         {{/gem-topics}}
 
         {{/box-content}}
 
