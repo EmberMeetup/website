@@ -24,6 +24,19 @@
       {{/box-content}}
 
       {{#box-content}}
+      <h2 class="give-whitespace center">2 Day Ember.JS Training</h2>
+
+      <h4>Monday 8/15 & Tuesday 8/16</h4>
+
+      <p>Ember Fast Track & Expansion Pack training with Ember Weekend.</p>
+      <p>This training is designed to quickly level up your Ember skills. The fast paced curriculum will focus on building a solid foundation in Ember and dive into advanced Ember techniques.</p>
+      <p>Receive video access to Ember training content prior to this 2 day training.</p>
+      <p>Full details on training {{link-to 'here' 'gemconf.training'}}.</p>
+      <a class="button red-button" href={{model.eventbrite}}>Register Today</a>
+
+      {{/box-content}}
+
+      {{#box-content}}
 
         <h2 class="give-whitespace center">The #GEMconf Schedule (8/12 - 8/16)</h2>
 
@@ -50,49 +63,68 @@
 
         <p>Intro to Ember and Rapid Prototyping, a 4 hour workshop with Taras Mankovski and Brendan O'Hara</p>
 
+        <strong><p>How the West Web was Won</p></strong>
+
+        <p>We will walk through the current state of the Web and how Frontend frameworks have helped make life better for developers. Then we will introduce you to the basics of Ember.js and do some live TDD development.</p>
+
+        <ul>
+          <li>Innovation in Frontend Development</li>
+          <li>Introduction to Ember.js</li>
+          <li>Introduction to Ember-Data</li>
+          <li>Introduction to Ember-CLI</li>
+          <li>Live Basic TDD with Taras &amp; Brendan</li>
+        </ul>
+
+        <strong><p>How to get ahead in Advertising Frontend Development</p></strong>
+
+        <p>We will explore the Ember.js ecosystem and the strategies you will need to get the most out of it. Then we will introduce you to Firebase and do some live prototyping.</p>
+
+        <ul>
+          <li>Strategy in Frontend Development</li>
+          <li>Introduction to Ember Add-ons</li>
+          <li>Introduction to the Ember Community</li>
+          <li>Introduction to the Firebase</li>
+          <li>Live Prototyping with Taras &amp; Brendan</li>
+        </ul>
+
         <h2 class="give-whitespace center">Conference Day & Talks</h2>
 
         <h4>Saturday 8/13</h4>
+        {{#box-content}}
+        <h3>Keynote by Todd Jordan, EmberJS Learning Team Core Member</h3>
+        <p>Ember has a passionate, welcoming, and very active open source community, which is a big factor in its success.  I’ll discuss my experiences from being brand new to Ember just a year ago to being on the Ember learning sub-team today, and about what I’ve seen work well in welcoming and fostering an active community.</p>
+        {{/box-content}}
 
         {{gem-topics topics=model.presentationTopics}}
 
-        <p>Lightning Talks</p>
-        <p>Community led discussions</p>
+        {{#box-content}}
 
-        <h2 class="give-whitespace center">2 Day Ember.JS Training</h2>
+          <h2 class="give-whitespace center">Community Leads</h2>
 
-        <h4>Monday 8/15 & Tuesday 8/16</h4>
+          {{#gem-topics}}
+            {{gem-topics-topic
+              title='Jeff Schilling'
+              description="SVP Development, Q2e Banking"
+            }}
+            {{gem-topics-topic
+              title='Julie David'
+              description= "MEAN Developer, EmployUs"
+            }}
+            {{gem-topics-topic
+              title='Todd Jordan'
+              description="Senior Software Engineer, Interactive Intelligence"
+            }}
+            {{gem-topics-topic
+              title="Brendan O'Hara"
+              description="Founder, ViaCapita"
+            }}
+            {{gem-topics-topic
+              title='Taras Mankovski'
+              description="Founder, EmberSherpa"
+            }}
+          {{/gem-topics}}
 
-        <p>Ember Fast Track & Expansion Pack training with Ember Weekend.</p>
-        <p>This training is designed to quickly level up your Ember skills. The fast paced curriculum will focus on building a solid foundation in Ember and dive into advanced Ember techniques.</p>
-        <p>Receive video access to Ember training content prior to this 2 day training.</p>
-        <p>Full details on training {{link-to 'here' 'gemconf.training'}}.</p>
-        <a class="button red-button" href={{model.eventbrite}}>Register Today</a>
-
-      {{/box-content}}
-
-      {{#box-content}}
-
-        {{!-- <h2 class="give-whitespace center">Community Leads</h2>
-
-        {{#gem-topics}}
-          {{gem-topics-topic
-            title='Hi Tracy'
-            description=" you so awesome!"
-            by-line='Yep yep'
-          }}
-          {{gem-topics-topic
-            title='Hi Tracy'
-            description=" you so awesome!"
-            by-line='Yep yep'
-          }}
-          {{gem-topics-topic
-            title='Hi Tracy'
-            description=" you so awesome!"
-            by-line='Yep yep'
-          }}
-        {{/gem-topics}} --}}
-
+        {{/box-content}}
 
       {{/box-content}}
 
