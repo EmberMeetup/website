@@ -174,19 +174,39 @@
   </main>
 
 {{#box-callout class="gemconf-sponsors"}}
+
   <h2>Sponsors</h2>
+  
   <p>Big 🙇 to our sponsors for helping us bring this event to you.</p>
 
-  {{gem-sponsor-links sponsors=model.sponsors}}
+  {{#if model.sponsors}}
+    {{gem-sponsor-links sponsors=model.sponsors}}
+  {{/if}}
 
-  <p>Want your logo to be seen by some ridiculously awesome developers?<br>
-  We would be very grateful for your support.</p>
+  {{#if model.goldSponsors}}
+    <h3 class="sponsor-category">Gold Sponsors</h3>
+    {{gem-sponsor-links sponsors=model.goldSponsors}}
+  {{/if}}
 
-  <a href="mailto:t@embersherpa.com?Subject=Sponsor%20GEMconf" class="button red-button">Sponsor</a>
+  {{#if model.silverSponsors}}
+    <h3 class="sponsor-category">Silver Sponsors</h3>
+    {{gem-sponsor-links sponsors=model.silverSponsors}}
+  {{/if}}
 
+  {{#if model.bronzeSponsors}}
+    <h3 class="sponsor-category">Bronze Sponsors</h3>
+    {{gem-sponsor-links sponsors=model.bronzeSponsors}}
+  {{/if}}
+
+  <div class="gemconf-sponsors-footer">
+    <p>Want your logo to be seen by some ridiculously awesome developers?<br>
+    We are grateful for your support.</p>
+
+    <a href="mailto:t@embersherpa.com?Subject=Sponsor%20GEMconf" class="button red-button">Sponsor</a>
+  </div>
 {{/box-callout}}
 
-{{#box-content}}
-<h2>Code of Conduct</h2>
-<p>Please read our {{link-to 'Code of Conduct' 'gemconf.code-of-conduct'}} before purchasing a ticket.</p>
+{{#box-content class="center"}}
+  <h2>Code of Conduct</h2>
+  <p>Please read our {{link-to 'Code of Conduct' 'gemconf.code-of-conduct'}} before purchasing a ticket.</p>
 {{/box-content}}

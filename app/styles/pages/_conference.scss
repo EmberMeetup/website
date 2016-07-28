@@ -69,7 +69,7 @@ header.gemconf {
   .box-content {
     padding: 0 $base-spacing;
     max-width: $max-width;
-    margin: 0 auto;
+    margin: 4em auto;
   }
 
   .box-content:first-of-type {
@@ -156,8 +156,15 @@ header.gemconf {
 .gemconf-sponsors.box-callout {
   .box-callout--content {
     text-align: center;
-    float: none;
     margin: 0 auto !important;
+  }
+
+  .sponsor-category {
+    margin-top: 2em;
+  }
+  
+  .sponsors-footer {
+    margin-top: 4em;
   }
 }
 

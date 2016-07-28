@@ -11,8 +11,11 @@ const {
 export default Model.extend(EventMixin, PostMixin, {
   eventbrite: attr(),
   sidebar: attr(),
-  sponsors: hasMany(),
   communityLeads: hasMany('presenter'),
   heroTitle: attr(),
-  heroSubTitle: attr()
+  heroSubTitle: attr(),
+  sponsors: hasMany(),
+  goldSponsors: hasMany('sponsor'),
+  silverSponsors: hasMany('sponsor'),
+  bronzeSponsors: hasMany('sponsor'),    
 });
