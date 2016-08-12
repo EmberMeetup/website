@@ -169,15 +169,18 @@
       </div>
     </div>
 
-
-    <div class="early-bird margin-bottom-80px">
-      <div class="main">
-        <button class="button call-to-action" {{action (toggle "showTickets" this)}}>Early Bird $299.99</button>
-      </div>
-      <div class="right">
-        - {{moment-from-now 'August 1, 2016' hideSuffix=true}} left
-      </div>
-    </div>
+    {{#with 'August 16, 2016' as |earlyBird|}}
+      {{#if (moment-is-before (now) earlyBird)}}
+        <div class="early-bird margin-bottom-80px">
+          <div class="main">
+            <button class="button call-to-action" {{action (toggle "showTickets" this)}}>Early Bird $299.99</button>
+          </div>
+          <div class="right">
+            - {{moment-from-now earlyBird hideSuffix=true}} left
+          </div>
+        </div>
+      {{/if}}
+    {{/with}}
 
   {{/box-content}}
 
