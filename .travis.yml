@@ -25,6 +25,7 @@ before_install:
   - export GOOGLE_APPLICATION_CREDENTIALS="$HOME/client-secret.json"
   - gcloud version
   - tar -xzf credentials.tar.gz
+  - ls -l
   - mkdir -p lib
   - gcloud auth activate-service-account --key-file client-secret.json
   - gcloud config set project 'global-ember-meetup-frontend'
