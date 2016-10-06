@@ -36,6 +36,7 @@ before_install:
   - phantomjs --version
 
 after_success:
+  - ls -l
   - npm run deploy
 
 install:
