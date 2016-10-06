@@ -33,8 +33,11 @@ module.exports = function(environment) {
 
     fastboot: {
       hostWhitelist: ['embermeetup.com']
+    },
+
+    'ember-cli-mirage': {
+      enabled: false
     }
-    
   };
 
   if (environment === 'development') {
