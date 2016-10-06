@@ -34,7 +34,7 @@ before_install:
   - phantomjs --version
 
 after_success:
-  - test $TRAVIS_BRANCH = "master" && npm deploy
+  - test $TRAVIS_BRANCH = "master" && npm run deploy
 
 install:
   - npm install
