@@ -24,3 +24,5 @@ fastboot-dist
 
 .idea
 .vscode
+credentials.tar.gz 
+client-secret.json

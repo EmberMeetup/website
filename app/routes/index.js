@@ -9,7 +9,7 @@ export default Ember.Route.extend({
   redirect() {
     this.transitionTo('show');
   },
-  afterModel(model) {
+  afterModel() {
     this.get('headData').change();
   }
 });
