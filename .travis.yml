@@ -27,7 +27,6 @@ before_install:
   - mkdir -p lib
   - gcloud auth activate-service-account --key-file client-secret.json
   - gcloud config set project 'global-ember-meetup-frontend'
-  - npm config set registry http://registry.npmjs.org/
   - npm config set spin false
   - npm install -g bower
   - bower --version
