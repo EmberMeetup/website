@@ -9,6 +9,7 @@ cache:
 
 env:
   - CXX=g++-4.8
+  - GOOGLE_APPLICATION_CREDENTIALS="$HOME/client-secret.json"
 addons:
   apt:
     sources:
