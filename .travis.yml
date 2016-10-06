@@ -16,8 +16,12 @@ before_install:
 - npm install -g gcloud
 - gcloud config set project 'global-ember-meetup-frontend'
 
+after_success:
+- npm deploy
+
 install:
 - npm install
 - bower install
+
 script:
 - npm test
