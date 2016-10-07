@@ -36,11 +36,10 @@ before_install:
   - phantomjs --version
 
 after_success:
-  - ls -l
   - npm run deploy
 
 install:
-  - npm install
+  - test $TRAVIS_BRANCH = "master" && npm install
   - bower install
 
 script:
