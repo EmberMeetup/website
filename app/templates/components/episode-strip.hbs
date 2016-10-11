@@ -1,9 +1,13 @@
-{{#if (or media.isMobile media.isTablet)}}
-  {{episode-strip-title-frame is-expanded=isExpanded episode=episode}}
-  {{#liquid-if isExpanded}}
-    {{episode-strip-details-frame episode=episode}}
-  {{/liquid-if}}
+{{#if preview}}
+  {{episode-strip-title-frame episode=episode preview=preview}}
 {{else}}
-  {{episode-strip-title-frame episode=episode}}
-  {{episode-strip-details-frame episode=episode}}
+  {{#if (or media.isMobile media.isTablet)}}
+    {{episode-strip-title-frame is-expanded=isExpanded episode=episode}}
+    {{#liquid-if isExpanded}}
+      {{episode-strip-details-frame episode=episode}}
+    {{/liquid-if}}
+  {{else}}
+    {{episode-strip-title-frame episode=episode}}
+    {{episode-strip-details-frame episode=episode}}
+  {{/if}}
 {{/if}}

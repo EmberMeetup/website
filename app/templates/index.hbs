@@ -1,0 +1,21 @@
+<section class="index-section embershow-section">
+  <div class="page-wrap">
+    <h2>EmberShow: Latest Episode</h2>
+    {{#each model.lastEpisodes as |episode|}}
+      {{episode-strip episode=episode preview=true}}
+    {{/each}}
+  </div>
+  <div class="page-wrap button-wrap">
+    {{#link-to 'show' class='red-button button'}}
+      All Ember Show episodes <i class="fa fa-arrow-right"></i>
+    {{/link-to}}
+  </div>
+</section>
+
+<div class="video-cards">
+  {{#each model.featuredVideos as |video|}}
+    <div class="medium-card-holder">
+      {{video-card model=video show-footer=true}}
+    </div>
+  {{/each}}
+</div>

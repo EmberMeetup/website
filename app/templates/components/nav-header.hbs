@@ -17,7 +17,7 @@
     </div>
   {{/if}}
 {{else}}
-  <nav>
+  <nav class="page-wrap">
     {{link-to '' 'index' classNames="go-home" title="Go home"}}
     {{#if isCollapsible}}
       <button {{action (action (toggle "isCollapsed" this))}} class="toggle-menu">{{title}}</button>

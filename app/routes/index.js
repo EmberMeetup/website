@@ -1,15 +1,31 @@
 import Ember from 'ember';
 
 const {
+  RSVP,
   inject: { service }
 } = Ember;
 
 export default Ember.Route.extend({
   headData: service(),
-  redirect() {
-    this.transitionTo('show');
-  },
-  afterModel() {
+
+  afterModel(model) {
     this.get('headData').change();
+  },
+
+  model() {
+    let lastEpisodes = this.store.query('episode', {
+      filter: {
+        'posts_per_page': 1
+      }
+    });
+    let featuredVideos = this.store.query('episode', {
+      filter: {
+        'posts_per_page': 6
+      }
+    });
+    return RSVP.hash({
+      lastEpisodes,
+      featuredVideos
+    })
   }
 });

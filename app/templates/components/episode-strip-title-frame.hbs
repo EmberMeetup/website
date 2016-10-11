@@ -1,9 +1,9 @@
 <h4 class="frame-title" id="episode-{{episode.number}}">Episode {{episode.number}}</h4>
 <h2 class="episode-title">{{episode.title}}</h2>
-<div class="episode-date"><strong>{{moment-format episode.eventDate 'MMMM DD, YYYY'}}</strong> at {{moment-format episode.eventDate 'h:mm a'}}</div>    
+<div class="episode-date"><strong>{{moment-format episode.eventDate 'MMMM DD, YYYY'}}</strong> at {{moment-format episode.eventDate 'h:mm a'}}</div>
 
 <div class="episode-buttons">
-  {{#with (hash 
+  {{#with (hash
     date=(moment episode.eventDate)
     end=(moment-add (moment episode.eventDate) episode.duration 'minutes')
   ) as |event|}}
@@ -19,12 +19,12 @@
     {{else}}
       <a href={{episode.bigmarker}} class="button cta-button bigmarker-rsvp" target="_blank">
         <span class="sub-text">RSVP on</span>
-        <span class="bigmarker-logo">BigMarker</span>      
+        <span class="bigmarker-logo">BigMarker</span>
       </a>
     {{/if}}
   {{/with}}
 
-  {{#if (or media.isMobile media.isTablet)}}
+  {{#if (and (or media.isMobile media.isTablet) (not preview))}}
     <button class="button expand-details" {{action (toggle 'is-expanded' this)}}>Show Details</button>
   {{/if}}
 </div>
