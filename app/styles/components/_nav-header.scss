@@ -68,6 +68,7 @@
 
   a.active {
     font-weight: bold;
+    color: #fff;
   }
 
   @include media($mobile) {

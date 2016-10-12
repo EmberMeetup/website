@@ -1,9 +1,9 @@
 <section class="index-section embershow-section">
   <div class="page-wrap">
     <h2>EmberShow: Latest Episode</h2>
-    {{#each model.lastEpisodes as |episode|}}
+    {{#with model.lastEpisodes.firstObject as |episode|}}
       {{episode-strip episode=episode preview=true}}
-    {{/each}}
+    {{/with}}
   </div>
   <div class="page-wrap button-wrap">
     {{#link-to 'show' class='red-button button'}}
@@ -12,10 +12,19 @@
   </div>
 </section>
 
-<div class="video-cards">
-  {{#each model.featuredVideos as |video|}}
-    <div class="medium-card-holder">
-      {{video-card model=video show-footer=true}}
+<section class="videos-page index-section">
+  <h2 class="full-line-header">
+    <span class="page-wrap">
+      Featured Videos
+    </span>
+  </h2>
+  <div class="page-wrap">
+    <div class="video-cards">
+      {{#each model.featuredVideos as |video|}}
+        <div class="medium-card-holder">
+          {{video-card model=video show-footer=true}}
+        </div>
+      {{/each}}
     </div>
-  {{/each}}
-</div>
+  </div>
+</section>

@@ -31,3 +31,16 @@
     padding-bottom: 20px;
   }
 }
+
+.videos-page.index-section {
+  padding: 0;
+}
+
+.full-line-header {
+  color: #fff;
+  background: $blue;
+  margin: 0;
+  .page-wrap {
+    display: block;
+  }
+}
