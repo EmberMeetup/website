@@ -1,7 +1,7 @@
 .video-page {
   @include outer-container(100%);
-  padding: 20px;
-  
+  padding-top: 30px;
+
   main {
     @include media($tablet) {
       @include span-columns(12);
@@ -10,7 +10,7 @@
       @include span-columns(9)
     }
   }
-  
+
   aside {
     @include media($tablet) {
       @include span-columns(12);
@@ -20,27 +20,27 @@
       @include omega();
     }
   }
-  
+
   .video-card-holder {
     height: 260px;
   }
-  
+
   &--title {
     font-size: 32px;
     -webkit-margin-before: 0px;
   }
-  
+
   &--section-title {
     font-size: 24px;
   }
-  
+
   &--badges {
     border-bottom: $base-separator;
     padding-bottom: $base-spacing;
-  
+
     a {
       display: inline-block;
-          
+
       padding: 5px;
       text-transform: uppercase;
       font-size: 18px;

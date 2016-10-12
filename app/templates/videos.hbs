@@ -25,39 +25,40 @@
   }}
 
   <section class="videos-page">
-
-    {{#gem-search-tools
-      is-expanded=filters
-      as |tools|
-    }}
-      {{#tools.filter
-        models=model.episodes
-        label='Episodes'
-        as |episode|
+    <div class="page-wrap">
+      {{#gem-search-tools
+        is-expanded=filters
+        as |tools|
       }}
-        {{#link-to (query-params episode=episode.slug category=null page=1 tag=null filters=false)}}<span class="episode-code">{{episode.slug}}</span> - {{episode.title}}{{/link-to}}
-      {{/tools.filter}}
-      {{#tools.filter
-        models=model.categories
-        label='Categories'
-        as |category|
-      }}
-        {{#link-to (query-params category=category.slug episode=null page=1 tag=null filters=false)}}{{category.name}}{{/link-to}}
-      {{/tools.filter}}
-      {{#tools.filter
-        models=model.tags
-        label='Tags'
-        as |tag|
-      }}
-        {{#link-to (query-params tag=tag.slug category=null episode=null page=1 filters=false)}}{{tag.name}}{{/link-to}}
-      {{/tools.filter}}
-    {{/gem-search-tools}}
+        {{#tools.filter
+          models=model.episodes
+          label='Episodes'
+          as |episode|
+        }}
+          {{#link-to (query-params episode=episode.slug category=null page=1 tag=null filters=false)}}<span class="episode-code">{{episode.slug}}</span> - {{episode.title}}{{/link-to}}
+        {{/tools.filter}}
+        {{#tools.filter
+          models=model.categories
+          label='Categories'
+          as |category|
+        }}
+          {{#link-to (query-params category=category.slug episode=null page=1 tag=null filters=false)}}{{category.name}}{{/link-to}}
+        {{/tools.filter}}
+        {{#tools.filter
+          models=model.tags
+          label='Tags'
+          as |tag|
+        }}
+          {{#link-to (query-params tag=tag.slug category=null episode=null page=1 filters=false)}}{{tag.name}}{{/link-to}}
+        {{/tools.filter}}
+      {{/gem-search-tools}}
 
-    {{#if page.title}}
-      <h1 class="filter-title">{{page.title}}</h1>
-    {{/if}}
+      {{#if page.title}}
+        <h1 class="filter-title">{{page.title}}</h1>
+      {{/if}}
 
-    {{liquid-outlet}}
+      {{liquid-outlet}}
+    </div>
   </section>
 
 {{/with}}

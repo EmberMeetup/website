@@ -1,9 +1,11 @@
 .video-card {
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 
   &.without-featured {
-    background: $skyBlue;
+    background: #fff;
   }
 
   &.with-featured {
@@ -13,50 +15,49 @@
     }
   }
 
-
-  display: flex;
-  flex-direction: column;
-  
-  &--header, &--body, &--footer {    
+  &--header, &--body, &--footer {
     display: flex;
     align-content: center;
     justify-content: space-around;
   }
-    
+
   &--header {
     flex: 1;
     margin-top: 10px;
+    h3 {
+      font-size: 24px;
+    }
   }
-  
+
   &--body {
     flex: 2;
   }
 
   &--footer {
     flex: 1;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
   }
 
   &--title {
     margin: auto;
-        
+
     text-align: center;
   }
 
   &.show-flag {
     background: url(images/gem-flag.svg) 10px 0px no-repeat $skyBlue;
     background-size: 80px 100px;
-    
+
     .video-card--header {
       padding-left: 100px;
     }
-    
+
     .video-card--title {
       padding: 0 10px 0 0;
       text-indent: -50px;
     }
   }
-  
+
   &.no-flag {
     .video-card--title {
       padding: 0 10px;
@@ -67,7 +68,7 @@
     margin: auto;
     display: flex;
     flex-direction: row;
-    align-content: center;    
+    align-content: center;
   }
 
   &--info {
@@ -88,30 +89,30 @@
     font-weight: bold;
   }
 
-  &--presenter-twitter {  
+  &--presenter-twitter {
     color: $blue;
   }
-  
+
   &--footer.with-cta {
-    text-align: center;    
-    
+    text-align: center;
+
     p {
       margin: 0;
     }
   }
-  
+
   .button.small {
     height: 44px;
     display: flex;
     margin: auto;
   }
-  
+
   &.is-not-small {
     @include media($tablet) {
       &--title, &--presenter-name {
-        font-size: 40px;      
-      }      
-    }    
+        font-size: 40px;
+      }
+    }
   }
 
 }

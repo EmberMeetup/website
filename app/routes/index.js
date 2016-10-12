@@ -10,15 +10,18 @@ export default Ember.Route.extend({
 
   model() {
     let lastEpisodes = this.store.query('episode', {
-      filter: {
-        'posts_per_page': 1
-      }
+      page: 1,
+      'per_page': 1
     });
-    let featuredVideos = this.store.query('episode', {
+
+    let featuredVideos = this.store.query('presentation-topic', {
       filter: {
-        'posts_per_page': 6
-      }
+        meta_query: [ { key: 'has_video', 'value': 1 } ]
+      },
+      page: 1,
+      'per_page': 6
     });
+
     return RSVP.hash({
       lastEpisodes,
       featuredVideos
