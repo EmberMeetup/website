@@ -8,10 +8,6 @@ const {
 export default Ember.Route.extend({
   headData: service(),
 
-  afterModel(model) {
-    this.get('headData').change();
-  },
-
   model() {
     let lastEpisodes = this.store.query('episode', {
       filter: {
@@ -26,6 +22,10 @@ export default Ember.Route.extend({
     return RSVP.hash({
       lastEpisodes,
       featuredVideos
-    })
+    });
+  },
+
+  afterModel() {
+    this.get('headData').change();
   }
 });

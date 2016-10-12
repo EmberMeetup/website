@@ -1,9 +1,22 @@
 .nav-header {
-  background: $red;
-
   nav {
     @include clearfix;
     padding-bottom: 5px;
+    background: $red;
+    .page-wrap {
+      padding: 0 20px;
+      @include media($mobile) {
+        padding-left: 70px;
+      }
+
+      @include media($tablet) {
+        padding-left: 100px;
+      }
+
+      @include media($desktop) {
+        padding-left: 100px;
+      }
+    }
   }
 
   a, .toggle-menu {
@@ -17,21 +30,7 @@
   }
 }
 
-.nav-header.no-hero {
-  nav {
-    padding: 0 20px;
-    @include media($mobile) {
-      padding-left: 70px;
-    }
-
-    @include media($tablet) {
-      padding-left: 100px;
-    }
-
-    @include media($desktop) {
-      padding-left: 100px;
-    }
-  }
+.nav-header.no-hero, .nav-header.with-hero {
 
   .go-home{
     display: block;
@@ -95,33 +94,6 @@
     a {
       display: inline-block;
       padding: 20px;
-    }
-  }
-}
-
-.nav-header.with-hero {
-
-  .go-home{
-    position: absolute;
-    top: 0;
-    z-index: 1;
-
-    @include media($mobile) {
-      left: 20px;
-      height: 70px;
-      width: 49px;
-    }
-
-    @include media($tablet) {
-      left: 20px;
-      height: 120px;
-      width: 84px;
-    }
-
-    @include media($desktop) {
-      left: 120px;
-      height: 180px;
-      width: 126px;
     }
   }
 }

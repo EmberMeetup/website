@@ -2,6 +2,8 @@ header.the-ember-show {
   background: url(images/The-Ember-Show-Header.svg) no-repeat center, url(images/The-Ember-Show-Header-Background.svg) center repeat-x;
   background-size: cover, cover;
   height: 665px;
+  background-position: center 90px;
+  background-color: $skyBlue;
 
   .hero-title {
     padding-top: 60px;
@@ -11,12 +13,12 @@ header.the-ember-show {
 .episodes-page {
   @include outer-container(100%);
   padding: 20px;
-  
+
   $gw-column: 100px;
   $gw-gutter: 20px;
- 
+
   @import 'grid/private';
-  
+
   .episodes-page--title {
     margin-top: 0;
   }

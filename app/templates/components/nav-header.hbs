@@ -1,23 +1,5 @@
-{{#if withHero}}
-  {{link-to '' 'index' classNames="go-home" title="Go home"}}
-  {{#if headData.heroTitle}}
-    <span class="hero-title">{{headData.heroTitle}}</span>
-  {{/if}}
-  {{#if headData.heroImage}}
-  <div class="hero-image">
-    <img src="{{headData.heroImage}}" alt="Hero Image">
-  </div>
-  {{/if}}
-  {{#if headData.heroSubTitle}}
-    <span class="hero-sub-title">{{headData.heroSubTitle}}</span>
-  {{/if}}
-  {{#if withButton}}
-    <div class="call-to-action">
-      <a class="button red-button" href={{headData.buttonUrl}}>{{headData.buttonText}}</a>
-    </div>
-  {{/if}}
-{{else}}
-  <nav class="page-wrap">
+<nav>
+  <div class="page-wrap">
     {{link-to '' 'index' classNames="go-home" title="Go home"}}
     {{#if isCollapsible}}
       <button {{action (action (toggle "isCollapsed" this))}} class="toggle-menu">{{title}}</button>
@@ -27,5 +9,24 @@
     {{else}}
       {{yield}}
     {{/if}}
-  </nav>
+  </div>
+</nav>
+
+{{#if withHero}}
+  {{#if headData.heroTitle}}
+    <span class="hero-title">{{headData.heroTitle}}</span>
+  {{/if}}
+  {{#if headData.heroImage}}
+    <div class="hero-image">
+      <img src="{{headData.heroImage}}" alt="Hero Image">
+    </div>
+  {{/if}}
+  {{#if headData.heroSubTitle}}
+    <span class="hero-sub-title">{{headData.heroSubTitle}}</span>
+  {{/if}}
+  {{#if withButton}}
+    <div class="call-to-action">
+      <a class="button red-button" href={{headData.buttonUrl}}>{{headData.buttonText}}</a>
+    </div>
+  {{/if}}
 {{/if}}
