@@ -24,6 +24,7 @@ $base-separator: 1px solid transparentize($dark-gray, 0.9);
 @import 'pages/_newsletter';
 @import 'pages/_rock-and-roll-ember';
 @import 'pages/_past-conferences';
+@import 'pages/_index';
 
 @import 'components/_nav-header';
 @import 'components/_box-content';
@@ -114,4 +115,15 @@ a {
 hr.red-line {
   border-top: 2px solid $red;
   width: 90%;
+}
+
+.page-wrap {
+  @include outer-container;
+  position: relative;
+  @include media($mobile) {
+    padding: 10px;
+  }
+  @include media($tablet) {
+    padding: 20px;
+  }
 }

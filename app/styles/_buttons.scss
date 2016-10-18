@@ -1,28 +1,38 @@
-.button { 
+.button {
   display: inline-block;
   padding: 10px 20px;
   border-radius: 25px;
-  
-  text-decoration: none; 
+
+  text-decoration: none;
   line-height: 28px;
-  
-  &.red-button {    
+
+  &.red-button {
     background: $red;
     color: white;
   }
-  
+
   &.small {
     font-size: 22px;
     line-height: 22px;
   }
-  
+
   &.red-outline {
     border: 1px solid $red;
   }
 
+  &.green-outline {
+    border: 1px solid $dark-green;
+    color: $dark-green;
+  }
+
   &.sky-button {
-    background: skyblue;
+    background: $skyBlue;
     color: white;
   }
-  
+
+  &.blue-button {
+    background: $blue;
+    color: white;
+  }
+
 }

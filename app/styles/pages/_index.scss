@@ -1,0 +1,50 @@
+.embershow-section {
+  background: $skyBlue url(images/The-Ember-Show-Header-Background.svg) center bottom repeat-x;
+  padding: 40px 0;
+
+  @include media($tablet) {
+    background: url(images/The-Ember-Show-Header.svg) 0 bottom no-repeat, url(images/The-Ember-Show-Header-Background.svg) center bottom repeat-x;
+    background-color: $skyBlue;
+  }
+  @include media($desktop) {
+    background: url(images/The-Ember-Show-Header.svg) 320px bottom no-repeat, url(images/The-Ember-Show-Header-Background.svg) center bottom repeat-x;
+    background-color: $skyBlue;
+  }
+
+  .episode-strip.preview {
+    display: block;
+    padding: 20px;
+    background: #fff;
+    .title-frame {
+      width: 100%;
+    }
+    @include media($tablet) {
+      @include span-columns(9);
+    }
+    @include media($desktop) {
+      @include span-columns(6);
+    }
+  }
+
+  .button-wrap {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.videos-page.index-section {
+  padding: 0;
+  .all-videos-button {
+    text-align: center;
+    padding: 20px 0;
+  }
+}
+
+.full-line-header {
+  color: #fff;
+  background: $blue;
+  margin: 0;
+  .page-wrap {
+    display: block;
+  }
+}

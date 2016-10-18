@@ -1,65 +1,66 @@
 .videos-page {
   @include outer-container(100%);
-  padding: 20px;
-  
+  padding-top: 30px;
+  background: $skyBlue;
+
   .video-cards {
     @include outer-container(100%);
-    
+
     .medium-card-holder {
       margin-bottom: 20px;
-      height: 260px;  
-                  
+      height: 260px;
+
       @include media($desktop) {
         @include span-columns(4);
         @include omega(3n);
       }      
     }
-    
+
   }
-  
+
   .filter-text {
     text-transform: uppercase;
     color: $dark-gray;
   }
-  
+
   .filter-title {
     margin-top: 0;
-  }  
- 
+  }
+
  .gem-search-tools {
    @include span-columns(12);
    margin-bottom: $base-spacing;
    position: relative;
    min-height: 60px;
    float: none;
-   
+
   .episode-code {
     text-transform: uppercase;
   }
-   
+
    .expand-trigger {
      @include transition(color 0.25s ease-in 0s);
      position: absolute;
      top: 10px;
      right: 10px;
      z-index: 1;
-     
+
      border: none;
      background: none;
      color: $blue;
      cursor: pointer;
-     
+
      &:hover {
        color: $darkerBlue;
-     }     
+     }
    }
-   
+
    &.is-expanded .expand-trigger {
      color: $darkerBlue;
    }
-   
+
  }
-  
+
   .gem-pagination {
     @include span-columns(12);
   }

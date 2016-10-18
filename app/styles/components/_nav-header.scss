@@ -1,48 +1,73 @@
 .nav-header {
-  background: $skyBlue;
-  
   nav {
     @include clearfix;
-    padding-bottom: 5px; 
+    padding-bottom: 5px;
+    background: $red;
+    .page-wrap {
+      padding: 0 20px;
+      @include media($mobile) {
+        padding-left: 70px;
+      }
+
+      @include media($tablet) {
+        padding-left: 100px;
+      }
+
+      @include media($desktop) {
+        padding-left: 100px;
+      }
+    }
   }
 
   a, .toggle-menu {
-    color: $darkerBlue;
-    text-transform: uppercase;
+    color: $light-gray;
     text-decoration: none;
   }
 
-  .go-home {    
+  .go-home {
     text-indent: -2000px;
     background: url(images/gem-flag.svg) center top no-repeat;
-  }  
+  }
 }
 
-.nav-header.no-hero { 
-  nav {
-    padding: 0 20px;
-  }
-  
-  .go-home {
+.nav-header.no-hero, .nav-header.with-hero {
+
+  .go-home{
     display: block;
-    float: left;
-    width: 70px;
-    height: 100px;
-    padding: 40px 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    @include media($mobile) {
+      height: 100px;
+      width: 70px;
+      left: 10px;
+    }
+
+    @include media($tablet) {
+      height: 100px;
+      width: 70px;
+      left: 20px;
+    }
+
+    @include media($desktop) {
+      height: 120px;
+      width: 84px;
+    }
   }
-  
-  
+
   .toggle-menu {
     display: inline-block;
-    margin-top: 30px;
-    padding-bottom: 10px;
-    
+    padding: 10px;
+
     background: none;
     border: none;
   }
-  
+
   a.active {
     font-weight: bold;
+    color: #fff;
   }
 
   @include media($mobile) {
@@ -53,7 +78,7 @@
       padding: 10px 0;
     }
   }
-  
+
   @include media($tablet) {
     text-align: right;
 
@@ -62,41 +87,14 @@
       padding: 10px 0;
     }
   }
-    
+
   @include media($desktop) {
     text-align: left;
 
     a {
       display: inline-block;
-      padding: 40px 20px;
+      padding: 20px;
     }
-  }
-}
-
-.nav-header.with-hero {
-  
-  .go-home{
-    position: absolute;
-    top: 0;
-    z-index: 1;
-      
-    @include media($mobile) {
-      left: 20px;
-      height: 70px;
-      width: 49px;
-    }
-
-    @include media($tablet) {
-      left: 20px;
-      height: 120px;
-      width: 84px;
-    }
-      
-    @include media($desktop) {
-      left: 120px;
-      height: 180px;
-      width: 126px;
-    }   
   }
 }
 
@@ -119,13 +117,13 @@
       line-height: 64px;
     }
   }
-  
+
   @include media($tablet) {
     .hero-title {
       font-size: 72px;
     }
   }
-    
+
   @include media($desktop) {
     .hero-title {
       font-size: 88px;
