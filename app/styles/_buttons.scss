@@ -20,6 +20,11 @@
     border: 1px solid $red;
   }
 
+  &.green-outline {
+    border: 1px solid $dark-green;
+    color: $dark-green;
+  }
+
   &.sky-button {
     background: $skyBlue;
     color: white;

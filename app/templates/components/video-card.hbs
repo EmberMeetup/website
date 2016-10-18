@@ -17,13 +17,13 @@
       <div class="video-card--info">
         <h4 class="video-card--presenter-name">{{model.presenter.title}}</h4>
         {{#if model.presenter.twitter}}
-          <a class="video-card--presenter-twitter" 
+          <a class="video-card--presenter-twitter"
             href={{twitter-url model.presenter.twitter}}
             title="Link to {{model.presenter.firstName}}'s Twitter"
             target="_blank">
             @{{model.presenter.twitter}}
           </a>
-        {{/if}}      
+        {{/if}}
       </div>
     </div>
   </div>
@@ -38,11 +38,11 @@
       }}
         <div class="video-card--footer {{if footer.hasVideo 'with-video' 'with-cta'}}">
           {{#if footer.hasVideo}}
-            {{#link-to 'video' model class="button small red red-outline"}}Watch Video{{/link-to}}
+            {{#link-to 'video' model class="button small green-outline"}}Watch Video{{/link-to}}
           {{else}}
             <p>
               Watch live on <strong>
-                {{moment-format event.event.eventDate 'LLLL' timeZone='America/New_York'}} 
+                {{moment-format event.event.eventDate 'LLLL' timeZone='America/New_York'}}
                 {{moment-tz-guess 'z'}}
               </strong><br>
               <a href="http://bit.ly/the-ember-show" class="red">bit.ly/the-ember-show</a>
