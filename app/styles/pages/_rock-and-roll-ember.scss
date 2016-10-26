@@ -1,36 +1,31 @@
-header.rock-and-roll-ember {
-  background: url(images/RARE-Background.svg) #0A1D25 no-repeat center;
-  height: 658px;
-
-  text-align: center;
+.nav-header.rock-and-roll-ember.with-hero {
+  background: url(images/RARE-Background.svg) center / cover no-repeat #0A1D25;
+  padding-bottom: 40px;
 
   .hero-image {
-    padding-top: 60px;
+    @include margin(40px auto -30px auto);
+    max-width: 400px;
+
     img {
-      @include media($mobile) {
         max-width: 100%;
-      }
-      @include media($tablet) {
-        height: 543px;
-      }
     }
   }
 
   .hero-sub-title {
-    display: inline-block;
-    max-width: 600px;
-    
+    @include margin(null auto);
+    display: block;
+    color: #fff;
     font-family: 'Dosis';
-    color: white;
     font-weight: 100;
+    max-width: 600px;
+    text-align: center;
 
-    @include media($mobile) { 
-      margin-top: -30px; 
+    @include media($mobile) {
       padding-left: 20px;
       padding-right: 20px;
     }
+
     @include media($tablet) {
-      margin-top: -60px;      
       font-size: 36px;
     }
   }
@@ -118,7 +113,7 @@ section.rock-and-roll-ember {
   .max-width-800px {
     max-width: 800px;
   }
-  
+
   .float-right {
     float: right;
   }
@@ -139,7 +134,7 @@ section.rock-and-roll-ember {
 
   .rare-lightning-background {
     background: url(images/RARE-lightning-background.svg) center no-repeat $skyBlue;
-    
+
     .box-content--content {
       padding: 30px 0;
       text-align: center;
@@ -368,7 +363,7 @@ section.rock-and-roll-ember {
       cursor: pointer;
       border: none;
     }
-    
+
     .right {
       padding-left: 10px;
     }
