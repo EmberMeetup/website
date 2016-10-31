@@ -1,6 +1,7 @@
 {{#nav-header title="Menu"}}
   {{link-to 'The Ember Show' 'show'}}
   {{link-to 'Videos' 'videos' (query-params page=1 category=null tag=null episode=null)}}
+  {{link-to 'Trainings' 'rock-and-roll-ember'}}
 {{/nav-header}}
 
 <div class={{concat (slugify currentRouteName) '-' 'page'}}>

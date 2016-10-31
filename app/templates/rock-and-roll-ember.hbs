@@ -1,26 +1,63 @@
 {{scroll-to position=0}}
 
-<section class="max-width auto-margin rock-and-roll-ember">
-
-  {{#box-content classNames="center margin-left-right-30px margin-bottom-80px"}}
+<section class="page-wrap training-intro">
+  <div class="training-summary">
     <h2 class="heading">
       Learn to implement authentication with the author of <i>Rock and Roll with Ember</i> and EmberSherpa.
     </h2>
-
-    <p class="margin-bottom-80px">
+    <p>
       This complete introduction to authentication will tell you everything you need to know to implement
       <strong>Username / Password</strong> and <strong>oAuth 2.0</strong> authentication scenarios.
       This training will consist of pre-recorded videos, a live hands-on workshop and post workshop implementation support.
     </p>
-
-  {{/box-content}}
-
-
-  <div class="rocker-gabby-callout">
-    <h2>
-      Authentication is not simple. This course will have you and your Ember app rocking some serious login chops in no time.
-    </h2>
   </div>
+
+  <h2 class="center margin-bottom-30px">Your Instructor</h2>
+  <div class="instructor clearfix">
+    <div class="instructor-data">
+      <h3>Balint Erdi</h3>
+      <p>Balint helped thousands of people become Ember developers with the <i>Rock and Roll with Ember</i> book.</p>
+    </div>
+    <img src="https://embermeetup.com/wp-content/uploads/RARE-Balint.png" alt="Balint Erdi's portrait"/>
+  </div>
+</section>
+
+<section class="rocker-gabby-callout">
+  <div class="page-wrap">
+    <p>
+      Authentication is not simple. This course will have you and your Ember app rocking some serious login chops in no time.
+    </p>
+  </div>
+</section>
+
+<section class="available-workshops page-wrap">
+  <h2>Workshops by region</h2>
+  <ul class="workshops">
+    <li class="workshop">
+      <h3>Asian Timezone</h3>
+      <strong>November 17</strong> <br>
+      <em>12pm JST (GMT+9)</em>
+      <br>
+      <button class="button call-to-action" {{action (toggle 'showTickets' this)}}>Buy for $349.99</button>
+    </li>
+    <li class="workshop">
+      <h3>European Timezone</h3>
+      <strong>November 22</strong> <br>
+      <em>12pm JST (GMT)</em>
+      <br>
+      <button class="button call-to-action" {{action (toggle 'showTickets' this)}}>Buy for $349.99</button>
+    </li>
+    <li class="workshop">
+      <h3>Americas Timezone</h3>
+      <strong>November 30</strong> <br>
+      <em>12pm JST (GMT-5)</em>
+      <br>
+      <button class="button call-to-action" {{action (toggle 'showTickets' this)}}>Buy for $349.99</button>
+    </li>
+  </ul>
+</section>
+
+<section class="max-width auto-margin rock-and-roll-ember">
 
   {{#box-content
     classNames="margin-left-right-30px"
@@ -87,25 +124,6 @@
   {{/box-content}}
 
   <hr class="red-line margin-bottom-80px">
-
-  {{#box-content
-    classNames="margin-left-right-30px margin-bottom-30px"
-  }}
-    <h2 class="center margin-bottom-30px">Your Instructors</h2>
-
-    <div class="two-columns">
-      <div class="column margin-bottom-30px">
-        <img src="https://embermeetup.com/wp-content/uploads/RARE-Balint.png" alt="Balint Erdi's portrait"/>
-        <h3>Balint Erdi</h3>
-        <p>Balint helped thousands of people become Ember developers with the <i>Rock and Roll with Ember</i> book.</p>
-      </div>
-      <div class="column margin-bottom-30px">
-        <img src="https://embermeetup.com/wp-content/uploads/RARE-EmberSherpa.png" alt="Taras' portrait"/>
-        <h3>Taras Mankovski<br> (aka EmberSherpa)</h3>
-        <p>Taras spent the last 3 years helping people learn Ember.</p>
-      </div>
-    </div>
-  {{/box-content}}
 
   <div class="schedule">
     <h2>Schedule</h2>

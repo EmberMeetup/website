@@ -49,31 +49,6 @@ section.rock-and-roll-ember {
     }
   }
 
-  .rocker-gabby-callout {
-    background-color: $red;
-    display: flex;
-    align-content: center;
-    margin-bottom: 80px;
-
-    h2 {
-      max-width: 800px;
-      padding-left: 10px;
-      padding-right: 10px;
-      color: white;
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 64px;
-    }
-
-    @include media($tablet) {
-      padding-right: 200px;
-      background: $red url(https://embermeetup.com/wp-content/uploads/RARE-Gabby.svg) calc(100% - 10px) bottom no-repeat;
-      background-size: 200px auto;
-      min-height: 260px;
-    }
-  }
-
   .release-date {
     font-size: 80%;
     display: block;
@@ -87,7 +62,7 @@ section.rock-and-roll-ember {
   .key-message {
     background-color: $red;
     display: flex;
-    justify-content: center;    
+    justify-content: center;
     align-content: center;
     margin-bottom: 80px;
 
@@ -141,7 +116,7 @@ section.rock-and-roll-ember {
     }
 
     p {
-      font-size: 120%;      
+      font-size: 120%;
     }
   }
 
@@ -212,7 +187,7 @@ section.rock-and-roll-ember {
   .content-max-width-600px {
     .box-content--content {
       max-width: 600px;
-      margin: 0 auto;      
+      margin: 0 auto;
     }
   }
 
@@ -250,7 +225,7 @@ section.rock-and-roll-ember {
 
         background-position: left center;
         background-repeat: no-repeat;
-        background-size: 30px auto;   
+        background-size: 30px auto;
 
         u {
           display: inline-block;
@@ -268,13 +243,13 @@ section.rock-and-roll-ember {
 
       .call-to-action {
         display: inline-block;
-        cursor: pointer;      
+        cursor: pointer;
       }
     }
 
     &--plan.primary {
       width: 320px;
-      padding: 20px;      
+      padding: 20px;
       border: $red 6px solid;
       border-radius: 3px;
 
@@ -398,5 +373,119 @@ section.rock-and-roll-ember {
   @include media($tablet) {
     max-width: 800px;
     max-height: 420px;
+  }
+}
+
+section.training-intro {
+  text-align: center;
+
+  @include media($tablet) {
+    .training-summary {
+      text-align: left;
+      .heading {
+        @include span-columns(6);
+      }
+      p {
+        @include span-columns(6);
+      }
+    }
+    .instructor {
+      .instructor-data {
+        @include span-columns(6);
+      }
+      img {
+        @include span-columns(6);
+      }
+    }
+  }
+
+  @include media($desktop) {
+    margin-top: 50px;
+    .training-summary {
+      @include span-columns(6);
+      padding-right: 50px;
+      .heading, p {
+        @include span-columns(12);
+      }
+    }
+    .instructor {
+      @include span-columns(6);
+    }
+  }
+  .instructor {
+    background: $skyBlue;
+    padding: 20px;
+    border-radius: 10px;
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.rocker-gabby-callout {
+  background-color: $red;
+  display: flex;
+  align-content: center;
+  margin-bottom: 80px;
+
+  p {
+    color: white;
+    text-align: left;
+    line-height: 50px;
+    font-size: 32px;
+  }
+
+  @include media($tablet) {
+    margin: 50px 0;
+    .page-wrap {
+      padding-right: 200px;
+      background: $red url(https://embermeetup.com/wp-content/uploads/RARE-Gabby.svg) calc(100% - 10px) bottom no-repeat;
+      background-size: 200px auto;
+      min-height: 260px;
+    }
+  }
+  @include media($desktop) {
+    p {
+      padding-right: 40%;
+    }
+    .page-wrap {
+      background-position: calc(80% - 10px) bottom;
+    }
+  }
+}
+
+.available-workshops {
+  @include media($desktop) {
+    margin: 50px 0;
+  }
+}
+
+.workshops {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  .workshop {
+    display: block;
+    text-align: center;
+    border: 1px solid $blue;
+    border-radius: 10px;
+
+    h3 {
+      color: $darkerBlue;
+      margin-bottom: 20px;
+    }
+    .button {
+      color: $dark-green;
+      border: 1px solid $dark-green;
+      outline: none;
+      background: #fff;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  @include media($tablet) {
+    .workshop {
+      @include span-columns(4);
+    }
   }
 }
