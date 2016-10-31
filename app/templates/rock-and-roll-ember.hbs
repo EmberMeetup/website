@@ -57,13 +57,15 @@
   </ul>
 </section>
 
-<section class="max-width auto-margin rock-and-roll-ember">
+<hr class="red-line">
 
+<section class="page-wrap workshop-schedule">
+  <h2>Workshop Schedule</h2>
   {{#box-content
     classNames="margin-left-right-30px"
     image="https://embermeetup.com/wp-content/uploads/RARE-Player.png"
   }}
-  <h2>Authentication Fundamentals Videos <span class="release-date">August 11th</span></h2>
+  <h2>Authentication Fundamentals Videos <span class="release-date">Two Weeks before</span></h2>
   <p>
     You will receive access to pre-recorded videos 7 days before the workshop. <br>
     These videos will cover the following topics:
@@ -81,18 +83,20 @@
       As you view them, you'll' write down your questions as they occur, or later on as your subconscious mind continues to work. We'll collect all the questions beforehand to allow our instructor to dive right into the details that are most relevant to the group.
     </p>
   {{/box-content}}
+</section>
 
-  <div class="key-message">
-    <h2>
-      Our videos are tightly edited and offer a deep dive into all aspects of authentication.
-    </h2>
-  </div>
+<div class="key-message">
+  <h2>
+    Our videos are tightly edited and offer a deep dive into all aspects of authentication.
+  </h2>
+</div>
 
+<section class="page-wrap workshop-schedule">
   {{#box-content
     classNames="margin-left-right-30px margin-bottom-80px"
     image="https://embermeetup.com/wp-content/uploads/RARE-Monitor.png"
   }}
-    <h2 class="clearfix">Interactive Workshop <span class="release-date">August 18th<br>12pm - 4pm EST</span></h2>
+    <h2 class="clearfix">Interactive Workshop <span class="release-date">Training day</span></h2>
     <p>
       In the online workshop we'll spend ALL of our time working on a project,
       adding authentication to an existing application. The goal of
@@ -100,21 +104,23 @@
       You will see real code and work on real problems.
     </p>
   {{/box-content}}
+</section>
 
-  {{#box-content
-    classNames="margin-bottom-80px rare-lightning-background"
-  }}
-    <p>
-      Our workshop is open to a <span class="red">LIMITED</span> number of seats in order to <br>
-      ensure learners can get their questions answered by our instructors & mentors. <br>
-    </p>
-  {{/box-content}}
+{{#box-content
+  classNames="margin-bottom-80px rare-lightning-background"
+}}
+  <p>
+    Our workshop is open to a <span class="red">LIMITED</span> number of seats in order to <br>
+    ensure learners can get their questions answered by our instructors & mentors. <br>
+  </p>
+{{/box-content}}
 
+<section class="page-wrap workshop-schedule">
   {{#box-content
     classNames="margin-left-right-30px margin-bottom-80px"
     image="https://embermeetup.com/wp-content/uploads/RARE-notebook.png"
   }}
-    <h2 class="clearfix">Implementation Support <span class="release-date">August 18 - 25th</span></h2>
+    <h2 class="clearfix">Implementation Support <span class="release-date">Two weeks after</span></h2>
     <p>
       Putting what you learn to practice is the real test. After the workshop, you'll continue to have access
       to our Slack channel and a remote pair programming session. Ask questions, or clarify details
@@ -122,86 +128,75 @@
       or get help with a complex integration.
     </p>
   {{/box-content}}
+</section>
 
-  <hr class="red-line margin-bottom-80px">
+<hr class="red-line">
 
-  <div class="schedule">
-    <h2>Schedule</h2>
-
-    <dl class="date-list">
-      <div class="row">
-        <dt><i class="fa fa-calendar-o" aria-hidden="true"></i> August 11th</dt>
-        <dd>Access to Authentication Fundamentals Videos</dd>
-      </div>
-      <div class="row">
-        <dt><i class="fa fa-calendar-o" aria-hidden="true"></i> August 18th</dt>
-        <dd>12pm - 4pm EST - Online Workshop</dd>
-      </div>
-      <div class="row">
-        <dt><i class="fa fa-calendar-o" aria-hidden="true"></i> August 18th - 25th</dt>
-        <dd>Implementation Support</dd>
-      </div>
-    </dl>
-  </div>
-
-  {{#box-content}}
-
-    <h2 class="center margin-bottom-80px">Reserve your stop now!</h2>
-
-    <div class="packages-table margin-bottom-80px">
-      <div class="packages-table--plan secondary">
-        <h3 class="header">Training<br> <span class="sub">Videos &amp; Workshop</span></h3>
-        <ul class="content">
-          <li class="item videos-icon"><u>Authentication Fundamentals Videos</u></li>
-          <li class="item workshop-icon">Interactive Workshop</li>
-        </ul>
-        <div class="footer">
-          <button class="button call-to-action" {{action (toggle 'showTickets' this)}}>$249.99</button>
-        </div>
-      </div>
-
-      <div class="packages-table--plan primary">
-        <h3 class="header">Training &amp; Support <span class="sub">Complete Package</span></h3>
-        <ul class="content">
-          <li class="item videos-icon"><u>Authentication Fundamentals Videos</u></li>
-          <li class="item workshop-icon"><u>Interactive Workshop</u></li>
-          <li class="item slack-icon"><u>Support Slack Channel (1 week)</u></li>
-          <li class="item screenhero-icon"><u>Pair Programming Session (45 min)</u></li>
-          <li class="item trees-icon">Evergreen Videos (1 year)</li>
-        </ul>
-        <div class="footer">
-          <button class="button call-to-action" {{action (toggle 'showTickets' this)}}>Buy Together $349.99</button>
-        </div>
-      </div>
-
-      <div class="packages-table--plan secondary">
-        <h3 class="header">Implementation Support <span class="sub">Chat &amp; Pairing</span></h3>
-        <ul class="content">
-          <li class="item slack-icon"><u>Support Slack Channel (1 week)</u></li>
-          <li class="item screenhero-icon"><u>Pair Programming Session (45 min)</u></li>
-          <li class="item trees-icon">Evergreen Videos (1 year)</li>
-        </ul>
-        <div class="footer">
-          <button class="button call-to-action" {{action (toggle 'showTickets' this)}}>$249.99</button>
-        </div>
-      </div>
-    </div>
-
-    {{#with 'August 16, 2016' as |earlyBird|}}
-      {{#if (moment-is-before (now) earlyBird)}}
-        <div class="early-bird margin-bottom-80px">
-          <div class="main">
-            <button class="button call-to-action" {{action (toggle "showTickets" this)}}>Early Bird $299.99</button>
-          </div>
-          <div class="right">
-            - {{moment-from-now earlyBird hideSuffix=true}} left
-          </div>
-        </div>
-      {{/if}}
-    {{/with}}
-
+<section class="page-wrap rock-and-roll-ember">
+  <h2>Reserve your spot now!</h2>
+  {{#box-content
+    classNames="prerequisites"
+  }}
+    <h2>Prerequisites</h2>
+    <p>
+      This course will build on your understanding of Ember.js and common Ember.js development toolset.
+      You must be comfortable with content that’s covered in Ember Guides and have working familiarity with EmberCLI and Git.
+    </p>
   {{/box-content}}
+  <aside class="workshop-aside">
+    {{#box-content class="package-box"}}
+      <div class="packages-table margin-bottom-80px">
+        <div class="packages-table--plan primary">
+          <h3 class="header">Training &amp; Support</h3>
+          <ul class="content">
+            <li class="item videos-icon"><u>Authentication Fundamentals Videos</u></li>
+            <li class="item workshop-icon"><u>Interactive Workshop</u></li>
+            <li class="item slack-icon"><u>Support Slack Channel (1 week)</u></li>
+            <li class="item screenhero-icon"><u>Pair Programming Session (45 min)</u></li>
+            <li class="item trees-icon">Evergreen Videos (1 year)</li>
+          </ul>
+        </div>
+      </div>
+      {{#with 'August 16, 2016' as |earlyBird|}}
+        {{#if (moment-is-before (now) earlyBird)}}
+          <div class="early-bird margin-bottom-80px">
+            <div class="main">
+              <button class="button call-to-action" {{action (toggle "showTickets" this)}}>Early Bird $299.99</button>
+            </div>
+            <div class="right">
+              - {{moment-from-now earlyBird hideSuffix=true}} left
+            </div>
+          </div>
+        {{/if}}
+      {{/with}}
+    {{/box-content}}
+  </aside>
+  <ul class="workshops">
+    <li class="workshop">
+      <h3>Asian Timezone</h3>
+      <strong>November 17</strong> <br>
+      <em>12pm JST (GMT+9)</em>
+      <br>
+      <button class="button call-to-action" {{action (toggle 'showTickets' this)}}>Buy for $349.99</button>
+    </li>
+    <li class="workshop">
+      <h3>European Timezone</h3>
+      <strong>November 22</strong> <br>
+      <em>12pm JST (GMT)</em>
+      <br>
+      <button class="button call-to-action" {{action (toggle 'showTickets' this)}}>Buy for $349.99</button>
+    </li>
+    <li class="workshop">
+      <h3>Americas Timezone</h3>
+      <strong>November 30</strong> <br>
+      <em>12pm JST (GMT-5)</em>
+      <br>
+      <button class="button call-to-action" {{action (toggle 'showTickets' this)}}>Buy for $349.99</button>
+    </li>
+  </ul>
+</section>
 
+<section class="page-wrap">
   <hr class="red-line margin-bottom-80px">
 
   {{#box-content
@@ -215,17 +210,6 @@
       It’s a great way to keep up to date on the developments of Ember’s authentication story.
     </p>
   {{/box-content}}
-
-  {{#box-content
-    classNames="margin-bottom-80px rare-lightning-background content-max-width-600px"
-  }}
-    <h2>Prerequisites</h2>
-    <p>
-      This course will build on your understanding of Ember.js and common Ember.js development toolset.
-      You must be comfortable with content that’s covered in Ember Guides and have working familiarity with EmberCLI and Git.
-    </p>
-  {{/box-content}}
-
 </section>
 
 {{#if showTickets}}
