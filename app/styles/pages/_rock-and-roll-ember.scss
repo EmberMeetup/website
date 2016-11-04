@@ -1,32 +1,92 @@
-.nav-header.rock-and-roll-ember.with-hero {
-  background: url(images/RARE-Background.svg) center / cover no-repeat #0A1D25;
-  padding-bottom: 40px;
+.training-header {
+  background: url(images/rare/RARE-Background.svg) center / cover no-repeat #0A1D25;
 
-  .hero-image {
-    @include margin(40px auto -30px auto);
-    max-width: 400px;
+  .training-title {
+    text-align: center;
+    padding-top: 20px;
 
-    img {
-        max-width: 100%;
+    .rock-and-roll-logo {
+      width: 230px;
+      height: 288px;
+      background: url(images/rare/RARE-logo.png) center / contain no-repeat;
+      display: block;
+      text-indent: -1000px;
+      overflow: hidden;
+    }
+    h1 {
+      color: #fff;
+      margin: 0;
+    }
+
+    @include media($mobile) {
+      .rock-and-roll-logo {
+        width: 100%;
+        height: 200px;
+      }
+    }
+    @include media($tablet) {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      padding-top: 100px;
+
+      h1 {
+        max-width: 500px;
+        text-align: left;
+        font-size: 60px;
+        border-left: 2px solid rgba(255,255,255,0.5);
+        padding: 20px 40px;
+        margin-left: 40px;
+      }
     }
   }
 
-  .hero-sub-title {
-    @include margin(null auto);
-    display: block;
+  .training-summary {
+    background: rgba(0, 0, 0, 0.5);
     color: #fff;
-    font-family: 'Dosis';
-    font-weight: 100;
-    max-width: 600px;
-    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
 
-    @include media($mobile) {
-      padding-left: 20px;
-      padding-right: 20px;
+    strong {
+      font-weight: bold;
     }
 
+    @include media($mobile) {
+      p {
+        margin: 0;
+        text-align: center;
+        border-top: 1px solid rgba(255,255,255,0.5);
+        padding: 20px 10px;
+        &:first-child {
+          border: none;
+        }
+      }
+    }
     @include media($tablet) {
-      font-size: 36px;
+      .page-wrap {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+      }
+
+      p {
+        width: 33%;
+        margin: 0;
+        text-align: center;
+        padding: 0 20px;
+        &:first-child {
+          padding: 0;
+        }
+      }
+    }
+    @include media($desktop) {
+      margin-top: 50px;
+      p {
+        padding: 0 40px;
+        &:first-child {
+          padding: 0;
+        }
+      }
     }
   }
 }
