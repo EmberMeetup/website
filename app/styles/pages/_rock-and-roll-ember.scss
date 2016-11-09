@@ -177,10 +177,23 @@
       margin: 20px 0;
       p {
         margin: 0;
+        clear: both;
       }
       footer {
         font-weight: normal;
         margin-top: 10px;
+      }
+      .photo {
+        display: inline-block;
+        width: 120px;
+        height: 80px;
+        border-radius: 10px;
+        overflow: hidden;
+        float: left;
+        margin-right: 10px;
+        img {
+          max-width: 100%;
+        }
       }
     }
   }
