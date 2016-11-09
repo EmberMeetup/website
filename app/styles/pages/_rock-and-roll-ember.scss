@@ -375,14 +375,26 @@
   h3 {
     text-transform: none;
   }
-  .button {
+  button[type="submit"] {
+    @extend .button;
+    @extend .blue-button;
     border: none;
     outline: none;
+    margin-left: 20px;
   }
   input {
     background: #F2F2F2;
     padding: 10px 20px;
     border: none;
     outline: none;
+  }
+  .ember-chimp {
+    &.error {
+      .message {
+        color: red;
+        margin-top: 20px;
+        font-size: 18px;
+      }
+    }
   }
 }

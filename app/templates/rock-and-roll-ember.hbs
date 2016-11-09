@@ -164,7 +164,7 @@
     <aside class="more-info">
       <h3>More info?</h3>
       Ask us anything by email or DM on twitter: <br> <br>
-      <a href="mailto:t@embersherpa.com"><i class="fa fa-envelope-o"></i> t@embermeetup.com</a> <br> <br>
+      <a href="mailto:hi@embermeetup.com"><i class="fa fa-envelope-o"></i> hi@embermeetup.com</a> <br> <br>
       <a href="https://twitter.com/EmberMeetup" target="_blank"><i class="fa fa-twitter"></i> EmberMeetup</a>
     </aside>
   </div>
@@ -172,10 +172,12 @@
 
 <section class="training-subscribe training-section">
   <h3>Can’t make it for these dates?</h3>
-  <form>
-    <input type="email" name="email" value="" placeholder="Your email here">
-    <button type="button" name="button" class="button blue-button">Subscribe</button>
-  </form>
+  {{ember-chimp label="Subscribe"
+      placeholder="Your Email Here"
+      formAction="//embersherpa.us12.list-manage.com/subscribe/post?u=81e8e3fa2a6f79fe97467029a&amp;id=05fb609e3f"
+      buttonText="Subscribe"
+      loadingText="Loading"
+  }}
 </section>
 
 {{#if showTickets}}
