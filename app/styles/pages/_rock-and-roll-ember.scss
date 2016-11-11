@@ -1,6 +1,10 @@
 .training-header {
   background: url(images/rare/RARE-Background.svg) center / cover no-repeat #0A1D25;
 
+  .training-video {
+    max-width: 840px;
+  }
+
   .training-title {
     text-align: center;
     padding-top: 20px;
