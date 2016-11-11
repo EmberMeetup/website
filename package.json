@@ -24,6 +24,7 @@
     "ember-ajax": "2.5.1",
     "ember-chimp": "0.1.0",
     "ember-cli": "^2.7.0",
+    "ember-cli-analytics": "1.0.0",
     "ember-cli-app-version": "^1.0.0",
     "ember-cli-babel": "^5.1.6",
     "ember-cli-bourbon": "1.2.2",
