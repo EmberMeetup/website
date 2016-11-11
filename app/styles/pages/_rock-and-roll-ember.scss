@@ -1,402 +1,397 @@
-.nav-header.rock-and-roll-ember.with-hero {
-  background: url(images/RARE-Background.svg) center / cover no-repeat #0A1D25;
-  padding-bottom: 40px;
+.training-header {
+  background: url(images/rare/RARE-Background.svg) center / cover no-repeat #0A1D25;
 
-  .hero-image {
-    @include margin(40px auto -30px auto);
-    max-width: 400px;
-
-    img {
-        max-width: 100%;
-    }
-  }
-
-  .hero-sub-title {
-    @include margin(null auto);
-    display: block;
-    color: #fff;
-    font-family: 'Dosis';
-    font-weight: 100;
-    max-width: 600px;
+  .training-title {
     text-align: center;
+    padding-top: 20px;
+
+    .rock-and-roll-logo {
+      width: 230px;
+      height: 288px;
+      background: url(images/rare/RARE-logo.png) center / contain no-repeat;
+      display: block;
+      text-indent: -1000px;
+      overflow: hidden;
+    }
+    h1 {
+      color: #fff;
+      margin: 0;
+      font-weight: normal;
+    }
 
     @include media($mobile) {
-      padding-left: 20px;
-      padding-right: 20px;
+      .rock-and-roll-logo {
+        width: 100%;
+        height: 200px;
+      }
     }
-
     @include media($tablet) {
-      font-size: 36px;
-    }
-  }
-}
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      padding-top: 100px;
 
-section.rock-and-roll-ember {
-
-  @include media($mobile) {
-    font-size: 90%;
-  }
-
-  @include media($tablet) {
-    font-size: 100%;
-  }
-
-  .heading {
-    margin: 80px auto;
-
-    @include media($desktop) {
-      max-width: 600px;
+      h1 {
+        max-width: 500px;
+        text-align: left;
+        font-size: 60px;
+        border-left: 2px solid rgba(255,255,255,0.5);
+        padding: 20px 40px;
+        margin-left: 40px;
+      }
     }
   }
 
-  .rocker-gabby-callout {
-    background-color: $red;
-    display: flex;
-    align-content: center;
-    margin-bottom: 80px;
+  .training-summary {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 20px;
 
-    h2 {
-      max-width: 800px;
-      padding-left: 10px;
-      padding-right: 10px;
-      color: white;
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 64px;
-    }
-
-    @include media($tablet) {
-      padding-right: 200px;
-      background: $red url(https://embermeetup.com/wp-content/uploads/RARE-Gabby.svg) calc(100% - 10px) bottom no-repeat;
-      background-size: 200px auto;
-      min-height: 260px;
-    }
-  }
-
-  .release-date {
-    font-size: 80%;
-    display: block;
-
-    @include media($desktop) {
-      float: right;
-      maring-right: 30px;
-    }
-  }
-
-  .key-message {
-    background-color: $red;
-    display: flex;
-    justify-content: center;    
-    align-content: center;
-    margin-bottom: 80px;
-
-    h2 {
-      max-width: 800px;
-      padding-left: 10px;
-      padding-right: 10px;
-      color: white;
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 64px;
-    }
-
-    @include media($tablet) {
-      background: $red url(https://embermeetup.com/wp-content/uploads/RARE-key.png) calc(100% - 20px) center no-repeat;
-      padding-right: 170px;
-      min-height: 210px;
-      background-size: 150px auto;
-    }
-  }
-
-  .max-width-800px {
-    max-width: 800px;
-  }
-
-  .float-right {
-    float: right;
-  }
-
-  .video-list {
-    li {
-      list-style: none;
-      background: url(https://embermeetup.com/wp-content/uploads/RARE-Film.svg) left center no-repeat;
-      padding: 5px 0px 5px 60px;
-      margin-bottom: 20px;
-    }
-  }
-
-  .smaller-font {
-    font-weight: 100;
-    font-size: 80%;
-  }
-
-  .rare-lightning-background {
-    background: url(images/RARE-lightning-background.svg) center no-repeat $skyBlue;
-
-    .box-content--content {
-      padding: 30px 0;
-      text-align: center;
+    strong {
+      font-weight: bold;
     }
 
     p {
-      font-size: 120%;      
-    }
-  }
-
-  .schedule {
-    background-color: $skyBlue;
-    padding: 20px;
-    margin-bottom: 80px;
-
-    h2 {
-      margin-top: 0;
+      font-size: 21px;
     }
 
+    @include media($mobile) {
+      p {
+        margin: 0;
+        text-align: center;
+        border-top: 1px solid rgba(255,255,255,0.5);
+        padding: 20px 10px;
+        &:first-child {
+          border: none;
+        }
+      }
+    }
     @include media($tablet) {
-      background: $skyBlue url(https://embermeetup.com/wp-content/uploads/RARE-calendar.png) calc(100% - 20px) center no-repeat;
-      padding-right: 170px;
-      min-height: 210px;
-      background-size: 150px auto;
-    }
-  }
+      .page-wrap {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+      }
 
-  .two-columns {
-    @include outer-container(100%);
-
-    .column {
-      text-align: center;
-      h3 {
+      p {
+        width: 33%;
+        margin: 0;
         text-align: center;
-        font-weight: 100;
-      }
-      img {
-        max-height: 300px;
-        max-width: 100%;
-      }
-      @include media($mobile) {
-        @include span-columns(12);
-      }
-      @include media($tablet) {
-        @include span-columns(6);
-      }
-    }
-  }
-
-  .img-max-height-150px {
-    img {
-      max-height: 150px;
-    }
-  }
-
-  .date-list {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-
-    .row {
-      display: flex;
-      flex-direction: row;
-      dt {
-        width: 240px;
-      }
-    }
-
-    dt, dd {
-      padding: 5px 0;
-      margin-left: 0;
-    }
-  }
-
-  .content-max-width-600px {
-    .box-content--content {
-      max-width: 600px;
-      margin: 0 auto;      
-    }
-  }
-
-  .packages-table {
-    display: flex;
-    flex-direction: row;
-    max-width: 920px;
-    margin-left: auto;
-    margin-right: auto;
-
-    &--plan {
-      display: flex;
-      flex-direction: column;
-
-      .header {
-        margin-bottom: 0;
-        text-align: center;
-      }
-
-      .sub {
-        display: block;
-        font-size: 80%;
-      }
-
-      .content {
-        flex: 1 0 auto;
-        padding-left: 0;
-      }
-
-      .item {
-        padding: 20px 0 0 0;
-        font-size: 60%;
-        list-style: none;
-        padding-left: 60px;
-
-        background-position: left center;
-        background-repeat: no-repeat;
-        background-size: 30px auto;   
-
-        u {
-          display: inline-block;
-          width: 100%;
-          padding-bottom: 20px;
-
-          text-decoration: none;
-          border-bottom: 1px solid $navyBlue;
-        }
-      }
-
-      .footer {
-        text-align: center;
-      }
-
-      .call-to-action {
-        display: inline-block;
-        cursor: pointer;      
-      }
-    }
-
-    &--plan.primary {
-      width: 320px;
-      padding: 20px;      
-      border: $red 6px solid;
-      border-radius: 3px;
-
-      .header {
-        margin-top: 20px;
-        min-height: 70px;
-      }
-
-      .content {
-        margin-bottom: 40px;
-      }
-
-      .footer {
-        position: relative;
-      }
-
-      .call-to-action {
-        left: calc(50% - 145px);
-        width: 290px;
-        position: absolute;
-
-        background: $blue;
-        color: white;
-        font-weight: bold;
-        border: none;
-      }
-    }
-
-    &--plan.secondary {
-      width: 300px;
-      padding: 10px 15px 30px 15px;
-      margin: 30px 0 40px 0;
-      background-color: $skyBlue;
-
-      .header {
-        margin-top: 10px;
-        font-weight: 100;
-      }
-
-      .call-to-action {
-        border: 2px solid $darkerBlue;
-        padding: 5px 30px;
-        border-radius: 20px;
-        color: $red;
-        background-color: white;
-        font-size: 80%;
-      }
-    }
-
-    &--footer {
-      display: flex;
-      flex-direction: row;
-
-      .main {
-        width: 50%;
-
-        .call-to-action {
-          width: 100%;
-          background-color: $red;
-          color: white;
-          font-weight: bold;
+        padding: 0 20px;
+        &:first-child {
+          padding: 0;
         }
       }
     }
-  }
-
-  .early-bird {
-    display: flex;
-    flex-direction: row;
-    max-width: 940px;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
-
-    .main {
-      margin-left: 25%;
-      width: 50%;
+    @include media($desktop) {
+      p {
+        padding: 0 40px;
+        &:first-child {
+          padding: 0;
+        }
+      }
     }
-
-    .call-to-action {
-      width: 100%;
-
-      background-color: $red;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-      border: none;
-    }
-
-    .right {
-      padding-left: 10px;
-    }
-  }
-
-  .videos-icon {
-    background-image: url(https://embermeetup.com/wp-content/uploads/RARE-Player.png);
-  }
-
-  .workshop-icon {
-    background-image: url(https://embermeetup.com/wp-content/uploads/RARE-Monitor.png);
-  }
-
-  .slack-icon {
-    background-image: url(https://embermeetup.com/wp-content/uploads/RARE-Slack.svg);
-  }
-
-  .screenhero-icon {
-    background-image: url(https://embermeetup.com/wp-content/uploads/RARE-Screenhero.svg);
-  }
-
-  .trees-icon {
-    background-image: url(https://embermeetup.com/wp-content/uploads/RARE-trees.png);
   }
 }
 
-.pricing-modal {
-  text-align: center;
-  width: 100%;
-  height: 100%;
+.training-section {
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $red;
+  }
+  h3 {
+    font-size: 21px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $blue;
+  }
+  p {
+    font-size: 21px;
+  }
+}
 
+.training-will-learn {
+  padding-bottom: 0;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+      margin: 20px 0;
+      padding-left: 10px;
+      border-left: 1px solid $red;
+      font-size: 21px;
+    }
+  }
+  .gabby-rocker {
+    background: url(https://embermeetup.com/wp-content/uploads/RARE-Gabby.svg) center bottom no-repeat;
+    background-size: 200px auto;
+    min-height: 260px;
+    text-indent: -10000px;
+    overflow: hidden;
+    min-width: 250px;
+    display: none;
+  }
   @include media($tablet) {
-    max-width: 800px;
-    max-height: 420px;
+    li {
+      @include span-columns(6);
+      padding-right: 20px;
+    }
+  }
+  @include media($desktop) {
+    &.page-wrap {
+      padding-top: 50px;
+      padding-bottom: 0;
+    }
+    .section-content {
+      display: flex;
+      flex-flow: row wrap;
+      ul {
+        width: 66%;
+        padding-bottom: 50px;
+      }
+      .gabby-rocker {
+        width: 33%;
+        display: block;
+      }
+    }
+  }
+}
+
+.training-perfect-for {
+  background: $red;
+  color: #fff;
+  h2 {
+    color: #fff;
+  }
+  .testimonials {
+    blockquote {
+      font-weight: normal;
+      font-style: italic;
+      font-size: 21px;
+      padding: 0;
+      margin: 20px 0;
+      p {
+        margin: 0;
+        clear: both;
+      }
+      footer {
+        font-weight: normal;
+        margin-top: 10px;
+      }
+      .photo {
+        display: inline-block;
+        width: 120px;
+        height: 80px;
+        border-radius: 10px;
+        overflow: hidden;
+        float: left;
+        margin-right: 10px;
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  @include media($tablet) {
+    .perfect-for {
+      @include span-columns(6);
+    }
+    .testimonials {
+      @include span-columns(6);
+      padding-left: 20px;
+      border-left: 2px solid rgba(255, 255, 255, 0.5);
+    }
+  }
+  @include media($desktop) {
+    padding: 50px 0;
+    .perfect-for {
+      @include span-columns(4);
+    }
+    .testimonials {
+      @include span-columns(8);
+      padding-left: 40px;
+      blockquote {
+        width: 50%;
+        float: left;
+        box-sizing: border-box;
+        padding-right: 40px;
+      }
+    }
+  }
+}
+
+.training-details {
+  margin-top: 40px;
+  .training-box {
+    text-align: center;
+    &:before {
+      content: '';
+      background: url(images/rare/RARE-Monitor.png) center / contain no-repeat;
+      display: block;
+      width: 100%;
+      height: 200px;
+    }
+    &.videos:before {
+      background-image: url(images/rare/RARE-Monitor.png);
+    }
+    &.rare-book:before {
+      background-image: url(images/rare/rare-cover.jpg);
+    }
+    &.ember-cli:before {
+      background-image: url(images/rare/ember-cli.png);
+    }
+
+    @include media($tablet) {
+      @include span-columns(4);
+    }
+  }
+
+}
+
+.about-trainer {
+  .instructor {
+    background: $skyBlue;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    img {
+      max-width: 100%;
+    }
+  }
+  @include media($tablet) {
+    display: flex;
+    flex-flow: row wrap;
+    .instructor {
+      max-width: 33%;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-around;
+    }
+    .training-why-us {
+      max-width: 66%;
+      box-sizing: border-box;
+      padding-left: 10px;
+    }
+  }
+  @include media($desktop) {
+    margin-top: 50px;
+    .instructor {
+      padding: 40px;
+      box-sizing: border-box;
+    }
+    .training-why-us {
+      padding-left: 50px;
+    }
+  }
+}
+
+.workshops-section {
+  border-top: 2px solid $red;
+  border-bottom: 2px solid $red;
+
+  @include media($desktop) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .timezones {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    li {
+      margin: 20px 0 0 0;
+    }
+    h3 {
+      margin: 0;
+      color: darken($blue, 20);
+    }
+    .button {
+      font-size: 21px;
+      margin-top: 10px;
+    }
+  }
+  .limited-seats {
+    background: $skyBlue;
+    padding: 30px 20px;
+    margin: 0;
+    border-radius: 10px;
+    text-align: center;
+    .button {
+      margin-top: 40px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+  @include media($tablet) {
+    .limited-seats, .timezones {
+      @include span-columns(6);
+      margin: 0;
+    }
+    .more-info {
+      clear: both;
+    }
+  }
+  @include media($desktop) {
+    .timezones {
+      li {
+        margin-bottom: 50px;
+      }
+    }
+    .limited-seats {
+      padding: 50px 20px;
+      .button {
+        margin-top: 50px;
+      }
+    }
+    h2 {
+      margin-bottom: 50px;
+    }
+    .more-info {
+      clear: none;
+      h3 {
+        text-transform: none;
+      }
+    }
+    .limited-seats, .timezones, .more-info {
+      @include span-columns(4);
+    }
+  }
+}
+
+.training-subscribe {
+  margin: 50px auto;
+  text-align: center;
+  padding: 50px 0;
+  h3 {
+    text-transform: none;
+  }
+  button[type="submit"] {
+    @extend .button;
+    @extend .blue-button;
+    border: none;
+    outline: none;
+    margin-left: 20px;
+  }
+  input {
+    background: #F2F2F2;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+  }
+  .ember-chimp {
+    &.error {
+      .message {
+        color: red;
+        margin-top: 20px;
+        font-size: 18px;
+      }
+    }
   }
 }
