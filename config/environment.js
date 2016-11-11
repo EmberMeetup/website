@@ -17,16 +17,15 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
-    
+
     googleFonts: [
-      'Dosis:400',
-      'Pacifico'
+      'Dosis:400,700'
     ],
-    
+
     disqus: {
       shortname: 'embermeetup'
     },
-    
+
     moment: {
       includeTimezone: '2010-2020'
     },
@@ -61,6 +60,19 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
 
+    ENV.analytics = {
+      integrations: [
+        {
+          name: 'GoogleAnalytics',
+          config: {
+            id: 'UA-87303561-1',
+            remarketing: true,
+            ecommerce: true,
+            enhancedEcommerce: false
+          }
+        }
+      ]
+    };
   }
 
   return ENV;
