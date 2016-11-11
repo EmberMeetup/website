@@ -85,7 +85,6 @@
       }
     }
     @include media($desktop) {
-      margin-top: 100px;
       p {
         padding: 0 40px;
         &:first-child {
