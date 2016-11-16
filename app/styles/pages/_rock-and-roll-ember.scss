@@ -308,16 +308,20 @@
     margin: 0;
     list-style: none;
     text-align: center;
-    li {
-      margin: 20px 0 0 0;
-    }
     h3 {
       margin: 0;
       color: darken($blue, 20);
+      font-size: 80%;
     }
     .button {
       font-size: 21px;
       margin-top: 10px;
+    }
+    dd, dt {
+      display: inline-block;
+    }
+    p {
+      font-size: 60%;
     }
   }
   .limited-seats {
@@ -333,6 +337,15 @@
       cursor: pointer;
     }
   }
+  .clear-list {
+    padding-left: 0;
+    margin-top: 5px;
+    text-align: left;
+    li {
+      list-style: none;
+      padding: 5px 0;
+    }
+  }
   @include media($tablet) {
     .limited-seats, .timezones {
       @include span-columns(6);
@@ -343,11 +356,6 @@
     }
   }
   @include media($desktop) {
-    .timezones {
-      li {
-        margin-bottom: 50px;
-      }
-    }
     .limited-seats {
       padding: 50px 20px;
       .button {
