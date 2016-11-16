@@ -269,7 +269,7 @@
   }
   @include media($tablet) {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     .instructor {
       max-width: 33%;
       display: flex;
