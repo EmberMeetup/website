@@ -138,40 +138,63 @@
   </div>
 </section>
 
+{{let regions=(array 
+  (hash 
+    name="North America"
+    price="$495"
+    date=(moment-format "2017-01-18 12:00:00" timeZone="America/New_York")
+    link="https://www.eventbrite.com/e/implementing-authentication-in-ember-americas-timezone-tickets-28926729627"
+  ) 
+  (hash 
+    name="Europe"
+    price="$495"
+    date=(moment-format "2017-01-12 12:00:00" timeZone="Europe/London")
+    link="https://www.eventbrite.com/e/implementing-authentication-in-ember-european-timezone-tickets-28926698534"
+  ) 
+  (hash 
+    name="Asia"
+    price="$495"
+    date=(moment-format "2016-12-13 12:00:00" timeZone="Asia/Tokyo")
+    link="https://www.eventbrite.com/e/implementing-authentication-in-ember-asian-timezone-tickets-28810984430"
+  )
+)}}
+{{let options=(Select regions selection=regions.firstObject)}}
+{{let region=options.selection}}
+
 <section class="page-wrap workshops-section training-section">
   <h2>Available workshops</h2>
   <div class="section-content">
-    <ul class="timezones">
-      <li>
-        <h3>Asian timezone</h3>
-        <strong>Dec 13th - 12pm - 4pm JST (GMT+9)</strong><br>
-        <a href="https://www.eventbrite.com/e/implementing-authentication-in-ember-asian-timezone-tickets-28810984430" class="button red-button" target="_blank">
-          Book this workshop for <strong>$495</strong> <i class="fa fa-chevron-right"></i>
-        </a>
-      </li>
-      <li>
-        <h3>European timezone</h3>
-        <strong>Jan 12th - 12pm - 4pm BST (GMT)</strong><br>
-        <a href="https://www.eventbrite.com/e/implementing-authentication-in-ember-european-timezone-tickets-28926698534" class="button red-button" target="_blank">
-          Book this workshop for <strong>$495</strong> <i class="fa fa-chevron-right"></i>
-        </a>
-      </li>
-      <li>
-        <h3>Americas timezone</h3>
-        <strong>Jan 18th - 12pm - 4pm EST (GMT-5)</strong><br>
-        <a href="https://www.eventbrite.com/e/implementing-authentication-in-ember-americas-timezone-tickets-28926729627" class="button red-button" target="_blank">
-          Book this workshop for <strong>$495</strong> <i class="fa fa-chevron-right"></i>
-        </a>
-      </li>
-    </ul>
+    <div class="timezones">
+        <h3>Choose Region: 
+          {{#each options as |choice|}}
+            <button class="{{if choice.isSelected 'selected' 'not-selected'}}" {{action choice.toggle}}>{{choice.value.name}}</button> 
+          {{/each}}
+        </h3>
+      <h3>{{region.name}}</h3>
+      <ul class="clear-list">
+        <li><dt>Date:</dt>
+          <dd>
+            {{moment-format region.date "MMMM Do YYYY"}}
+          </dd>
+        </li>
+        <li>
+          <dt>Price:</dt>
+          <dd>{{region.price}}</dd>
+        </li>
+      </ul>
+      <a href="{{region.link}}" class="button red-button" target="_blank">Book Now!</a>
+      <p>Access to pre-recorded videos will be provided on {{moment-format (moment-subtract region.date 2 "weeks") "MMMM DD, YYYY"}}. Slack access will be available until {{moment-format (moment-add region.date 1 "month") "MMMM DD, YYYY"}}.</p>        
+    </div>
     <div class="limited-seats">
       <strong>Each workshop is limited to 16 participants</strong> in order to ensure learners can get their questions answered by our instructors and mentors.
     </div>
     <aside class="more-info">
       <h3>More info?</h3>
-      Ask us anything by email or DM on twitter: <br> <br>
-      <a href="mailto:hi@embermeetup.com"><i class="fa fa-envelope-o"></i> hi@embermeetup.com</a> <br> <br>
-      <a href="https://twitter.com/EmberMeetup" target="_blank"><i class="fa fa-twitter"></i> EmberMeetup</a>
+      Ask us anything by email or DM on Twitter:
+      <ul class="clear-list">
+        <li><a href="mailto:hi@embermeetup.com"><i class="fa fa-envelope-o"></i> hi@embermeetup.com</a></li>
+        <li><a href="https://twitter.com/EmberMeetup" target="_blank"><i class="fa fa-twitter"></i> EmberMeetup</a></li>
+      </ul>      
     </aside>
   </div>
 </section>
