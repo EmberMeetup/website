@@ -11,7 +11,7 @@
     "build": "ember build",
     "start": "ember fastboot --serve-assets",
     "test": "ember test",
-    "deploy": "GCLOUD_PROJECT=global-ember-meetup-frontend ember deploy production"
+    "deploy": "GCLOUD_PROJECT=this-dot ember deploy production"
   },
   "repository": "",
   "engines": {
@@ -31,7 +31,7 @@
     "ember-cli-dependency-checker": "^1.2.0",
     "ember-cli-deploy": "0.6.1",
     "ember-cli-deploy-build": "0.1.1",
-    "ember-cli-deploy-gcloud": "0.2.5",
+    "ember-cli-deploy-gcloud": "0.3.3",
     "ember-cli-deploy-gcloud-storage": "0.1.2",
     "ember-cli-fastboot": "1.0.0-beta.4",
     "ember-cli-google-fonts": "2.3.0",
