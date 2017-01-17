@@ -11,7 +11,7 @@ module.exports = function(defaults) {
       ]      
     },
     fingerprint: {
-      prepend: 'https://storage.googleapis.com/global-ember-meetup-frontend/'
+      prepend: 'https://storage.googleapis.com/embermeetup/'
     }
   });
 

@@ -1,11 +1,11 @@
-module.exports = function(deployTarget) {  
+module.exports = function() {  
   return {
     'gcloud': {
-      bucket: 'global-ember-meetup-frontend',
+      bucket: 'embermeetup',
       key: 'fastboot-release.json'      
     },
     'gcloud-storage': {
-        bucket: 'global-ember-meetup-frontend'
+        bucket: 'embermeetup'
     }
   };
 };
